@@ -28,7 +28,7 @@
         </div>
 
         <div>
-           <a href="">Envoyer mon dessin</a> 
+           <a href="../views/choixArtisteView.vue">Envoyer mon dessin</a> 
            <a href="">Faire un dessin</a> 
         </div>
         

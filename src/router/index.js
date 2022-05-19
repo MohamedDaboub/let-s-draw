@@ -3,6 +3,7 @@ import AccueilView from '../views/AccueilView.vue'
 import TendancesView from '../views/TendancesView.vue'
 import DonView from '../views/DonView.vue'
 import GlossaireView from '../views/GlossaireView.vue'
+import choixArtisteView from '../views/choixArtisteView.vue'
 
 
 
@@ -13,6 +14,7 @@ const router = createRouter({
     { path: '/Tendances', name: 'TendancesView', component: TendancesView },
     { path: '/Don', name: 'DonView', component: DonView },
     { path: '/Glossaire', name: 'GlossaireView', component: GlossaireView },
+    { path: '/choixArtiste', name: 'choixArtisteView', component: choixArtisteView },
     // ici les autre routes
   ]
 })
