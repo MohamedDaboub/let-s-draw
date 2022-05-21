@@ -8,6 +8,7 @@ import profilArtisteView from '../views/profilArtisteView.vue'
 import FormulaireView from '../views/FormulaireView.vue'
 import ContactView from '../views/ContactView.vue'
 import ProfilView from '../views/ProfilView.vue'
+import MentionslegalesView from '../views/MentionslegalesView.vue'
 
 
 
@@ -23,6 +24,7 @@ const router = createRouter({
     { path: '/Formulaire', name: 'FormulaireView', component: FormulaireView },
     { path: '/Contact', name: 'ContactView', component: ContactView },
     { path: '/Profil', name: 'ProfilView', component: ProfilView },
+    { path: '/Mentionslegales', name: 'MentionslegalesView', component: MentionslegalesView },
     // ici les autre routes
   ]
 })

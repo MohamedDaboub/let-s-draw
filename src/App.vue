@@ -15,6 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <li> <RouterLink class=" " to="/Formulaire">Formulaire</RouterLink></li>
       <li> <RouterLink class=" " to="/Contact">Contact</RouterLink></li>
       <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li>
+      <li> <RouterLink class=" " to="/Mentionlegales">Mentions legales</RouterLink></li>
     </ul>
   </nav>
 
