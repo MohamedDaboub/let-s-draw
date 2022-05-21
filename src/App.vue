@@ -13,6 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <li> <RouterLink class=" " to="/choixArtiste">Choix de l'artiste</RouterLink></li>
       <li> <RouterLink class=" " to="/profilArtiste">Profil de l'artiste</RouterLink></li>
       <li> <RouterLink class=" " to="/Formulaire">Formulaire</RouterLink></li>
+      <li> <RouterLink class=" " to="/Contact">Contact</RouterLink></li>
     </ul>
   </nav>
 

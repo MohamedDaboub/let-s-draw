@@ -6,6 +6,7 @@ import GlossaireView from '../views/GlossaireView.vue'
 import choixArtisteView from '../views/choixArtisteView.vue'
 import profilArtisteView from '../views/profilArtisteView.vue'
 import FormulaireView from '../views/FormulaireView.vue'
+import ContactView from '../views/ContactView.vue'
 
 
 
@@ -19,6 +20,7 @@ const router = createRouter({
     { path: '/choixArtiste', name: 'choixArtisteView', component: choixArtisteView },
     { path: '/profilArtiste', name: 'profilArtisteView', component: profilArtisteView },
     { path: '/Formulaire', name: 'FormulaireView', component: FormulaireView },
+    { path: '/Contact', name: 'ContactView', component: ContactView },
     // ici les autre routes
   ]
 })
