@@ -1,4 +1,24 @@
 <template>
+    <header>
+        <div>
+            <div>
+                <!-- Logo Let's Draw-->
+            </div>
+            <nav>
+                <a href="">Tendances</a>
+                <a href="">Glossaire</a>
+                <a href="">Nous Contacter</a>
+                <div>
+                    <!-- Logo don -->
+                    <a href="">Faire un don</a>
+                </div>
+                <div>
+                    <!-- logo s'inscrire -->
+                    <a href="">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
     <h1>Glossaire</h1>
     <dt>
         <h2>Hyperréalisme</h2>
@@ -17,4 +37,34 @@
         <h2>Le Dessin de mode</h2>
         <p>Les illustrations de mode sont souvent utilisées par les créateurs pour mettre leurs idées sur papier. Il s’agit de dessin fait rapidement qui transmet l’essence d’un vêtement. Pour ce style, l’accent est mis sur les vêtements et non sur le visage. Les traits du visage sont souvent inexistants ou minimes.</p>
     </dt>
+    <footer>
+        
+        <div>
+            <h3>Lien</h3>
+            <a href="">Faire un don</a>
+            <a href="">Tendances</a>
+            <a href="">Nous contacter</a>
+            <a href="">Glossaire</a>
+        </div>
+         <div>
+            <h3>Obtenir de l'aide</h3>
+            <p>Lets.Draw250@gmail.com</p>
+            <a href="">À propos</a>
+        </div>
+        <div>
+            <h3>Information</h3>
+            <a href="">Mentions Légales</a>
+        </div>
+        <div>
+            <h3>Suivez-nous</h3>
+            <!-- Logo Réseaux Sociaux -->
+        </div>
+        <div>
+            <!-- Image Paiement -->
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </footer>
 </template>
