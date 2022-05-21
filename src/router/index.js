@@ -4,6 +4,7 @@ import TendancesView from '../views/TendancesView.vue'
 import DonView from '../views/DonView.vue'
 import GlossaireView from '../views/GlossaireView.vue'
 import choixArtisteView from '../views/choixArtisteView.vue'
+import profilArtisteView from '../views/profilArtisteView.vue'
 
 
 
@@ -15,6 +16,7 @@ const router = createRouter({
     { path: '/Don', name: 'DonView', component: DonView },
     { path: '/Glossaire', name: 'GlossaireView', component: GlossaireView },
     { path: '/choixArtiste', name: 'choixArtisteView', component: choixArtisteView },
+    { path: '/profilArtiste', name: 'profilArtisteView', component: profilArtisteView },
     // ici les autre routes
   ]
 })

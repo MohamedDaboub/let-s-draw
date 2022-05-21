@@ -11,6 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <li> <RouterLink class=" " to="/Don">Faire un don</RouterLink></li>
       <li> <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink></li>
       <li> <RouterLink class=" " to="/choixArtiste">Choix de l'artiste</RouterLink></li>
+      <li> <RouterLink class=" " to="/profilArtiste">Profil de l'artiste</RouterLink></li>
     </ul>
   </nav>
 
