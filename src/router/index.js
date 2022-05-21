@@ -9,7 +9,7 @@ import FormulaireView from '../views/FormulaireView.vue'
 import ContactView from '../views/ContactView.vue'
 import ProfilView from '../views/ProfilView.vue'
 import MentionslegalesView from '../views/MentionslegalesView.vue'
-
+import InscriptionView from '../views/InscriptionView.vue'
 
 
 const router = createRouter({
@@ -25,7 +25,8 @@ const router = createRouter({
     { path: '/Contact', name: 'ContactView', component: ContactView },
     { path: '/Profil', name: 'ProfilView', component: ProfilView },
     { path: '/Mentionslegales', name: 'MentionslegalesView', component: MentionslegalesView },
-    // ici les autre routes
+    { path: '/Inscription', name: 'InscriptionView', component: InscriptionView },
+    // ici les autres routes
   ]
 })
 
