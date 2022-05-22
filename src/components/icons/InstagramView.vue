@@ -1,4 +1,5 @@
 <template>
+<div class="bg-slate-500 p-2 rounded-full">
     <svg
   width="24"
   height="23"
@@ -20,4 +21,5 @@
     </clipPath>
   </defs>
 </svg>
+</div>
 </template>

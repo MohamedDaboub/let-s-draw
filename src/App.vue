@@ -64,9 +64,9 @@ import { RouterLink, RouterView } from 'vue-router'
                     Suivez-nous
                 </div>
                 <div class="flex gap-2">
-                  <a><Facebook  class=" "/></a>
-                  <a><Instagram class=" "/></a>
-                  <a><Pinterest class=" "/></a>
+                  <a><Facebook  /></a>
+                  <a><Instagram /></a>
+                  <a><Pinterest /></a>
                 </div>
             </div>           
         </div>
