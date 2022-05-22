@@ -1,10 +1,10 @@
 <template>
     <header>
-        <div>
+        <div class="flex justify-between bg-bleu1-900 p-4">
             <div>
                 <!-- Logo Let's Draw-->
             </div>
-            <nav>
+            <nav class="flex gap-10 mr-10 text-white">
                 <a href="">Tendances</a>
                 <a href="">Glossaire</a>
                 <a href="">Nous Contacter</a>
@@ -19,20 +19,20 @@
             </nav>
         </div>
     </header>
-    <body>
+    <main class="bg-bleu2-600">
         <div>
-            <h1>Enfants & Artiste, présentez votre coup de pinceau, partagez votre talent sur Let’s Draw</h1>
+            <h1 class="text-white">Enfants & Artiste, présentez votre coup de pinceau, partagez votre talent sur Let’s Draw</h1>
 
             <!-- Image début -->
             <img src="" alt="">
         </div>
 
-        <div>
-           <a href="../views/choixArtisteView.vue">Envoyer mon dessin</a> 
-           <a href="">Faire un dessin</a> 
+        <div class="flex justify-between mt-20 mx-64">
+           <a class="bg-bleu1-900 rounded-full text-white p-3" href="">Envoyer mon dessin</a> 
+           <a class="bg-bleu1-900 rounded-full text-white p-3" href="">Faire un dessin</a> 
         </div>
         
-        <h2>Les Dernieres Tendances</h2>
+        <h2 class="font-bold text-center mt-16">Les Dernieres Tendances</h2>
 
         <div>
             <div>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </main>
     <footer>
         
         <div>

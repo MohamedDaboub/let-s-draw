@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {
       "colors": {
+        bleu1: { '900': '#2D3548' },
+        bleu2: { '600': '#547ACC' }
 
       },
       "fontFamily": {
