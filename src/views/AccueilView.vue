@@ -9,7 +9,7 @@
            <a class="bg-bleufonce rounded-full text-white  px-8 py-4" href="">Faire un dessin</a> 
         </div>
         
-        <h2 class="font-bold text-center text-5xl my-10">Les Dernieres Tendances</h2>
+        <h2 class="font-bold text-center text-4xl my-10 text-white">Les Dernieres Tendances</h2>
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(345px,1fr))] gap-8 mx-10 py-10">
         <card :nbr-s-d-b="4"
             :favori="true"
