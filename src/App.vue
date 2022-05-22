@@ -25,44 +25,6 @@ import { RouterLink, RouterView } from 'vue-router'
 <main class=" bg-bleu">
   <Router-View/>
 </main>
-  <!-- <footer class=" bg-bleufonce py-20"> 
-    <div class="flex justify-between m-auto p-8 text-white">
-      <div class="flex flex-col gap-6">
-        <h3 class="border-b-2 border-rouge pb-4">Lien</h3>
-        <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black">
-          <Donate class=""/>
-          <RouterLink class="" to="/Don">Faire un don</RouterLink>
-        </div>
-        <Routerlink class="text-gris" to="/Tendances">Tendances</Routerlink>
-        <Routerlink class="text-gris" to="/Contact">Nous contacter</Routerlink>
-        <Routerlink class="text-gris" to="/Glossaire">Glossaire</Routerlink>
-      </div>
-      <div class="flex flex-col gap-6">
-        <h3 class="border-b-2 border-rouge pb-4">Obtenir de l'aide</h3>
-        <a class="text-gris" href="mailto:Lets.Draw250@gmail.com">Lets.Draw250@gmail.com</a>
-        <RouterLink class="text-gris" to="/Apropos">À propos</RouterLink>
-      </div>
-      <div class="flex flex-col gap-6">
-        <h3 class="border-b-2 border-rouge pb-4">Information</h3>
-        <RouterLink class="text-gris" to="/Mentionlegales">Mentions legales</RouterLink>
-      </div>
-      <div class="flex flex-col gap-6">
-        <h3 class="border-b-2 border-rouge pb-4">Suivez-nous</h3>
-            <div class="flex gap-2">
-              <Facebook  class=""/>
-              <Instagram class=""/>
-              <Pinterest class=""/>
-            </div>
-      </div>
-    </div>
-    <div>
-             Image Paiement
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-    </div>
-  </footer> -->
 <footer class="bg-bleufonce pt-10">
         <div class="max-w-6xl m-auto text-gray-900 flex flex-wrap justify-left">
 
@@ -71,21 +33,13 @@ import { RouterLink, RouterView } from 'vue-router'
                 <div class="text-xs uppercase text-white font-bold mb-6 border-b-2 border-rouge pb-4 w-1/4">
                     Lien
                 </div>
-
-
                 <div class="relative  bg-white  rounded-3xl text-black   w-36 py-1   ">
                   <Donate class="absolute left-2 top-3  "/>
                   <RouterLink class="my-3 block text-black hover:text-gray-500 text-sm  font-normal duration-700   mx-8" to="/Don">Faire un don</RouterLink>
                 </div>
-                <a href="#" class="my-3 block text-gris hover:text-gray-100 text-sm  font-normal duration-700">
-                    Tendances
-                </a>
-                <a href="#" class="my-3 block text-gris hover:text-gray-100 text-sm  font-normal duration-700">
-                    Nous contacter
-                </a>
-                <a href="#" class="my-3 block text-gris hover:text-gray-100 text-sm  font-normal duration-700">
-                    Glossaire
-                </a>
+                <Routerlink class="text-gris my-3 block  hover:text-gray-100 text-sm  font-normal duration-700" to="/Tendances">Tendances</Routerlink>
+                <Routerlink class="text-gris my-3 block  hover:text-gray-100 text-sm  font-normal duration-700" to="/Contact">Nous contacter</Routerlink>
+                <Routerlink class="text-gris my-3 block  hover:text-gray-100 text-sm  font-normal duration-700" to="/Glossaire">Glossaire</Routerlink>
             </div>
 
 
@@ -110,17 +64,17 @@ import { RouterLink, RouterView } from 'vue-router'
                     Suivez-nous
                 </div>
                 <div class="flex gap-2">
-                  <Facebook  class=" hover:text-gray-100"/>
-                  <Instagram class=" hover:"/>
-                  <Pinterest class=" "/>
+                  <a><Facebook  class=" "/></a>
+                  <a><Instagram class=" "/></a>
+                  <a><Pinterest class=" "/></a>
                 </div>
             </div>           
         </div>
-        <div>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
+        <div class="flex  justify-end gap-10 pb-6 px-10">
+          <img class=" w-1/6 h-1/6  "  src="../public/img-squirrel/image_40.webp" alt="">
+          <img class=" w-1/12 " src="../public/img-squirrel/image_41.webp" alt="">
+          <img class=" w-1/12 h-1/12  " src="../public/img-squirrel/image_21.webp" alt="">
+          <img class=" w-1/12 h-1/12  " src="../public/img-squirrel/image_20.webp" alt="">
         </div>
 </footer>
 </template>
