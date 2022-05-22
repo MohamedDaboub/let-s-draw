@@ -6,9 +6,10 @@ module.exports = {
   theme: {
     extend: {
       "colors": {
-        bleu1: { '900': '#2D3548' },
-        bleu2: { '600': '#547ACC' }
-
+        "bleu": "#547acc",
+        "bleufonce": "#123456",
+        "bleutransparent": "#03a9f4",
+        "gris": "#b0b0b0"
       },
       "fontFamily": {
         "inter": "Inter, system-ui, sans-serif"

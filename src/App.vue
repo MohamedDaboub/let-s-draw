@@ -23,9 +23,9 @@ import { RouterLink, RouterView } from 'vue-router'
     </ul>
   </nav>
 </header>
-
-  <!-- Affiche les pages -->
+<main class=" bg-bleu">
   <Router-View/>
+</main>
   <footer> 
     <div>
       <h3>Lien</h3>
