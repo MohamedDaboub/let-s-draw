@@ -10,6 +10,7 @@ import ContactView from '../views/ContactView.vue'
 import ProfilView from '../views/ProfilView.vue'
 import MentionslegalesView from '../views/MentionslegalesView.vue'
 import InscriptionView from '../views/InscriptionView.vue'
+import AproposView from '../views/AproposView.vue'
 
 
 const router = createRouter({
@@ -26,6 +27,7 @@ const router = createRouter({
     { path: '/Profil', name: 'ProfilView', component: ProfilView },
     { path: '/Mentionslegales', name: 'MentionslegalesView', component: MentionslegalesView },
     { path: '/Inscription', name: 'InscriptionView', component: InscriptionView },
+    { path: '/Apropos', name: 'AproposView', component: AproposView },
     // ici les autres routes
   ]
 })
