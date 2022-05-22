@@ -3,13 +3,16 @@ import { RouterLink, RouterView } from 'vue-router'
 
 </script>
 <template>
-<header class=" sticky top-0">
+<header class=" sticky top-0 drop-shadow-lg z-10">
   <nav class="bg-bleufonce flex justify-between" >
-<img src="../public/icon_svg/logo-site.svg" class="w-24 h-24 mx-6" alt="">
-    <ul class="flex gap-6  p-10">
+<img src="../public/icon_svg/logo-site.svg" class="w-28 h-28 mx-6" alt="">
+    <ul class="flex gap-6  p-10 px-10 text-white text-2xl">
       <li> <RouterLink class=" " to="/Tendances"> Tendances</RouterLink></li>
       <li> <RouterLink class=" " to="/Glossaire"> Glossaire</RouterLink></li>
-      <li> <RouterLink class=" " to="/Don">Faire un don</RouterLink></li>
+      <div class="relative items-center  text-black px-1 ">
+        <Donate class="absolute left-3  top-1.5"/>
+        <li> <RouterLink class=" bg-white px-8 py-4  rounded-3xl " to="/Don">Faire un don</RouterLink></li>
+      </div>
       <li> <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink></li>
       <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li>
     </ul>
@@ -18,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <main class=" bg-bleu">
   <Router-View/>
 </main>
-  <footer> 
+  <footer class=" bg-bleufonce"> 
     <div>
       <h3>Lien</h3>
         <a href="">Faire un don</a>
@@ -51,9 +54,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <script>
 import { MenuIcon } from "@heroicons/vue/solid";
+import Donate from "./components/icons/DonateView.vue"
+
 
 export default {
   name: "App",
-  components: { MenuIcon },
+  components: { MenuIcon,Donate },
 };
 </script>
