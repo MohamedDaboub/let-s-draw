@@ -10,7 +10,8 @@ module.exports = {
         "bleufonce": "#123456",
         "bleutransparent": "#03a9f4",
         "gris": "#b0b0b0",
-        "noir": "#282C2C"
+        "noir": "#282C2C",
+        "rouge": "#FF0101"
       },
       "fontFamily": {
         "inter": "Inter, system-ui, sans-serif"
