@@ -6,11 +6,11 @@ import { RouterLink, RouterView } from 'vue-router'
 <header class=" sticky top-0 drop-shadow-lg z-10">
   <nav class="bg-bleufonce flex justify-between" >
 <img src="../public/icon_svg/logo-site.svg" class="w-28 h-28 mx-6" alt="">
-    <ul class="flex gap-6  p-10 px-10 text-white text-2xl">
+    <ul class="flex gap-6  p-10 px-10 text-white text-xl">
       <li> <RouterLink class=" " to="/Tendances"> Tendances</RouterLink></li>
       <li> <RouterLink class=" " to="/Glossaire"> Glossaire</RouterLink></li>
       <div class="relative items-center  text-black px-1 ">
-        <Donate class="absolute left-3  top-1.5"/>
+        <Donate class="absolute left-3"/>
         <li> <RouterLink class=" bg-white px-8 py-4  rounded-3xl " to="/Don">Faire un don</RouterLink></li>
       </div>
       <li> <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink></li>

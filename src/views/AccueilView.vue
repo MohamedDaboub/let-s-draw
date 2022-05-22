@@ -1,52 +1,37 @@
 <template>
     <main class="bg-bleu">
-        <div class="flex">
-            <h1 class="text-white text-6xl">Enfants & Artiste, présentez votre coup de pinceau, partagez votre talent sur Let’s Draw</h1>
-
-            <!-- Image début -->
-            <img src="" alt="">
+        <div class="flex mx-20 py-20">
+            <h1 class="text-white text-5xl leading-tight">Enfants & Artiste, présentez votre coup de pinceau, partagez votre talent sur Let’s Draw</h1>
+            <img class="w-1/3 h-1/3 " src="../../public/img-squirrel/image_9.webp" alt="">
         </div>
-
-        <div class="flex justify-between mt-20 mx-64">
+        <div class="flex mx-auto content-center text-center justify-center gap-20 text-xl">
            <a class="bg-bleufonce rounded-full text-white  px-8 py-4" href="">Envoyer mon dessin</a> 
            <a class="bg-bleufonce rounded-full text-white  px-8 py-4" href="">Faire un dessin</a> 
         </div>
         
-        <h2 class="font-bold text-center mt-16">Les Dernieres Tendances</h2>
+        <h2 class="font-bold text-center text-5xl my-10">Les Dernieres Tendances</h2>
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(345px,1fr))] gap-8">
         <card :nbr-s-d-b="4"
-            :nbr-s-d-b1="2"
-            :prix="2700"
             :favori="true"
             image="/public/img-squirrel/image_3.webp"
-            nom="Beverly Springfield"
-            nom1="2821 Lake Sevilla, Palm Harbor, TX"
-            size="6x7.5 m²"
+            nom="Jean Vart"
+            nom1="Peintre"
             />
-        <card :nbr-s-d-b="4"
-            :nbr-s-d-b1="2"
-            :prix="2095"
+        <card :nbr-s-d-b="7"
             favori
             image="/public/img-squirrel/image_3.webp"
-            nom="Palm Harbor"
-            nom1="2699 Green Valley, Highland Lake"
-            size="6x7.5 m²" />
-        <card :nbr-s-d-b="4"
-            :nbr-s-d-b1="2"
-            :prix="2095"
+            nom="Jean Vart"
+            nom1="Peintre" />
+        <card :nbr-s-d-b="10"
             favori
             image="/public/img-squirrel/image_3.webp"
-            nom="Palm Harbor"
-            nom1="2699 Green Valley, Highland Lake"
-            size="6x7.5 m²" />
-        <card :nbr-s-d-b="4"
-            :nbr-s-d-b1="2"
-            :prix="2095"
+            nom="Jean Vart"
+            nom1="Peintre"/>
+        <card :nbr-s-d-b="15"
             favori
             image="/public/img-squirrel/image_3.webp"
-            nom="Palm Harbor"
-            nom1="2699 Green Valley, Highland Lake"
-            size="6x7.5 m²" />
+            nom="Jean Vart"
+            nom1="Peintre" />
     </div>
 
 

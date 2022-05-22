@@ -1,6 +1,6 @@
 <template>
     <figure class=" flex flex-col bg-white mx-4">
-        <img class=" rounded-t-lg mt-5 w-full  " :src="image" alt="">
+        <img class=" rounded-t-lg w-full  " :src="image" alt="">
         <figcaption class=" flex flex-col px-5 py-7 border-2 border-t-0 relative">
             <div class=" relative flex flex-col bg-white">
                 <h3 class="text-2xl text-gray-900 ">{{ nom }}</h3>
