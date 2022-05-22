@@ -10,7 +10,7 @@
                 </div>
                 <div class="flex justify-between text-sm">
                     <div><p class=" inline-block align-top">{{ nbrSDB }} Jour</p></div>
-                    <div>
+                    <div class="flex mt-8 gap-3">
                         <star :class="{ 'fill-yellow-400': favori }"></star>
                         <star :class="{ 'fill-yellow-400': favori }"></star>
                         <star :class="{ 'fill-yellow-400': favori }"></star>
