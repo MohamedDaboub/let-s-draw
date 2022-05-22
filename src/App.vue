@@ -4,22 +4,14 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
 <header class=" sticky top-0">
-  <nav class="bg-slate-600 flex justify-between" >
+  <nav class="bg-bleufonce flex justify-between" >
 <img src="../public/icon_svg/logo-site.svg" class="w-24 h-24 mx-6" alt="">
     <ul class="flex gap-6  p-10">
-      <li><RouterLink class=" " to="/"> Accueil</RouterLink></li>
       <li> <RouterLink class=" " to="/Tendances"> Tendances</RouterLink></li>
       <li> <RouterLink class=" " to="/Glossaire"> Glossaire</RouterLink></li>
       <li> <RouterLink class=" " to="/Don">Faire un don</RouterLink></li>
       <li> <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink></li>
-      <!-- <li> <RouterLink class=" " to="/choixArtiste">Choix de l'artiste</RouterLink></li> -->
-      <!-- <li> <RouterLink class=" " to="/profilArtiste">Profil de l'artiste</RouterLink></li> -->
-      <!-- <li> <RouterLink class=" " to="/Formulaire">Formulaire</RouterLink></li> -->
-      <!-- <li> <RouterLink class=" " to="/Contact">Contact</RouterLink></li> -->
       <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li>
-      <!-- <li> <RouterLink class=" " to="/Mentionlegales">Mentions legales</RouterLink></li> -->
-      <!-- <li> <RouterLink class=" " to="/Inscription">Inscription</RouterLink></li> -->
-      <!-- <li> <RouterLink class=" " to="/Apropos">À propos</RouterLink></li> -->
     </ul>
   </nav>
 </header>

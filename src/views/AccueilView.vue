@@ -1,5 +1,5 @@
 <template>
-    <main class="bg-bleu2-600">
+    <main class="bg-bleu">
         <div class="flex">
             <h1 class="text-white text-6xl">Enfants & Artiste, présentez votre coup de pinceau, partagez votre talent sur Let’s Draw</h1>
 
