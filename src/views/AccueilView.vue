@@ -16,34 +16,5 @@
 
 
     </main>
-    <footer>
-        
-        <div>
-            <h3>Lien</h3>
-            <a href="">Faire un don</a>
-            <a href="">Tendances</a>
-            <a href="">Nous contacter</a>
-            <a href="">Glossaire</a>
-        </div>
-         <div>
-            <h3>Obtenir de l'aide</h3>
-            <p>Lets.Draw250@gmail.com</p>
-            <a href="">À propos</a>
-        </div>
-        <div>
-            <h3>Information</h3>
-            <a href="">Mentions Légales</a>
-        </div>
-        <div>
-            <h3>Suivez-nous</h3>
-            <!-- Logo Réseaux Sociaux -->
-        </div>
-        <div>
-            <!-- Image Paiement -->
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
-    </footer>
+
 </template>

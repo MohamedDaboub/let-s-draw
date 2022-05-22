@@ -1,24 +1,5 @@
 <template>
-    <header>
-        <div>
-            <div>
-                <!-- Logo Let's Draw-->
-            </div>
-            <nav>
-                <a href="">Tendances</a>
-                <a href="">Glossaire</a>
-                <a href="">Nous Contacter</a>
-                <div>
-                    <!-- Logo don -->
-                    <a href="">Faire un don</a>
-                </div>
-                <div>
-                    <!-- logo s'inscrire -->
-                    <a href="">S'inscrire</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+
     <body>
         <h1>Mentions légales</h1>
 
@@ -193,34 +174,5 @@ Le prestataire externe pourra éventuellement recueillir des informations sur le
 
         <p>Tout litige en relation avec l’utilisation du site https://Lets-draw.daboub.fr est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Montbéliard</p>
     </body>
-    <footer>
-        
-        <div>
-            <h3>Lien</h3>
-            <a href="">Faire un don</a>
-            <a href="">Tendances</a>
-            <a href="">Nous contacter</a>
-            <a href="">Glossaire</a>
-        </div>
-         <div>
-            <h3>Obtenir de l'aide</h3>
-            <p>Lets.Draw250@gmail.com</p>
-            <a href="">À propos</a>
-        </div>
-        <div>
-            <h3>Information</h3>
-            <a href="">Mentions Légales</a>
-        </div>
-        <div>
-            <h3>Suivez-nous</h3>
-            <!-- Logo Réseaux Sociaux -->
-        </div>
-        <div>
-            <!-- Image Paiement -->
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
-    </footer>
+
 </template>
