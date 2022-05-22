@@ -1,24 +1,4 @@
 <template>
-    <header>
-        <div class="flex justify-between bg-bleu1-900 p-4">
-            <div>
-                <!-- Logo Let's Draw-->
-            </div>
-            <nav class="flex gap-10 mr-10 text-white">
-                <a href="">Tendances</a>
-                <a href="">Glossaire</a>
-                <a href="">Nous Contacter</a>
-                <div>
-                    <!-- Logo don -->
-                    <a href="">Faire un don</a>
-                </div>
-                <div>
-                    <!-- logo s'inscrire -->
-                    <a href="">S'inscrire</a>
-                </div>
-            </nav>
-        </div>
-    </header>
     <main class="bg-bleu2-600">
         <div>
             <h1 class="text-white">Enfants & Artiste, présentez votre coup de pinceau, partagez votre talent sur Let’s Draw</h1>
@@ -34,23 +14,7 @@
         
         <h2 class="font-bold text-center mt-16">Les Dernieres Tendances</h2>
 
-        <div>
-            <div>
-                <img src="" alt="">
 
-                <div>
-                    <p>Jean Vart</p>
-                    <p>Peintre</p>
-                </div>
-
-                <div>
-                    <p>7 Jours</p>
-                </div>
-                <div>
-                    <!-- Étoiles -->
-                </div>
-            </div>
-        </div>
     </main>
     <footer>
         
