@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
 <header class=" sticky top-0 drop-shadow-lg z-10">
   <nav class="bg-bleufonce flex justify-between" >
-<img src="../public/icon_svg/logo-site.svg" class="w-28 h-28 mx-6" alt="">
+    <RouterLink to="/" ><img src="../public/icon_svg/logo-site.svg" class="w-28 h-28 mx-6" alt=""></RouterLink>
     <ul class="flex gap-6  p-10 px-10 text-white text-xl">
       <li> <RouterLink class=" " to="/Tendances"> Tendances</RouterLink></li>
       <li> <RouterLink class=" " to="/Glossaire"> Glossaire</RouterLink></li>
