@@ -33,15 +33,14 @@ import { RouterLink, RouterView } from 'vue-router'
                 <div class="text-xs uppercase text-white font-bold mb-6 border-b-2 border-rouge pb-4 w-1/4">
                     Lien
                 </div>
-                <div class="relative  bg-white  rounded-3xl text-black w-36 py-1 ">
-                  <Donate class="absolute left-2 top-4  "/>
-                  <RouterLink class="my-3 block text-black hover:text-gray-500 text-sm   font-semibold duration-700   mx-8" to="/Don">Faire un don</RouterLink>
-                </div>
+                <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black w-44">
+                  <Donate class="" />
+                  <RouterLink class="hover:text-gray-500 font-semibold duration-500" to="/Don">Faire un don</RouterLink>
+                  </div>
                   <RouterLink class="text-gris my-3 block  hover:text-gray-100  font-semibold duration-700" to="/Tendances">Tendances</RouterLink>
                   <RouterLink class="text-gris my-3 block  hover:text-gray-100   font-semibold duration-700" to="/Contact">Nous contacter</RouterLink>
                   <RouterLink class="text-gris my-3 block  hover:text-gray-100  font-semibold duration-700" to="/Glossaire">Glossaire</RouterLink>
             </div>
-
 
             <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
 
