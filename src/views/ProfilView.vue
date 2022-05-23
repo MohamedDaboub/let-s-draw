@@ -1,22 +1,24 @@
 <template>
-    <h1>Mon Profil</h1>
-    <div>
+    <h1 class="p-10 text-white text-5xl">Mon Profil</h1>
+    <div class="flex flex-cols-3>">
         <div>
-            <img src="" alt="">
+            <img class="rounded-full border-4 border-white" src="../../public/img-squirrel/image-35.webp" alt="">
         </div>
-        <div>
-            <div>
-                <p>Votre nom</p>
+        <div class="mx-16 text-white">
+            <div class="flex gap-52">
                 <div>
-                    <p>Antoine</p>
-                    <!-- Logo modifier -->
+                    <p>Votre nom</p>
+                    <div class="ml-4 flex">
+                        <p>Antoine</p>
+                        <Modifier class=""/>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <p>Votre prénom</p>
                 <div>
-                    <p>Garot</p>
-                    <!-- Logo modifer -->
+                    <p>Votre prénom</p>
+                    <div>
+                        <p>Garot</p>
+                        <!-- Logo modifer -->
+                    </div>
                 </div>
             </div>
             <div>
@@ -61,3 +63,11 @@
     </div>
     <!-- Composant Bouton -->
 </template>
+<script>
+import Modifier from "../components/icons/ModifierView.vue"
+
+export default {
+  name: "App",
+  components: { Modifier },
+};
+</script>

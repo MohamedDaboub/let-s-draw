@@ -10,6 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <li> <RouterLink class=" " to="/Tendances">Tendances</RouterLink></li>
       <li> <RouterLink class=" " to="/Glossaire">Glossaire</RouterLink></li>
       <li> <RouterLink class=" " to="/Contact">Nous contacter</RouterLink></li>
+      <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li>
       <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black">
         <Donate class=""/>
         <li> <RouterLink class="" to="/Don">Faire un don</RouterLink></li>
@@ -85,10 +86,11 @@ import Inscription from "./components/icons/sincrireView.vue"
 import Facebook from "./components/icons/FacebookView.vue"
 import Instagram from "./components/icons/InstagramView.vue"
 import Pinterest from "./components/icons/PinterestView.vue"
+import modifier from "./components/icons/ModifierView.vue"
 
 
 export default {
   name: "App",
-  components: { MenuIcon,Donate, Inscription, Facebook, Instagram, Pinterest },
+  components: { MenuIcon,Donate, Inscription, Facebook, Instagram, Pinterest, modifier },
 };
 </script>
