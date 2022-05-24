@@ -38,7 +38,7 @@ import { RouterLink, RouterView } from 'vue-router'
                   <Donate class="" />
                   <RouterLink class="hover:text-gray-500 font-semibold duration-500" to="/Don">Faire un don</RouterLink>
                   </div>
-                  <RouterLink class="text-gris my-3 block  hover:text-gray-100  font-semibold duration-700" to="/Tendances">Tendances</RouterLink>
+                  <RouterLink class="text-gris my-3 block  hover:text-gray-100  font-semibold duration-700" to="/">Accueil</RouterLink>
                   <RouterLink class="text-gris my-3 block  hover:text-gray-100   font-semibold duration-700" to="/Contact">Nous contacter</RouterLink>
                   <RouterLink class="text-gris my-3 block  hover:text-gray-100  font-semibold duration-700" to="/Glossaire">Glossaire</RouterLink>
             </div>
