@@ -55,7 +55,7 @@ import { RouterLink, RouterView } from 'vue-router'
                 <div class="text-xs uppercase text-white font-bold mb-6 border-b-2 border-rouge pb-4 w-1/2">
                     Information
                 </div>
-                <RouterLink class="text-gris my-3 block  hover:text-gray-100   font-semibold duration-700" to="/Mentionlegales">Mentions legales</RouterLink>
+                <RouterLink class="text-gris my-3 block  hover:text-gray-100   font-semibold duration-700" to="/Mentionslegales">Mentions legales</RouterLink>
                 <RouterLink class="text-gris my-3 block  hover:text-gray-100  font-semibold duration-700" to="/Apropos">À propos</RouterLink>
             </div>
 
