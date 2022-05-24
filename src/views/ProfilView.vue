@@ -1,15 +1,15 @@
 <template>
     <h1 class="p-10 text-white text-5xl">Mon Profil</h1>
-    <div class="flex flex-cols-3>">
+    <div class="grid grid-cols-2 w-1/2">
         <div>
-            <img class="rounded-full border-4 border-white" src="../../public/img-squirrel/image-35.webp" alt="">
+            <img class="rounded-full border-4 border-white ml-24 w-52" src="../../public/img-squirrel/image-35.webp" alt="">
         </div>
-        <div class="mx-16 text-white">
+        <div class="text-white grid grid-col-2">
             <div class="flex gap-52">
                 <div>
                     <p>Votre nom</p>
-                    <div class="ml-4 flex">
-                        <p>Antoine</p>
+                    <div class="flex justify-between ">
+                        <p class="">Antoine</p>
                         <Modifier class=""/>
                     </div>
                 </div>

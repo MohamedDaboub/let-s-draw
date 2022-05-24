@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <nav class="bg-bleufonce flex justify-between" >
     <RouterLink to="/" ><img src="../public/icon_svg/logo-site.svg" class="w-40 h-28 ml-6" alt=""></RouterLink>
     <ul class="flex gap-12 items-center text-white text-xl font-semibold mr-16">
-      <li> <RouterLink class=" " to="/Tendances">Tendances</RouterLink></li>
+      <li> <RouterLink class=" " to="/">Accueil</RouterLink></li>
       <li> <RouterLink class=" " to="/Glossaire">Glossaire</RouterLink></li>
       <li> <RouterLink class=" " to="/Contact">Nous contacter</RouterLink></li>
       <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li>
@@ -42,7 +42,7 @@ import { RouterLink, RouterView } from 'vue-router'
                   <RouterLink class="text-gris my-3 block  hover:text-gray-100   font-semibold duration-700" to="/Contact">Nous contacter</RouterLink>
                   <RouterLink class="text-gris my-3 block  hover:text-gray-100  font-semibold duration-700" to="/Glossaire">Glossaire</RouterLink>
             </div>
-
+                 
             <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
 
                 <div class="text-xs uppercase text-white font-bold mb-6 border-b-2 border-rouge pb-4 w-1/2">
