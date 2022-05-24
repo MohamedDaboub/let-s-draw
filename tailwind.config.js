@@ -9,6 +9,7 @@ module.exports = {
         "bleu": "#547acc",
         "bleufonce": "#123456",
         "bleutransparent": "#03a9f4",
+        "bleutransparent2": "#98AFE0",
         "gris": "#b0b0b0",
         "noir": "#282C2C",
         "rouge": "#FF0101",
