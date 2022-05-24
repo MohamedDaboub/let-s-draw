@@ -18,16 +18,7 @@ module.exports = {
       "fontFamily": {
         "inter": "Inter, system-ui, sans-serif"
       },
-      "animation": {
-        "spin1": "animation: spin 1s linear"
-      },
-      "keyframes": {
-        "spin1": { 
-                   "0%": "rotate(360deg)",
-                   
-        }
 
-      }
 
 
 

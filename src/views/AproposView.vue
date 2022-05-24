@@ -12,9 +12,9 @@
                     </p>
                 </div>
                 <div class="px-6 pt-4 pb-2 flex justify-center gap-7">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:animate-spin1  duration-100 "><a href="https://discord.com/channels/@me"><i class="bi bi-discord"></i></a></span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:animate-spin1  duration-100"><a href="https://www.instagram.com/daboub_mohamed_/"><i class="bi bi-instagram"></i></a></span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:animate-spin1  duration-100"> <a href="https://www.linkedin.com/in/mohamed-daboub-12376a224/"><i class="bi bi-linkedin "></i></a></span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2  hover:animate-[spin_2000ms_1]  "><a href="https://discord.com/channels/@me"><i class="bi bi-discord"></i></a></span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2  hover:animate-[spin_2000ms_1] "><a href="https://www.instagram.com/daboub_mohamed_/"><i class="bi bi-instagram"></i></a></span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2  hover:animate-[spin_2000ms_1] "> <a href="https://www.linkedin.com/in/mohamed-daboub-12376a224/"><i class="bi bi-linkedin "></i></a></span>
                 </div>
             </div>
             
