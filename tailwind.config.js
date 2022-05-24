@@ -22,7 +22,10 @@ module.exports = {
         "spin1": "animation: spin 1s linear"
       },
       "keyframes": {
-        "spin1": "0%" "0%": "rotate(360deg)";
+        "spin1": { 
+                   "0%": "rotate(360deg)",
+                   
+        }
 
       }
 
