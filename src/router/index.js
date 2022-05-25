@@ -10,7 +10,7 @@ import ProfilView from '../views/ProfilView.vue'
 import MentionslegalesView from '../views/MentionslegalesView.vue'
 import InscriptionView from '../views/InscriptionView.vue'
 import AproposView from '../views/AproposView.vue'
-
+import UnicefView from '../views/UnicefView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +26,7 @@ const router = createRouter({
     { path: '/Mentionslegales', name: 'MentionslegalesView', component: MentionslegalesView },
     { path: '/Inscription', name: 'InscriptionView', component: InscriptionView },
     { path: '/Apropos', name: 'AproposView', component: AproposView },
+    { path: '/Unicef', name: 'UnicefView', component: UnicefView },
     // ici les autres routes
   ]
 })
