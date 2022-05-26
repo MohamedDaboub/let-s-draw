@@ -3,10 +3,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 </script>
 <template>
-  <!-- Test -->
   <header class=" sticky top-0 drop-shadow-lg z-10">
     <nav class="bg-bleufonce flex justify-between">
-      <RouterLink to="/"><Logo class="w-40 h-28 ml-6" /></RouterLink>
+      <RouterLink to="/"><Logo class="w-36 h-24 ml-6" /></RouterLink>
       <ul class="flex gap-12 items-center text-white text-xl font-semibold mr-16">
         <li>
           <RouterLink class=" " to="/">Accueil</RouterLink>
@@ -16,12 +15,6 @@ import { RouterLink, RouterView } from 'vue-router'
         </li>
         <li>
           <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
-        </li>
-        <li>
-          <RouterLink class=" " to="/Profil">Profil</RouterLink>
-        </li>
-        <li>
-          <RouterLink class=" " to="/Unicef">Unicef</RouterLink>
         </li>
         <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black">
           <Donate class="" />
