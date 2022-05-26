@@ -62,9 +62,10 @@
         <div>
             <h3 class="text-2xl text-white my-6 mx-6">L'objectif du don</h3>
             <p class="w-1/2 ml-16">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
-                “unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
+                “Unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
                 Draw.</p>
-            <img src="" alt="">
+            <img class="bg-transparent" src="../../public/img-squirrel/image-37.webp" alt="">
+            
         </div>
         <div>
             <h3 class="text-2xl text-white my-6 mx-6">Répartition du don</h3>

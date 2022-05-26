@@ -1,22 +1,44 @@
 <template>
+    <h1>Faire un Don à l’UNICEF</h1>
+    <p>Vous avez la possibilité de faire un don à l’UNICEF et à Let’s Draw où la moitié du don ira à l’un et à l’autre</p>
 
-    <h1>Glossaire</h1>
-    <dt>
-        <h2>Hyperréalisme</h2>
-        <p>Courant artistique (peinture, sculpture) né aux États-Unis à la fin des années 1960, caractérisé par un rendu minutieux de la réalité inspiré d'images photographiques.</p>
-        <h2>Dessin au trait</h2>
-        <p>Un dessin au trait est simplement tracé pour ne représenter que les contours des objets. Ces lignes sont accusées à l'encre ou au crayon.</p>
-        <h2>Le Gribouillage</h2>
-        <p>Types de dessin qui laisse subconscient circuler. 
-            C’est une façon de joué avec les ombres et les formes qu’ils trouvent au quotidien et les transforment en œuvres d’art fantaisistes avec leurs griffonnages. Le griffonnage est une impression merveilleuse et immédiate du monde devant nous. Ils sont censés être exécutés rapidement.</p>
-        <h2>L’Anamorphique</h2>
-        <p>Style de dessin assez technique qui consiste à représenté un dessin en 3D. Les 3D requièrent une très bonne maîtrise de la perspective pour créer profondeur et illusion. Bien que cela prenne un peu de temps et de pratique pour se familiariser, les résultats sont des œuvres d’art étonnantes et surprenantes.</p>
-        <h2>L’Architectural</h2>
-        <p>Style de dessin assez technique qui est souvent utilisé dans le monde du design pour représenter des batiments. Ce type de dessin nécessite beaucoup de précision et d’attention aux détails. Et cela s’applique soit pour dessiner une réplique exacte d’un bâtiment historique, soit pour créer sa propre pièce d’architecture fantastique.</p>
-        <h2>Le pointillisme</h2>
-        <p>Style de dessin qui consiste à dessiner entièrement avec des points. Les artistes peuvent créer de l’ombre et de la lumière en pointillant des centaines, voire des milliers, de minuscules points. Très souvent, le réalisme des résultats peut être choquants.</p>
-        <h2>Le Dessin de mode</h2>
-        <p>Les illustrations de mode sont souvent utilisées par les créateurs pour mettre leurs idées sur papier. Il s’agit de dessin fait rapidement qui transmet l’essence d’un vêtement. Pour ce style, l’accent est mis sur les vêtements et non sur le visage. Les traits du visage sont souvent inexistants ou minimes.</p>
-    </dt>
+    <h2>Pourquoi l’UNICEF ?</h2>
+    <p>Nous avons créer une page entièrement dédiée à l’UNICEF. Nous vous conseillons d’aller la voir.</p>
+    <flechedroite />
+
+    <h2>Pourquoi Let’s Draw ?</h2>
+    <p>En fondant Let’s Draw, nous avons tout de suite penser à le rendre totalement gratuit. Mais cela a des conséquences, nous avons besoin de rémunération pour continué à faire fonctionner le site.
+    Si chaque personne lisant ce message donnait ce qui pouvait, nous pourrons déjà vivre de ce site.</p>
+
+    <h2>Pour faire un don</h2>
+    <p>Pour faire un don remplissez le formulaire ci-dessous. 
+    Vous avez la possibilité de remplir ce formulaire de façon anonymes en ne remplissant votre nom et prénom.
+    Le montant minimal est de 1 € et maximal de 1 000 €.</p>
+
+    <div>
+        <div>
+            <h3>Nom</h3>
+            <p>Votre nom</p>
+        </div>
+        <div>
+            <h3>Prénom</h3>
+            <p>Votre prénom</p>
+        </div>
+        <div>
+            <h3>email</h3>
+            <p>Votre mail</p>
+        </div>
+    </div>
+
+
+
 
 </template>
+<script>
+import Flechedroite from "../components/icons/FlechedroiteView.vue"
+
+export default {
+    name: "App",
+    components: { Flechedroite },
+};
+</script>
