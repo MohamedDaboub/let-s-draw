@@ -20,6 +20,9 @@ import { RouterLink, RouterView } from 'vue-router'
         <li>
           <RouterLink class=" " to="/Profil">Profil</RouterLink>
         </li>
+        <li>
+          <RouterLink class=" " to="/Unicef">Unicef</RouterLink>
+        </li>
         <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black">
           <Donate class="" />
           <li>
