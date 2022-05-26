@@ -101,9 +101,10 @@ import Facebook from "./components/icons/FacebookView.vue";
 import Instagram from "./components/icons/InstagramView.vue";
 import Pinterest from "./components/icons/PinterestView.vue";
 import modifier from "./components/icons/ModifierView.vue";
+import Logo from "./components/LogoView.vue";
 
 export default {
   name: "App",
-  components: { MenuIcon, Donate, Inscription, Facebook, Instagram, Pinterest, modifier },
+  components: { MenuIcon, Donate, Inscription, Facebook, Instagram, Pinterest, modifier, Logo },
 };
 </script>
