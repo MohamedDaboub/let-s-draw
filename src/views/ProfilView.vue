@@ -57,22 +57,23 @@
 
     </div>
     <bouton  Nom="Consulter mon dessin" />
-    <div class="mx-10">
+    <div class="mx-10 pb-36">
         <h2 class="text-4xl text-white mt-20">Faîtes un don</h2>
         <div>
             <h3 class="text-2xl text-white my-6 mx-6">L'objectif du don</h3>
-            <p class="w-1/2 ml-16">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
+            <p class="w-1/2 ml-16 text-white">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
                 “Unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
                 Draw.</p>
-            <img class="bg-transparent" src="../../public/img-squirrel/image-37.webp" alt="">
+            <img class="absolute w-1/4 right-20 mb-20" src="../../public/img-squirrel/image-37 (1).webp" alt="Logo Unicef">
             
         </div>
-        <div>
+        <div class="mt-56">
             <h3 class="text-2xl text-white my-6 mx-6">Répartition du don</h3>
-            <img src="" alt="">
+            <img class="w-1/3 ml-64" src="../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don">
         </div>
+        <bouton class="mt-10 mr-40" Nom="Faire un don" />
     </div>
-    <!-- Composant Bouton -->
+    
 </template>
 <script>
 import Modifier from "../components/icons/ModifierView.vue"
