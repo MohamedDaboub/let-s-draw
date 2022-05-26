@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <!-- Test -->
   <header class=" sticky top-0 drop-shadow-lg z-10">
     <nav class="bg-bleufonce flex justify-between">
-      <RouterLink to="/"><img src="../public/icon_svg/logo-site.svg" class="w-40 h-28 ml-6" alt=""></RouterLink>
+      <RouterLink to="/"><img src="../public/icon_svg/logo-site.svg" class="w-40 h-28 ml-6" alt="letsdraw"></RouterLink>
       <ul class="flex gap-12 items-center text-white text-xl font-semibold mr-16">
         <li>
           <RouterLink class=" " to="/">Accueil</RouterLink>
