@@ -1,6 +1,6 @@
 <template>
 <div class="flex justify-center items-center w-[250px] h-[150px]">
-  <svg width="250" height="614" viewBox="0 0 1567 614" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="250" height="150" viewBox="0 0 1567 614" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1062.71 525.158L1467.6 520.807" stroke="#1D1D1B" stroke-width="0.25" stroke-miterlimit="10" />
     <path d="M1468.42 573.845L1063.33 578.197" stroke="#1D1D1B" stroke-width="0.25" stroke-miterlimit="10" />
     <path
