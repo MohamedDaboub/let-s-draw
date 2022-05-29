@@ -132,7 +132,7 @@ export default {
     this.getParent(this.$route.params.id);
   },
   methods: {
-    async getArtiste(id) {
+    async getParent(id) {
       const firestore = getFirestore();
       const docRef = doc(firestore, "parent", id);
       this.refParent = await getDoc(docRef);
