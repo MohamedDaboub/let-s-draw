@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <form enctype="multipart/form-data" @submit.prevent="createArtiste">
+    <form enctype="multipart/form-data" @submit.prevent="updateParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Création compte artiste</h5>
+          <h5 style="color: white">Mise à jour compte parent</h5>
         </div>
 
         <div class="card-body">
@@ -19,14 +19,14 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required />
+                <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" required />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" required />
+                <input class="form-control" placeholder="Prénom de la personne" v-model="parent.prenom" required />
               </div>
               <br />
               <div class="input-group">
@@ -43,7 +43,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required />
+                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
               </div>
               <!-- <div class="input-group">
                                 <div class="input-group-prepend">
@@ -61,16 +61,23 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Téléphone</span>
                 </div>
-                <input class="form-control" placeholder="Téléphone de la personne" v-model="artiste.telephoneArtiste" required />
+                <input class="form-control" placeholder="Téléphone de la personne" v-model="parent.telephoneParent" required />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Style</span>
+                  <span class="input-group-text">Mail</span>
                 </div>
-                <select class="custom-select" v-model="artiste.style">
-                  <option selected disabled>Sélectionner un style</option>
-                  <option v-for="style in listeStyle" :key="style.libelle">{{ style.libelle }}</option>
+                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Nombre d'enfants</span>
+                </div>
+                <select class="custom-select" v-model="parent.enfantsNbr">
+                  <option selected disabled>Sélectionner un nombre</option>
+                  <option v-for="enfantsNbr in listeEnfantsNbr" :key="enfantsNbr.nombre">{{ enfantsNbr.nombre }}</option>
                 </select>
               </div>
               <br />
@@ -79,21 +86,23 @@
         </div>
 
         <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Créer</button>
+          <button type="submit" class="btn btn-light float-left">Modifier</button>
           <button class="btn btn-light float-right">
-            <router-link to="/CreateArtiste">Annuler</router-link>
+            <router-link to="/CreateParent">Annuler</router-link>
           </button>
         </div>
       </div>
     </form>
   </div>
 </template>
+
 <script>
 import {
   getFirestore,
   collection,
   doc,
   getDocs,
+  getDoc,
   addDoc,
   updateDoc,
   deleteDoc,
@@ -101,39 +110,50 @@ import {
   query,
   orderBy,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
-import { getStorage, ref, getDownloadURL, uploadString } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+import {
+  getStorage,
+  ref, //
+  getDownloadURL,
+  uploadString,
+  deleteObject,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
-  name: "CreateArtisteView",
+  name: "UpdateView",
   data() {
     return {
       imageData: null,
-      listeStyle: [],
-      artiste: {
+      listeEnfantsNbr: [],
+      parent: {
         nom: null,
         prenom: null,
         photo: null,
-        mailArtiste: null,
-        telephoneArtiste: null,
-        style: null,
+        mailParent: null,
+        telephoneParent: null,
+        enfantsNbr: null,
       },
+      refParent: null,
+      imgModifiée: false,
+      photoActuelle: null,
     };
   },
   mounted() {
-    this.getStyle();
+    console.log("id parent", this.$route.params.id);
+    this.getParent(this.$route.params.id);
+    this.getEnfantsNbr();
   },
   methods: {
-    async getStyle() {
+    async getEnfantsNbr() {
       const firestore = getFirestore();
-      const dbStyle = collection(firestore, "style");
-      const query = await getDocs(dbStyle);
+      const dbEnfantsNbr = collection(firestore, "enfantsNbr");
+      const query = await getDocs(dbEnfantsNbr);
       query.forEach((doc) => {
-        let style = {
+        let enfantsNbr = {
           id: doc.id,
-          libelle: doc.data().libelle,
+          nombre: doc.data().nombre,
         };
-        this.listeStyle.push(style);
-        console.log("liste des style", this.style);
+        this.listeStyle.push(enfantsNbr);
+        console.log("nombre d'enfants ?", this.enfantsNbr);
       });
     },
 
@@ -141,9 +161,11 @@ export default {
       // Miseàjour de la photo du participant
       this.file = this.$refs.file.files[0];
       // Récupérer le nom du fichier pour la photo du participant
-      this.artiste.photo = this.file.name;
+      this.parent.photo = this.file.name;
       // Reference to the DOM input element
-      // Reference du fichieràprévisualiser
+      // Reference du fichieràprévisualise
+      //Verifie l'image est modifiée ou non
+      this.imgModifiée = true;
       var input = event.target;
       // On s'assure que l'onaau moins un fichieràlire
       if (input.files && input.files[0]) {
@@ -161,20 +183,40 @@ export default {
         reader.readAsDataURL(input.files[0]);
       }
     },
-    async createArtiste() {
-      // Obtenir storage Firebase
+    async getParent(id) {
+      const firestore = getFirestore();
+      const docRef = doc(firestore, "parent", id);
+      this.refParent = await getDoc(docRef);
+      if (this.refParent.exists()) {
+        this.parent = this.refParent.data();
+        this.photoActuelle = this.parent.photo;
+      } else {
+        this.console.log("Parent inexistant");
+      }
       const storage = getStorage();
-      // Référence de l'imageàuploader
-      const refStorage = ref(storage, "artiste/" + this.artiste.photo);
-      // Upload de l'image sur le Cloud Storage
-      await uploadString(refStorage, this.imageData, "data_url").then((snapshot) => {
-        console.log("Uploadedabase64 string");
-        // Création du participant sur le Firestore
-        const db = getFirestore();
-        const docRef = addDoc(collection(db, "artiste"), this.artiste);
-      });
-      // redirection sur la liste des participants
-      this.$router.push("/CreateArtiste");
+      const spaceRef = ref(storage, "parent/" + this.parent.photo);
+      getDownloadURL(spaceRef)
+        .then((url) => {
+          this.imageData = url;
+        })
+        .catch((error) => {
+          console.log("erreur downloadUrl", error);
+        });
+    },
+
+    async updateParent() {
+      if (this.imgModifiée) {
+        const storage = getStorage();
+        let docRef = ref(storage, "parent/" + this.photoActuelle);
+        deleteObject(docRef);
+        docRef = ref(storage, "parent/" + this.parent.photo);
+        await uploadString(docRef, this.imageData, "data_url").then((snapshot) => {
+          console.log("Upload a base64 string", this.parent.photo);
+        });
+      }
+      const firestore = getFirestore();
+      await updateDoc(doc(firestore, "parent", this.$route.params.id), this.parent);
+      this.$router.push("/parent");
     },
   },
 };

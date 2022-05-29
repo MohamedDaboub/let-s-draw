@@ -1,5 +1,5 @@
 <template>
-
+<!-- liste java d'artistes ? -->
     <body>
         <div>
             <h1>Choix de l’artiste</h1>

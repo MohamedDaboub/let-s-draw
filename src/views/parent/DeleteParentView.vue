@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <form enctype="multipart/form-data" @submit.prevent="deleteArtiste">
+    <form enctype="multipart/form-data" @submit.prevent="deleteParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Supression de l"artiste</h5>
+          <h5 style="color: white">Supression du parent</h5>
         </div>
 
         <div class="card-body">
@@ -19,14 +19,14 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
+                <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" disabled />
+                <input class="form-control" placeholder="Prénom de la personne" v-model="parent.prenom" disabled />
               </div>
               <br />
               <div class="input-group">
@@ -43,28 +43,34 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Date naissance</span>
                 </div>
-                <input type="date" class="form-control" v-model="artiste.naissance" format="dd//mm/yyyy" disabled />
+                <input type="date" class="form-control" v-model="parent.naissance" format="dd//mm/yyyy" disabled />
               </div> -->
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Téléphone</span>
                 </div>
-                <input class="form-control" placeholder="Téléphone de la personne" v-model="artiste.telephoneArtiste" required />
+                <input class="form-control" placeholder="Téléphone de la personne" v-model="parent.telephoneParent" required />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Style</span>
+                  <span class="input-group-text">Mail</span>
                 </div>
-                <select class="custom-select" v-model="artiste.style" disabled>
-                  <option selected disabled>Sélectionner un style</option>
-                  <option v-for="style in listeStyle" :key="style.libelle">{{ style.libelle }}</option>
-                </select>
+                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
               </div>
               <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Nombre d'enfants</span>
+                </div>
+                <select class="custom-select" v-model="parent.enfantsNbr" disabled>
+                  <option selected disabled>Sélectionner un nombre</option>
+                  <option v-for="enfantsNbr in listeEnfantsNbr" :key="enfantsNbr.nombre">{{ enfantsNbr.nombre }}</option>
+                </select>
+              </div>
               <h5 class="alert alert-warning text-center" role="alert">
-                Attention vous allez supprimer cet artiste, cette action est irreversible !!
+                Attention vous allez supprimer ce parent, cette action est irreversible !!
               </h5>
             </div>
           </div>
@@ -109,35 +115,35 @@ export default {
   name: "CreateView",
   data() {
     return {
-      artiste: {
+      parent: {
         nom: null,
         prenom: null,
         photo: null,
-        mailArtiste: null,
-        telephoneArtiste: null,
-        style: null,
+        mailParent: null,
+        telephoneParent: null,
+        enfantsNbr: null,
       },
-      refArtiste: null,
+      refParent: null,
       photoActuelle: null,
     };
   },
   mounted() {
-    console.log("id artiste", this.$route.params.id);
-    this.getArtiste(this.$route.params.id);
+    console.log("id parent", this.$route.params.id);
+    this.getParent(this.$route.params.id);
   },
   methods: {
     async getArtiste(id) {
       const firestore = getFirestore();
-      const docRef = doc(firestore, "artiste", id);
-      this.refArtiste = await getDoc(docRef);
-      if (this.refArtiste.exists()) {
-        this.artiste = this.refArtiste.data();
-        this.photoActuelle = this.artiste.photo;
+      const docRef = doc(firestore, "parent", id);
+      this.refParent = await getDoc(docRef);
+      if (this.refParent.exists()) {
+        this.parent = this.refParent.data();
+        this.photoActuelle = this.parent.photo;
       } else {
-        this.console.log("artiste inexistant");
+        this.console.log("parent inexistant");
       }
       const storage = getStorage();
-      const spaceRef = ref(storage, "artiste/" + this.artiste.photo);
+      const spaceRef = ref(storage, "parent/" + this.parent.photo);
       getDownloadURL(spaceRef)
         .then((url) => {
           this.imageData = url;
@@ -147,16 +153,15 @@ export default {
         });
     },
 
-    async deleteArtiste() {
+    async deleteParent() {
       const firestore = getFirestore();
-      await deleteDoc(doc(firestore, "artiste", this.$route.params.id));
+      await deleteDoc(doc(firestore, "parent", this.$route.params.id));
       const storage = getStorage();
-      let docRef = ref(storage, "artiste/", this.artiste.photo);
+      let docRef = ref(storage, "parent/", this.parent.photo);
       deleteObject(docRef);
-      this.$router.push("/artiste");
+      this.$router.push("/parent");
     },
   },
 };
 </script>
-
 
