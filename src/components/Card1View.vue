@@ -1,6 +1,6 @@
 <template>
     <div class="p-6 flex bg-bleufonce rounded-xl">
-            <img class="rounded-full" :src="image" alt="Image de l'artiste">
+            <img class="rounded-full w-32 h-32" :src="image" alt="Image de l'artiste">
 
             <div class="flex flex-col text-white ml-4">
                 <p class="font-bold text-2xl mt-6">{{ nom }}</p>

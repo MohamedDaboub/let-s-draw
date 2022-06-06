@@ -4,35 +4,61 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
   <header class=" sticky top-0 drop-shadow-lg z-10">
-    <nav class="bg-bleufonce flex justify-between">
-      <RouterLink to="/"><Logo class="w-36 h-24 ml-6" /></RouterLink>
-      <ul class="flex gap-12 items-center text-white text-xl font-semibold mr-16">
-        <li>
+  <a href="#content" class="sr-only focus:not-sr-only text-lg text-text"> Passez au contenu </a>
+    <nav class="bg-bleufonce lg:flex lg:justify-between">
+      <div class="flex justify-between items-center">
+        <RouterLink to="/"><Logo class="w-24 h-20 mx-6" /></RouterLink>
+        <span class="text-3xl cursor-pointer lg:hidden block w-8 h-8 mx-10  ">
+          <MenuIcon class=" text-white"  aria-controls="menu"
+          :aria-expanded="menuOuvert"
+          @click="menuOuvert = !menuOuvert">
+          </MenuIcon>
+          <span class="sr-only ">Menu</span>
+        </span>
+      </div>
+      <ul id="menu" v-if="menuOuvert" class="lg:hidden gap-12 items-center text-white text-xl font-semibold mx-10 py-5" >
+        <li class="my-5">
           <RouterLink class=" " to="/">Accueil</RouterLink>
         </li>
-        <li>
+        <li class="my-5">
           <RouterLink class=" " to="/Glossaire">Glossaire</RouterLink>
         </li>
-        <li>
+        <li class="my-5">
           <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
         </li>
-        <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black">
+        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2">
           <Donate class="" />
-          <li>
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
-          </li>
-        </div>
-        <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black">
+        </li>
+        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black py-5 w-1/2">
           <Inscription class="mt-1" />
-          <li>
-            <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink>
-          </li>
-        </div>
+          <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink>
+        </li>
+        <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
+      </ul>
+      <ul class="lg:flex  gap-10 lg:items-center hidden items-center text-white text-xl font-semibold mx-10 py-5" >
+        <li class="my-5">
+          <RouterLink class=" " to="/">Accueil</RouterLink>
+        </li>
+        <li class="my-5">
+          <RouterLink class=" " to="/Glossaire">Glossaire</RouterLink>
+        </li>
+        <li class="my-5">
+          <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
+        </li>
+        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2">
+          <Donate class="" />
+            <RouterLink class="" to="/Don">Faire un don</RouterLink>
+        </li>
+        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/2">
+          <Inscription class="mt-1" />
+          <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink>
+        </li>
         <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
       </ul>
     </nav>
   </header>
-  <main class=" bg-bleu">
+  <main class=" bg-bleu" id="content">
     <Router-View />
   </main>
   <footer class="bg-bleufonce pt-10 ">
@@ -43,7 +69,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <div class="text-xs uppercase text-white font-bold mb-6 border-b-2 border-rouge pb-4 w-1/4">
           Lien
         </div>
-        <div class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black w-44">
+        <div class="flex gap-2 px-3 bg-white p-2 rounded-3xl text-black w-40">
           <Donate class="" />
           <RouterLink class="hover:text-gray-500 font-semibold duration-500" to="/Don">Faire un don</RouterLink>
         </div>
@@ -55,13 +81,13 @@ import { RouterLink, RouterView } from 'vue-router'
           Glossaire</RouterLink>
       </div>
 
-      <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+      <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12 flex flex-col ">
 
         <div class="text-xs uppercase text-white font-bold mb-6 border-b-2 border-rouge pb-4 w-1/2">
           Obtenir de l'aide
         </div>
-        <a class="text-gris my-3 block hover:text-gray-100  font-semibold duration-700"
-          href="mailto:Lets.Draw250@gmail.com">Lets.Draw250@gmail.com</a>
+        <a class="text-gris my-3  hover:text-gray-100 text-xs sm:text-lg  font-semibold duration-700 "
+          href="mailto:Lets.Draw250@gmail.com">LetsDraw@gmail.com</a>
       </div>
 
       <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
@@ -79,13 +105,13 @@ import { RouterLink, RouterView } from 'vue-router'
           Suivez-nous
         </div>
         <div class="flex gap-2">
-          <a>
+          <a href="mailto:Lets.Draw250@gmail.com">
             <Facebook />
           </a>
-          <a>
+          <a href="mailto:Lets.Draw250@gmail.com">
             <Instagram />
           </a>
-          <a>
+          <a href="mailto:Lets.Draw250@gmail.com">
             <Pinterest />
           </a>
         </div>
@@ -109,10 +135,19 @@ import Instagram from "./components/icons/InstagramView.vue"
 import Pinterest from "./components/icons/PinterestView.vue"
 import modifier from "./components/icons/ModifierView.vue"
 import Logo from "./components/LogoView.vue";
-import menu from "./components/icons/MenuView.vue";
+
 
 export default {
   name: "App",
-  components: { MenuIcon, Donate, Inscription, Facebook, Instagram, Pinterest, modifier, Logo },
+  components: { MenuIcon, Donate, Inscription, Facebook, Instagram, Pinterest, modifier, Logo,},
+      data() {
+    return {
+      menuOuvert: false,
+    };
+    
+    },
+    beforeMount(){
+    this.$router.afterEach(() => (this.menuOuvert = false));
+  }
 };
 </script>

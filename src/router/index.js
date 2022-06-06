@@ -28,7 +28,11 @@ const router = createRouter({
     { path: '/Apropos', name: 'AproposView', component: AproposView },
     { path: '/Unicef', name: 'UnicefView', component: UnicefView },
     // ici les autres routes
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return savedPosition || { top: 0 }
+  },
 })
 
 export default router
