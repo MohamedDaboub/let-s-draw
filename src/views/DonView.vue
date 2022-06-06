@@ -6,7 +6,7 @@
     <h2 class="text-3xl  font-bold py-4">Pourquoi l’UNICEF ?</h2>
     <p class=" text-lg py-4">Nous avons créer une page entièrement dédiée à l’UNICEF. Nous vous conseillons d’aller la voir.</p>
     <div class="flex justify-end ">
-    <flechedroite />
+    <RouterLink to="/Unicef"><flechedroite /></RouterLink>
     </div>
     <h2  class="text-3xl  font-bold py-4">Pourquoi Let’s Draw ?</h2>
     <p class=" text-lg py-4">En fondant Let’s Draw, nous avons tout de suite penser à le rendre totalement gratuit. Mais cela a des conséquences, nous avons besoin de rémunération pour continué à faire fonctionner le site.
@@ -34,6 +34,11 @@
                 <input type="email" id="email" name="email" value="" placeholder="   exemple@Mail.com" required  class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400 text-black  rounded-lg h-8"  >
                 </label>
             </p>
+            <p> <label for="number" class="flex gap-4 text-xl  h-8 my-10 text-black">
+                <input type="number" id="tentacles" name="tentacles" class="rounded-lg"
+                min="1" max="100">€
+                </label>
+            </p>
             <div class="flex   ">
             <input type="checkbox" id="choix" name="choix"
                     class="mx-5 md:h-10 md:w-10 w-20 border-2 border-Default/me/Gris" required>
@@ -48,6 +53,10 @@
                     class="mx-5 md:h-10 md:w-10 w-20 border-2 border-Default/me/Gris" required>
             <label for="choix3" class="check"><img src="../../public/img-squirrel/image_21.webp" class="md:w-1/2  w-full      " alt=""></label>
             </div>
+            <input type="checkbox" id="j'accepte" name="j'accepte" 
+            class="mx-5 h-6 w-6 border-2 my-10" required>
+            <label for="j'accepte" class="">J’accepte et j’ai  lu les conditions générales d’utilisations.</label>
+            <p class="text-white text-base mr-10">(2) En communiquant mes informations, je consens à être recontacté par voie électronique ou téléphonique par le groupe d'étudiant . Ces données seront conservées durant 30 jours afin de pouvoir traiter au mieux ma Demande. Je pourrai faire modifier ou supprimer mes informations sur simple demande.</p>
             <div class="flex justify-center m-auto">
                 <button type="submit"  class="bg-bleufonce px-8 py-4 my-7 text-base hover:bg-white hover:text-black rounded-lg">Envoyer votre message</button>
             </div>
