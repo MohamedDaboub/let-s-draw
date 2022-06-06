@@ -1,4 +1,5 @@
 <template>
+<div class="bg-bleufonce p-4 rounded-2xl">
     <svg
   width="95"
   height="46"
@@ -12,4 +13,5 @@
     fill="#D9D9D9"
   ></path>
 </svg>
+</div>
 </template>

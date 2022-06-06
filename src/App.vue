@@ -3,11 +3,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 </script>
 <template>
-  <header class=" sticky top-0 drop-shadow-lg z-10">
+  <header class=" sticky top-0 drop-shadow-lg z-10 bg-bleufonce">
   <a href="#content" class="sr-only focus:not-sr-only text-lg text-text"> Passez au contenu </a>
-    <nav class="bg-bleufonce lg:flex lg:justify-between">
+    <nav class=" lg:flex lg:justify-between">
       <div class="flex justify-between items-center">
-        <RouterLink to="/"><Logo class="w-24 h-20 mx-6" /></RouterLink>
+        <RouterLink to="/"><Logo class="md:w-40 h-16 mx-6 w-20 " /></RouterLink>
         <span class="text-3xl cursor-pointer lg:hidden block w-8 h-8 mx-10  ">
           <MenuIcon class=" text-white"  aria-controls="menu"
           :aria-expanded="menuOuvert"
@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <span class="sr-only ">Menu</span>
         </span>
       </div>
-      <ul id="menu" v-if="menuOuvert" class="lg:hidden gap-12 items-center text-white text-xl font-semibold mx-10 py-5" >
+      <ul id="menu" v-if="menuOuvert" class="lg:hidden gap-12 items-center text-white text-xl font-semibold mx-10 " >
         <li class="my-5">
           <RouterLink class=" " to="/">Accueil</RouterLink>
         </li>
@@ -26,11 +26,11 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="my-5">
           <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
         </li>
-        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2">
+        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-48">
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
-        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black py-5 w-1/2">
+        <li class="flex gap-2 px-4 bg-white  rounded-3xl text-black py-5 w-40">
           <Inscription class="mt-1" />
           <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink>
         </li>

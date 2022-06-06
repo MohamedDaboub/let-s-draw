@@ -1,5 +1,4 @@
 <template>
-
 <section class=" lg:mx-10 sm:mx-4 text-white py-7">
     <h1 class="text-3xl  font-bold py-4">C’est quoi l’UNICEF ?</h1>
     <p class=" text-lg py-4">UNICEF - pour United Nations International Children's Emergency Fund, soit Fonds des Nations unies pour l’enfance - est une agence des Nations unies, créée en 1946, dont le siège est à New York, aux États-Unis.
