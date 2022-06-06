@@ -31,7 +31,7 @@
                     nom="Florent Vacot"
                     role="Peintre"/></RouterLink>
             <RouterLink to="/profilArtiste"><Card1 image="/public/img-squirrel/Florent_Vacot.webp"
-                    nom="Florent Vacot"
+                    nom="Manon Bernard"
                     role="Peintre"/></RouterLink>
             <RouterLink to="/profilArtiste"><Card1 image="/public/img-squirrel/Florent_Vacot.webp"
                     nom="Florent Vacot"
