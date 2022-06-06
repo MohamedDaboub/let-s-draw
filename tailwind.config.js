@@ -17,7 +17,10 @@ module.exports = {
         "batman1": "#121212"
       },
       "fontFamily": {
-        "inter": "Inter, system-ui, sans-serif"
+        "inter": "Inter, system-ui, sans-serif",
+        "yaldevi-colombo-semibold": "Yaldevi Colombo SemiBold",
+        "tinos": "Tinos",
+        "fira-sans": "Fira Sans"
       },
 
 
