@@ -7,12 +7,12 @@
         <!--Ajouter la route  vers la création de l'artiste et parent (compte)--> 
         <div class="py-10 flex justify-center lg:gap-52 gap-10 text-white">
             <div class="bg-bleufonce p-10">
-                <img src="" alt="">
-                <p>Je souhaite devenir un artiste</p>
+                <img src="../../public/img-squirrel/image_17.webp" class="text-center m-auto" alt="">
+                <h4 class="text-2xl font-bold py-10">Je souhaite devenir un artiste</h4>
             </div>
             <div class="bg-bleufonce p-10">
-                <img src="" alt="">
-                <p>Je souhaite devenir un artiste</p>
+                <img src="../../public/img-squirrel/image_18.webp" class="text-center m-auto" alt="">
+                <h4 class="text-2xl font-bold py-10 ">Je souhaite devenir un artiste</h4>
             </div>
         </div>
     </body>
