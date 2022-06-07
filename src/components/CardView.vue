@@ -1,6 +1,6 @@
 <template>
     <figure class=" flex flex-col bg-noir mx-4 rounded-lg">
-        <img class=" rounded-t-lg w-full  " :src="image" alt="">
+        <img class=" rounded-t-lg w-full h-full  " :src="image" alt="dessin realisé par des artiste">
         <figcaption class=" flex flex-col px-5 py-7  ">
             <div class="  flex flex-col ">
                 <h3 class="text-2xl text-white ">{{ nom }}</h3>
