@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 </script>
 <template>
-  <header class=" sticky top-0 drop-shadow-lg z-10 bg-bleufonce">
+  <header class=" sticky top-0 drop-shadow-lg z-10 bg-bleufonce font-yaldevi">
   <a href="#content" class="sr-only focus:not-sr-only text-lg text-text"> Passez au contenu </a>
     <nav class=" lg:flex lg:justify-between">
       <div class="flex justify-between items-center">
@@ -61,7 +61,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <main class=" bg-bleu" id="content">
     <Router-View />
   </main>
-  <footer class="bg-bleufonce pt-10 ">
+  <footer class="bg-bleufonce pt-10 font-yaldevi ">
     <div class="max-w-6xl m-auto text-gray-900 flex flex-wrap justify-left text-lg">
 
       <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
