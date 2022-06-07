@@ -18,15 +18,15 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
       <ul id="menu" v-if="menuOuvert" class="lg:hidden gap-12 items-center text-white text-xl font-semibold mx-10 " >
         <li class="my-5">
-          <RouterLink class=" " to="/"><p class="hover:text-bleu">Accueil</p></RouterLink>
+          <RouterLink class=" " to="/">Accueil</RouterLink>
         </li>
         <li class="my-5">
-          <RouterLink class=" " to="/Glossaire"><p class="hover:text-bleu">Glossaire</p></RouterLink>
+          <RouterLink class=" " to="/Glossaire">Glossaire</RouterLink>
         </li>
         <li class="my-5">
-          <RouterLink class="" to="/Contact"><p class="hover:text-bleu">Nous contacter</p></RouterLink>
+          <RouterLink class="" to="/Contact">Nous contacter</RouterLink>
         </li>
-        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-48">
+        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-48 ">
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
@@ -46,11 +46,11 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="my-5">
           <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
         </li>
-        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2">
+        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2 hover:bg-cyan-700">
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
-        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/2">
+        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-cyan-700">
           <Inscription class="mt-1" />
           <RouterLink class=" " to="/Inscription">S’inscrire</RouterLink>
         </li>
