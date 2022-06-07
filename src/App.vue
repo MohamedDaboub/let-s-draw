@@ -30,6 +30,9 @@ import { RouterLink, RouterView } from 'vue-router'
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
+        <!-- <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white">
+          <RouterLink class=" " to="/connecter">se connecter</RouterLink>
+        </li> -->
         <li class="flex gap-2 px-4 bg-white  rounded-3xl text-black py-5 w-40">
           <Inscription class="mt-1" />
           <RouterLink class=" " to="/Inscrire">S’inscrire</RouterLink>
@@ -46,13 +49,17 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="my-5">
           <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
         </li>
-        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2 hover:bg-cyan-700">
+        <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2 hover:bg-bleu hover:text-white">
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
-        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-cyan-700">
-          <Inscription class="mt-1" />
+        <!-- <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white">
+          <RouterLink class=" " to="/connecter">se connecter</RouterLink>
+        </li> -->
+        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white">
+          <Inscription class="mt-1 " />
           <RouterLink class=" " to="/Inscription">S’inscrire</RouterLink>
+          
         </li>
         <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
       </ul>
