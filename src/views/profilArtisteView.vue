@@ -16,8 +16,8 @@
 
         <!-- Composants Style de dessin x2 -->
         <div class="flex gap-20 mt-10 ml-52">
-            <TypeDessins Nom="Hyperréalisme"/>
-            <TypeDessins Nom="Dessins au Trait"/>
+            <RouterLink class=" " to="/Glossaire"><TypeDessins Nom="Hyperréalisme"/></RouterLink>
+            <RouterLink class=" " to="/Glossaire"><TypeDessins Nom="Dessins au Trait"/></RouterLink>
         </div>
 
 
