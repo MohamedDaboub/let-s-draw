@@ -32,6 +32,9 @@
         </div>
         
         <!-- Composant bouton envoyer -->
+        <button>
+            <RouterLink to="">Commence un chat </RouterLink>
+        </button>
     </body>
 
 </template>
