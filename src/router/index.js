@@ -13,6 +13,7 @@ import AproposView from '../views/AproposView.vue'
 import UnicefView from '../views/UnicefView.vue'
 import page404 from '../views/Page404View.vue'
 import connecter from '../views/ConnecterView.vue'
+import IArtistesView from '../views/IArtistesView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +30,7 @@ const router = createRouter({
     { path: '/Inscription', name: 'InscriptionView', component: InscriptionView },
     { path: '/Apropos', name: 'AproposView', component: AproposView },
     { path: '/Unicef', name: 'UnicefView', component: UnicefView },
+    { path: '/IArtistes', name: 'IArtistesView', component: IArtistesView },
     { path: '/:pathMatch(.*)*', name: 'page404', component: page404 },
     { path: '/connecter', name: 'connecter', component: connecter },
     // ici les autres routes
