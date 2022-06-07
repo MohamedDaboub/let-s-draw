@@ -11,6 +11,7 @@ import MentionslegalesView from '../views/MentionslegalesView.vue'
 import InscriptionView from '../views/InscriptionView.vue'
 import AproposView from '../views/AproposView.vue'
 import UnicefView from '../views/UnicefView.vue'
+import page404 from '../views/Page404View.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,7 @@ const router = createRouter({
     { path: '/Inscription', name: 'InscriptionView', component: InscriptionView },
     { path: '/Apropos', name: 'AproposView', component: AproposView },
     { path: '/Unicef', name: 'UnicefView', component: UnicefView },
+    { path: '/:pathMatch(.*)*', name: 'page404', component: page404 },
     // ici les autres routes
   ],
   scrollBehavior(to, from, savedPosition) {
