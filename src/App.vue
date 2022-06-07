@@ -105,13 +105,13 @@ import { RouterLink, RouterView } from 'vue-router'
           Suivez-nous
         </div>
         <div class="flex gap-2">
-          <a href="mailto:Lets.Draw250@gmail.com">
+          <a href="https://www.facebook.com/">
             <Facebook />
           </a>
-          <a href="mailto:Lets.Draw250@gmail.com">
+          <a href="https://www.instagram.com/lets_draw_off/">
             <Instagram />
           </a>
-          <a href="mailto:Lets.Draw250@gmail.com">
+          <a href="https://www.pinterest.fr/letsdraw250/_saved/">
             <Pinterest />
           </a>
         </div>
