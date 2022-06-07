@@ -18,7 +18,7 @@ module.exports = {
       },
       "fontFamily": {
         "inter": "Inter, system-ui, sans-serif",
-        "yaldevi-colombo-semibold": "Yaldevi Colombo SemiBold",
+        "yaldevi": "Yaldevi",
         "tinos": "Tinos",
         "fira-sans": "Fira Sans"
       },
