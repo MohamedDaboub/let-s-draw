@@ -17,6 +17,12 @@
                 nom="Jean Vart"
                 nom1="Peintre"
                 />
+            <card :nbr-s-d-b="20"
+                :favori="true"
+                image="/img-squirrel/image_15.webp"
+                nom="Florent Vacot"
+                nom1="Peintre"
+                />
             <card :nbr-s-d-b="7"
                 favori
                 image="/img-squirrel/image_4.webp"
