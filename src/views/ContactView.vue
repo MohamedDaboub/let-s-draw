@@ -27,7 +27,7 @@
             </label>
             </p>
             <p>
-            <label for="message" class="flex flex-col my-5">Message complémentaire pour l’artiste (obligatoire)
+            <label for="message" class="flex flex-col my-5">Message
                 <textarea id="message" name="message"  placeholder="   Message" rows="7" required class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400  text-black  rounded-lg " ></textarea>
             </label>
             </p>
