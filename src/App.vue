@@ -18,13 +18,13 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
       <ul id="menu" v-if="menuOuvert" class="lg:hidden gap-12 items-center text-white text-xl font-semibold mx-10 " >
         <li class="my-5">
-          <RouterLink class=" " to="/">Accueil</RouterLink>
+          <RouterLink class=" " to="/"><p class="hover:text-bleu">Accueil</p></RouterLink>
         </li>
         <li class="my-5">
-          <RouterLink class=" " to="/Glossaire">Glossaire</RouterLink>
+          <RouterLink class=" " to="/Glossaire"><p class="hover:text-bleu">Glossaire</p></RouterLink>
         </li>
         <li class="my-5">
-          <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
+          <RouterLink class="" to="/Contact"><p class="hover:text-bleu">Nous contacter</p></RouterLink>
         </li>
         <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-48">
           <Donate class="" />
