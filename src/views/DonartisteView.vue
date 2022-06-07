@@ -1,7 +1,7 @@
 <template>
 <section class=" lg:mx-10 sm:mx-4 text-white py-7">
     <h1 class="text-3xl  font-bold py-4">Faire un don à l’artiste</h1>
-<div>
+    <div>
         <form action="#" method="post" class="text-white"> 
             <p>
             <label for="name"  class="flex flex-col my-5">Votre Nom

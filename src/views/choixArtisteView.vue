@@ -2,7 +2,7 @@
 <!-- liste java d'artistes ? -->
     <body>
         <section class="p-10">
-            <h1 class="text-white text-5xl">Choix de l’artiste</h1>
+            <h1 class="text-white text-3xl">Choix de l’artiste</h1>
 
             <p class="text-white text-lg pt-10">Pour envoyer votre dessin veullez choisir un artiste en fonction de son style et de vos préférences</p>
         </section>
