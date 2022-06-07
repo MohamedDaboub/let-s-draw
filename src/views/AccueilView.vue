@@ -13,47 +13,41 @@
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(345px,1fr))] gap-8 mx-10 py-10">
             <card :nbr-s-d-b="4"
                 :favori="true"
-                image="/public/img-squirrel/image_3.webp"
+                image="/img-squirrel/image_3.webp"
                 nom="Jean Vart"
                 nom1="Peintre"
                 />
             <card :nbr-s-d-b="7"
                 favori
-                image="/public/img-squirrel/image_3.webp"
-                nom="Jean Vart"
+                image="/img-squirrel/image_4.webp"
+                nom="Manon Bernard"
                 nom1="Peintre" />
             <card :nbr-s-d-b="10"
                 favori
-                image="/public/img-squirrel/image_3.webp"
-                nom="Jean Vart"
+                image="/img-squirrel/image_7.webp"
+                nom="Pauline Fort"
                 nom1="Peintre"/>
             <card :nbr-s-d-b="15"
                 favori
-                image="/public/img-squirrel/image_3.webp"
-                nom="Jean Vart"
+                image="/img-squirrel/image_8.webp"
+                nom="Lance Leblanc"
                 nom1="Peintre" />
             <card :nbr-s-d-b="20"
                 :favori="true"
-                image="/public/img-squirrel/image_3.webp"
-                nom="Jean Vart"
+                image="/img-squirrel/image_10.webp"
+                nom="Florent Vacot"
                 nom1="Peintre"
                 />
             <card :nbr-s-d-b="23"
                 favori
-                image="/public/img-squirrel/image_3.webp"
-                nom="Jean Vart"
+                image="/img-squirrel/image_11.webp"
+                nom="Manon Bernard"
                 nom1="Peintre" />
             <card :nbr-s-d-b="26"
                 favori
-                image="/public/img-squirrel/image_3.webp"
-                nom="Jean Vart"
+                image="/img-squirrel/image_12.webp"
+                nom="Pauline Fort"
                 nom1="Peintre"/>
-            <card :nbr-s-d-b="28"
-                favori
-                image="/public/img-squirrel/image_3.webp"
-                nom="Jean Vart"
-                nom1="Peintre" />
-            
         </div>
 
 
