@@ -118,10 +118,10 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
     </div>
     <div class="flex  justify-end gap-10 pb-6 px-10">
-      <img class=" w-1/6 h-1/6  " src="../public/img-squirrel/image_40.webp" alt="">
-      <img class=" w-1/12 " src="../public/img-squirrel/image_41.webp" alt="">
-      <img class=" w-1/12 h-1/12  " src="../public/img-squirrel/image_21.webp" alt="">
-      <img class=" w-1/12 h-1/12  " src="../public/img-squirrel/image_20.webp" alt="">
+      <img class=" w-1/6 h-1/6  " src="../public/img-squirrel/image_40.webp" alt="logo visa">
+      <img class=" w-1/12 " src="../public/img-squirrel/image_41.webp" alt="logo ob">
+      <img class=" w-1/12 h-1/12  " src="../public/img-squirrel/image_21.webp" alt="logo master card">
+      <img class=" w-1/12 h-1/12  " src="../public/img-squirrel/image_20.webp" alt="logo paypal">
     </div>
   </footer>
 </template>
