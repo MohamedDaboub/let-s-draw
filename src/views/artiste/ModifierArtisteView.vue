@@ -31,6 +31,13 @@
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
+                  <span class="input-group-text">Age</span>
+                </div>
+                <input class="form-control" placeholder="Age" v-model="artiste.age" required />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
@@ -59,31 +66,28 @@
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Téléphone</span>
+                  <span class="input-group-text">Délai</span>
                 </div>
-                <input class="form-control" placeholder="Téléphone de la personne" v-model="artiste.telephoneArtiste" required />
+                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">description</span>
+                </div>
+                <input class="form-control" placeholder="Délai" v-model="artiste.description" required />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Style</span>
                 </div>
-                <select class="custom-select" v-model="artiste.style">
+                <select class="custom-select" v-model="artiste.categorie">
                   <option selected disabled>Sélectionner un style</option>
-                  <option v-for="style in listeStyle" :key="style.libelle">{{ style.libelle }}</option>
+                  <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé">{{ categorieArtiste.libellé }}</option>
                 </select>
               </div>
-              <br />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Modifier</button>
-          <button class="btn btn-light float-right">
-            <router-link to="/CreateArtiste">Annuler</router-link>
-          </button>
-        </div>
+            <br />
       </div>
     </form>
   </div>
@@ -116,14 +120,17 @@ export default {
   data() {
     return {
       imageData: null,
-      listeStyle: [],
+      listecategorieArtiste: [],
       artiste: {
         nom: null,
         prenom: null,
+        age:null,
         photo: null,
         mailArtiste: null,
-        telephoneArtiste: null,
-        style: null,
+        délai: null,
+        categorie: null,
+        style:null,
+        description:null,
       },
       refArtiste: null,
       imgModifiée: false,
@@ -136,17 +143,17 @@ export default {
     this.getStyle();
   },
   methods: {
-    async getStyle() {
+    async getCategorieA() {
       const firestore = getFirestore();
-      const dbStyle = collection(firestore, "style");
-      const query = await getDocs(dbStyle);
+      const dbCateA = collection(firestore, "categorieArtiste");
+      const query = await getDocs(dbCateA);
       query.forEach((doc) => {
-        let style = {
+        let categorieArtiste = {
           id: doc.id,
-          libelle: doc.data().libelle,
+          libellé: doc.data().libellé,
         };
-        this.listeStyle.push(style);
-        console.log("liste des style", this.style);
+        this.categorieArtiste.push(categorieArtiste);
+        console.log("liste des categories", this.categorieArtiste);
       });
     },
 
@@ -209,7 +216,7 @@ export default {
       }
       const firestore = getFirestore();
       await updateDoc(doc(firestore, "artiste", this.$route.params.id), this.artiste);
-      this.$router.push("/artiste");
+      this.$router.push("/choixArtiste");
     },
   },
 };

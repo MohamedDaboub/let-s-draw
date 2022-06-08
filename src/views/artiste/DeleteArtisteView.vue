@@ -31,10 +31,17 @@
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
+                  <span class="input-group-text">Age</span>
+                </div>
+                <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
+                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled/>
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
               </div>
@@ -46,23 +53,31 @@
                 <input type="date" class="form-control" v-model="artiste.naissance" format="dd//mm/yyyy" disabled />
               </div> -->
               <br />
+              <br />
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Téléphone</span>
+                  <span class="input-group-text">Délai</span>
                 </div>
-                <input class="form-control" placeholder="Téléphone de la personne" v-model="artiste.telephoneArtiste" required />
+                <input class="form-control" placeholder="Délai" v-model="artiste.délai" disabled />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">description</span>
+                </div>
+                <input class="form-control" placeholder="Délai" v-model="artiste.description" disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Style</span>
                 </div>
-                <select class="custom-select" v-model="artiste.style" disabled>
+                <select class="custom-select" v-model="artiste.categorie">
                   <option selected disabled>Sélectionner un style</option>
-                  <option v-for="style in listeStyle" :key="style.libelle">{{ style.libelle }}</option>
+                  <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé" disabled>{{ categorieArtiste.libellé }}</option>
                 </select>
               </div>
-              <br />
+            <br />
               <h5 class="alert alert-warning text-center" role="alert">
                 Attention vous allez supprimer cet artiste, cette action est irreversible !!
               </h5>
@@ -112,10 +127,13 @@ export default {
       artiste: {
         nom: null,
         prenom: null,
+        age:null,
         photo: null,
         mailArtiste: null,
-        telephoneArtiste: null,
-        style: null,
+        délai: null,
+        categorie: null,
+        style:null,
+        description:null,
       },
       refArtiste: null,
       photoActuelle: null,
@@ -153,7 +171,7 @@ export default {
       const storage = getStorage();
       let docRef = ref(storage, "artiste/", this.artiste.photo);
       deleteObject(docRef);
-      this.$router.push("/artiste");
+      this.$router.push("/choixArtiste");
     },
   },
 };

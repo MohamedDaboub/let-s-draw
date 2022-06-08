@@ -15,6 +15,9 @@ import page404 from '../views/Page404View.vue'
 import connecter from '../views/ConnecterView.vue'
 import IArtistesView from '../views/IArtistesView.vue'
 import AuthFirebaseView from '../AuthentificationFirebase/AuthFirebaseView.vue'
+import CreationArtisteView from '../views/artiste/CreationArtisteView.vue'
+import ModifierArtisteView from '../views/artiste/ModifierArtisteView.vue'
+import DeleteArtisteView from '../views/artiste/DeleteArtisteView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +38,10 @@ const router = createRouter({
     { path: '/:pathMatch(.*)*', name: 'page404', component: page404 },
     { path: '/connecter', name: 'connecter', component: connecter },
     { path: '/Auth', name:'AuthFirebase', component: AuthFirebaseView},
+    { path: '/CreateArtiste', name:'CreateArtiste', component: CreationArtisteView},
+    { path: '/ModifierArtiste', name:'ModifierArtiste', component: ModifierArtisteView},
+    { path: '/DeleteArtiste', name:'DeleteArtiste', component: DeleteArtisteView},
+
     // ici les autres routes
   ],
   scrollBehavior(to, from, savedPosition) {
