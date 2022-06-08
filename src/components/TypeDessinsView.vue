@@ -1,7 +1,5 @@
 <template>
-    <button class="bg-bleufonce px-8 py-2 rounded-lg">
-        <h3 class="text-white">{{Nom}}</h3>
-    </button>
+    <h3 class="text-white bg-bleufonce px-8 py-2 rounded-lg">{{Nom}}</h3>
 </template>
 <script>
 export default {

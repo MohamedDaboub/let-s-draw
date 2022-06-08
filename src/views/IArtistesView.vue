@@ -33,37 +33,37 @@
                     <div class="flex m-4">
                         <input type="checkbox" id="choix1" name="choix1"
                             class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix1" class="check"><Bouton2  Nom="Hyperréalisme"/></label>
+                        <label for="choix1" class="check"><TypeDessins  Nom="Hyperréalisme"/></label>
                     </div>
                     <div class="flex m-4">
                         <input type="checkbox" id="choix2" name="choix2"
                             class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix2" class="check"><Bouton2 Nom="Dessin au Trait"/></label>
+                        <label for="choix2" class="check"><TypeDessins Nom="Dessin au Trait"/></label>
                     </div>         
                     <div class="flex m-4">
                         <input type="checkbox" id="choix3" name="choix3"
                             class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix3" class="check"><Bouton2 Nom="Le gribouillage"/></label>
+                        <label for="choix3" class="check"><TypeDessins Nom="Le gribouillage"/></label>
                     </div>  
                     <div class="flex m-4">
                         <input type="checkbox" id="choix4" name="choix4"
                             class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix4" class="check"><Bouton2 Nom="L’anamorphique"/></label>
+                        <label for="choix4" class="check"><TypeDessins Nom="L’anamorphique"/></label>
                     </div>  
                     <div class="flex m-4">
                         <input type="checkbox" id="choix5" name="choix5"
                             class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix5" class="check"><Bouton2 Nom="L’architectural"/></label>
+                        <label for="choix5" class="check"><TypeDessins Nom="L’architectural"/></label>
                     </div>
                     <div class="flex m-4">
                         <input type="checkbox" id="choix6" name="choix6"
                             class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix6" class="check"><Bouton2 Nom="Le pointillisme"/></label>
+                        <label for="choix6" class="check"><TypeDessins Nom="Le pointillisme"/></label>
                     </div> 
                     <div class="flex m-4">
                         <input type="checkbox" id="choix7" name="choix7"
                             class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix7" class="check"><Bouton2  Nom="Le dessin de mode"/></label>
+                        <label for="choix7" class="check"><TypeDessins  Nom="Le dessin de mode"/></label>
                     </div>         
                 </div>
             </div>
@@ -75,11 +75,11 @@
 </template>
 
 <script>
-import Bouton2 from "../components/Bouton2View.vue"
+import TypeDessins from "../components/TypeDessinsView.vue"
 import Bouton from "../components/BoutonView.vue"
 
 export default {
     name: "App",
-    components: { Bouton, Bouton2 },
+    components: { Bouton, TypeDessins },
 };
 </script>
