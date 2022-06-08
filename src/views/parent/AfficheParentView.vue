@@ -1,9 +1,10 @@
 <template>
+    <h1 class="p-10 text-white text-5xl">Mon Profil</h1>
   <div class="container">
-    <form enctype="multipart/form-data" @submit.prevent="updateParent">
+    <form enctype="multipart/form-data" @submit.prevent="afficheParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Mise à jour compte parent</h5>
+          <h5 style="color: white">Affichage du parent</h5>
         </div>
 
         <div class="card-body">
@@ -19,48 +20,45 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" required />
+                <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="parent.prenom" required />
+                <input class="form-control" placeholder="Prénom de la personne" v-model="parent.prenom" disabled />
               </div>
-              <br />
-              <div class="input-group">
+              <!-- <br /> -->
+              <!-- <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
+                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled/>
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
-              </div>
-              <br />
+              </div> -->
+              <br />              
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">mail</span>
+                  <span class="input-group-text">Mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
+                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" disabled  />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nombre d'enfants</span>
                 </div>
-                <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" required />
+                <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
                 </div>
-                <select class="custom-select" v-model="parent.moyenP">
-                  <option selected disabled>Sélectionner un moyen de paiement</option>
-                  <option v-for="moyenDePaiement in listeMoyenP" :key="moyenDePaiement.libellé">{{ moyenDePaiement.libellé }}</option>
-                </select>
+                 <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
               </div>
               <br />
             </div>
@@ -68,23 +66,60 @@
         </div>
 
         <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Modifier</button>
+          <button type="submit" class="btn btn-light float-left">Valider</button>
           <button class="btn btn-light float-right">
-            <router-link to="/CreateParent">Annuler</router-link>
+            <router-link to="/CreateArtiste">Annuler</router-link>
           </button>
         </div>
       </div>
     </form>
   </div>
-</template>
+    <div class="my-6 mx-10">
+        <h2 class="text-4xl text-white">Biographie</h2>
+        <div class="flex justify-between bg-bleutransparent2 p-3 rounded-xl mt-4 mr-40">
+            <p class="">Je suis actuellement à la recherche d’un artiste spécialiste du pointillisme. J’aimerai qu’on reprenne mon
+            dessin d’enfance.</p>
+            <!-- <Modifier class="" /> -->
+        </div>
+    </div>
+    <div class="my-10 mx-10">
+        <h2 class="text-4xl text-white">Notifications</h2>
+        <div class="text-2xl flex mt-8 ml-20 text-white">
+            <p class="bg-red-700 rounded-full p-1">1</p>
+            <p class="mx-4 p-1">Vous avez reçu un nouveau dessin</p>
+        </div>
+        <p class="bg-bleutransparent2 p-3 rounded-xl mr-40 mt-6">Florent Vacot a terminer votre dessin, il y a 2 jours. Vous pouvez dès à présent consulter votre dessin en
+            cliquant sur ce bouton ci-dessous</p>
 
+    </div>
+    <!-- <bouton  Nom="Consulter mon dessin" /> -->
+    <div class="mx-10 pb-36">
+        <h2 class="text-4xl text-white mt-20">Faîtes un don</h2>
+        <div>
+            <h3 class="text-2xl text-white my-6 mx-6">L'objectif du don</h3>
+            <p class="w-1/2 ml-16 text-white">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
+                “Unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
+                Draw.</p>
+            <img class="absolute w-1/4 right-20 mb-20" src="../../public/img-squirrel/image-37 (1).webp" alt="Logo Unicef">
+            
+        </div>
+        <div class="mt-56">
+            <h3 class="text-2xl text-white my-6 mx-6">Répartition du don</h3>
+            <img class="w-1/3 ml-64" src="../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don">
+        </div>
+        <bouton class="mt-10 mr-40" Nom="Faire un don" />
+    </div>
+    
+</template>
 <script>
+// import Modifier from "../components/icons/ModifierView.vue"
+// import Bouton from "../components/BoutonView.vue"
 import {
   getFirestore,
   collection,
   doc,
-  getDocs,
   getDoc,
+  getDocs,
   addDoc,
   updateDoc,
   deleteDoc,
@@ -96,16 +131,17 @@ import {
   getStorage,
   ref, //
   getDownloadURL,
+  uploadBytes,
   uploadString,
   deleteObject,
+  listAll,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
-  name: "UpdateView",
-  data() {
+    name: "App",
+    // components: { Modifier, Bouton },
+      data() {
     return {
-      imageData: null,
-      listeMoyenP: [],
       parent: {
         nom: null,
         prenom: null,
@@ -115,30 +151,36 @@ export default {
         moyenP:null,
       },
       refParent: null,
-      imgModifiée: false,
       photoActuelle: null,
+      imgModifiée: false,
+      imageData:null,
     };
   },
   mounted() {
     console.log("id parent", this.$route.params.id);
     this.getParent(this.$route.params.id);
-    this.getMoyenP();
   },
   methods: {
-     async getMoyenP() {
+    async getParent(id) {
       const firestore = getFirestore();
-      const dbMoyenP = collection(firestore, "moyenDePaiement");
-      const query = await getDocs(dbMoyenP);
-      query.forEach((doc) => {
-        let moyenDePaiement = {
-          id: doc.id,
-          libellé: doc.data().libellé,
-        };
-        this.listeMoyenP.push(moyenDePaiement);
-        console.log("moyen de paiement ?", this.listeMoyenP);
-      });
+      const docRef = doc(firestore, "parent", id);
+      this.refParent = await getDoc(docRef);
+      if (this.refParent.exists()) {
+        this.parent = this.refParent.data();
+        this.photoActuelle = this.parent.photo;
+      } else {
+        this.console.log("parent inexistant");
+      }
+      const storage = getStorage();
+      const spaceRef = ref(storage, "parent/" + this.parent.photo);
+      getDownloadURL(spaceRef)
+        .then((url) => {
+          this.imageData = url;
+        })
+        .catch((error) => {
+          console.log("erreur downloadUrl", error);
+        });
     },
-
     previewImage: function (event) {
       // Miseàjour de la photo du participant
       this.file = this.$refs.file.files[0];
@@ -165,28 +207,8 @@ export default {
         reader.readAsDataURL(input.files[0]);
       }
     },
-    async getParent(id) {
-      const firestore = getFirestore();
-      const docRef = doc(firestore, "parent", id);
-      this.refParent = await getDoc(docRef);
-      if (this.refParent.exists()) {
-        this.parent = this.refParent.data();
-        this.photoActuelle = this.parent.photo;
-      } else {
-        this.console.log("Parent inexistant");
-      }
-      const storage = getStorage();
-      const spaceRef = ref(storage, "parent/" + this.parent.photo);
-      getDownloadURL(spaceRef)
-        .then((url) => {
-          this.imageData = url;
-        })
-        .catch((error) => {
-          console.log("erreur downloadUrl", error);
-        });
-    },
 
-    async updateParent() {
+    async afficheParent() {
       if (this.imgModifiée) {
         const storage = getStorage();
         let docRef = ref(storage, "parent/" + this.photoActuelle);
@@ -201,5 +223,6 @@ export default {
       this.$router.push("/listeParent");
     },
   },
+
 };
 </script>

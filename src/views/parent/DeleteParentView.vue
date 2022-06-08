@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-6">
               <div>
-                <img class="preview img-fluid" :src="photoActuelle" />
+                <img class="preview img-fluid" :src="imageData" />
               </div>
             </div>
 
@@ -34,41 +34,32 @@
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
+                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled/>
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
               </div>
-              <br />
-              <!-- <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Date naissance</span>
-                </div>
-                <input type="date" class="form-control" v-model="parent.naissance" format="dd//mm/yyyy" disabled />
-              </div> -->
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Téléphone</span>
-                </div>
-                <input class="form-control" placeholder="Téléphone de la personne" v-model="parent.telephoneParent" required />
-              </div>
-              <br />
+              <br />              
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
+                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" disabled  />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nombre d'enfants</span>
                 </div>
-                <select class="custom-select" v-model="parent.enfantsNbr" disabled>
-                  <option selected disabled>Sélectionner un nombre</option>
-                  <option v-for="enfantsNbr in listeEnfantsNbr" :key="enfantsNbr.nombre">{{ enfantsNbr.nombre }}</option>
-                </select>
+                <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" disabled />
               </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
+                </div>
+                 <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
+              </div>
+              <br />
               <h5 class="alert alert-warning text-center" role="alert">
                 Attention vous allez supprimer ce parent, cette action est irreversible !!
               </h5>
@@ -120,11 +111,12 @@ export default {
         prenom: null,
         photo: null,
         mailParent: null,
-        telephoneParent: null,
-        enfantsNbr: null,
+        nbrEnfantsParent:null,
+        moyenP:null,
       },
       refParent: null,
       photoActuelle: null,
+      imageData:null,
     };
   },
   mounted() {
@@ -151,6 +143,32 @@ export default {
         .catch((error) => {
           console.log("erreur downloadUrl", error);
         });
+    },
+    previewImage: function (event) {
+      // Miseàjour de la photo du participant
+      this.file = this.$refs.file.files[0];
+      // Récupérer le nom du fichier pour la photo du participant
+      this.parent.photo = this.file.name;
+      // Reference to the DOM input element
+      // Reference du fichieràprévisualise
+      //Verifie l'image est modifiée ou non
+      this.imgModifiée = true;
+      var input = event.target;
+      // On s'assure que l'onaau moins un fichieràlire
+      if (input.files && input.files[0]) {
+        // Creation d'un filereader
+        // Pour lire l'image et la convertir en base 64
+        var reader = new FileReader();
+        // fonction callback appellée lors que le fichieraété chargé
+        reader.onload = (e) => {
+          // Read image as base64 and set to imageData
+          // lecture du fichier pour mettreàjour
+          // la prévisualisation
+          this.imageData = e.target.result;
+        };
+        // Demarrage du reader pour la transformer en data URL(format base 64)
+        reader.readAsDataURL(input.files[0]);
+      }
     },
 
     async deleteParent() {

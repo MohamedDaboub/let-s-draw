@@ -45,39 +45,23 @@
                 </div>
                 <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
               </div>
-              <!-- <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Date naissance</span>
-                                </div>
-                                <input 
-                                    type="date"
-                                    class="form-control"
-                                    v-model="participant.naissance"
-                                    format="dd//mm/yyyy" 
-                                    required />                    
-                            </div> -->
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Téléphone</span>
-                </div>
-                <input class="form-control" placeholder="Téléphone de la personne" v-model="parent.telephoneParent" required />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Mail</span>
-                </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
-              </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nombre d'enfants</span>
                 </div>
-                <select class="custom-select" v-model="parent.enfantsNbr">
-                  <option selected disabled>Sélectionner un nombre</option>
-                  <option v-for="enfantsNbr in listeEnfantsNbr" :key="enfantsNbr.nombre">{{ enfantsNbr.nombre }}</option>
+                <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" required />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    >Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span
+                  >
+                </div>
+                <select class="custom-select" v-model="parent.moyenP">
+                  <option selected disabled>Sélectionner un moyen de paiement</option>
+                  <option v-for="moyenDePaiement in listeMoyenP" :key="moyenDePaiement.libellé">{{ moyenDePaiement.libellé }}</option>
                 </select>
               </div>
               <br />
@@ -88,7 +72,7 @@
         <div class="card-footer">
           <button type="submit" class="btn btn-light float-left">Créer</button>
           <button class="btn btn-light float-right">
-            <router-link to="/CreateParent">Annuler</router-link>
+            <router-link to="/listeParent">Annuler</router-link>
           </button>
         </div>
       </div>
@@ -115,32 +99,32 @@ export default {
   data() {
     return {
       imageData: null,
-      listeEnfantsNbr: [],
+      listeMoyenP: [],
       parent: {
         nom: null,
         prenom: null,
         photo: null,
         mailParent: null,
-        telephoneParent: null,
-        enfantsNbr: null,
+        nbrEnfantsParent: null,
+        moyenP: null,
       },
     };
   },
   mounted() {
-    this.getEnfantsNbr();
+    this.getMoyenP();
   },
   methods: {
-    async getEnfantsNbr() {
+    async getMoyenP() {
       const firestore = getFirestore();
-      const dbEnfantsNbr = collection(firestore, "enfantsNbr");
-      const query = await getDocs(dbEnfantsNbr);
+      const dbMoyenP = collection(firestore, "moyenDePaiement");
+      const query = await getDocs(dbMoyenP);
       query.forEach((doc) => {
-        let enfantsNbr = {
+        let moyenDePaiement = {
           id: doc.id,
-          nombre: doc.data().nombre,
+          libellé: doc.data().libellé,
         };
-        this.listeStyle.push(enfantsNbr);
-        console.log("nombre d'enfants ?", this.enfantsNbr);
+        this.listeMoyenP.push(moyenDePaiement);
+        console.log("moyen de paiement ?", this.listeMoyenP);
       });
     },
 
@@ -168,11 +152,11 @@ export default {
         reader.readAsDataURL(input.files[0]);
       }
     },
-    async createArtiste() {
+    async createParent() {
       // Obtenir storage Firebase
       const storage = getStorage();
       // Référence de l'imageàuploader
-      const refStorage = ref(storage, "parent/" + this.artiste.photo);
+      const refStorage = ref(storage, "parent/" + this.parent.photo);
       // Upload de l'image sur le Cloud Storage
       await uploadString(refStorage, this.imageData, "data_url").then((snapshot) => {
         console.log("Uploadedabase64 string");
@@ -181,7 +165,7 @@ export default {
         const docRef = addDoc(collection(db, "parent"), this.parent);
       });
       // redirection sur la liste des participants
-      this.$router.push("/CreateArtiste");
+      this.$router.push("/listeParent");
     },
   },
 };

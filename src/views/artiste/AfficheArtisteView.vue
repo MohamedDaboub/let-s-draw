@@ -1,4 +1,6 @@
 <template>
+
+<!-- Les inputs doivent être des balises P (du moins a tester) !! affichage statique sur cette page avec l'id sélectionné -->
   <div class="container">
     <form enctype="multipart/form-data" @submit.prevent="afficheArtiste">
       <div class="card bg-dark">
@@ -19,7 +21,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required disabled/>
+                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required disabled />
               </div>
               <br />
               <div class="input-group">
@@ -33,9 +35,9 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Age</span>
                 </div>
-                <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled/>
+                <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled />
               </div>
-              <br />
+              <!-- <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Photo</span>
@@ -44,7 +46,7 @@
                   <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled />
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
-              </div>
+              </div> -->
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -57,57 +59,46 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Délai</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required disabled/>
+                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">description</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.description" required disabled/>
+                <input class="form-control" placeholder="Délai" v-model="artiste.description" required disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Categorie</span>
                 </div>
-                <select class="custom-select" v-model="artiste.categorie" disabled>
-                  <option selected disabled>Sélectionner un style</option>
-                  <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé" >
-                    {{ categorieArtiste.libellé }}
-                  </option>
-                </select>
+                <input class="form-control" placeholder="Délai" v-model="artiste.categorie" required disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Metier</span>
+                  <span class="input-group-text">Métier</span>
                 </div>
-                <select class="custom-select" v-model="artiste.role" disabled>
-                  <option selected disabled>Sélectionner un metier</option>
-                  <option v-for="metier in listeMetier" :key="metier.libellé" >{{ metier.libellé }}</option>
-                </select>
+                <input class="form-control" placeholder="Délai" v-model="artiste.role" required disabled />
               </div>
               <br />
             </div>
           </div>
         </div>
       </div>
-      <div class="card-footer">   
-                    <button type="submit" class="float-left btn btn-light">
-                        Valider
-                    </button>
-                    <button class="float-right btn btn-light" >
-                        <router-link to="/choixArtiste" >Annuler</router-link>
-                    </button>
-                </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-light float-left">Valider</button>
+        <button class="btn btn-light float-right">
+          <router-link to="/choixArtiste">Annuler</router-link>
+        </button>
+      </div>
     </form>
   </div>
 
   <h2>Mes derniers dessins :</h2>
 
   <div>
-    
     <div>
       <p>Chien et chat meilleurs amis</p>
       <p>Il y 4 jours</p>
@@ -136,7 +127,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 import {
   getStorage,
-  ref, 
+  ref,
   getDownloadURL,
   uploadBytes,
   uploadString,

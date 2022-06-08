@@ -5,7 +5,7 @@ import GlossaireView from '../views/GlossaireView.vue'
 import choixArtisteView from '../views/choixArtisteView.vue'
 import FormulaireView from '../views/FormulaireView.vue'
 import ContactView from '../views/ContactView.vue'
-import ProfilView from '../views/ProfilView.vue'
+import AfficheParentView from '../views/parent/AfficheParentView.vue'
 import MentionslegalesView from '../views/MentionslegalesView.vue'
 import InscriptionView from '../views/InscriptionView.vue'
 import AproposView from '../views/AproposView.vue'
@@ -16,6 +16,10 @@ import CreationArtisteView from '../views/artiste/CreationArtisteView.vue'
 import ModifierArtisteView from '../views/artiste/ModifierArtisteView.vue'
 import DeleteArtisteView from '../views/artiste/DeleteArtisteView.vue'
 import AfficheArtisteView from '../views/artiste/AfficheArtisteView.vue'
+import CreationParentView from '../views/parent/CreationParentView.vue'
+import ListeParentView from '../views/parent/ListeParentView.vue'
+import ModifierParentView from '../views/parent/ModiferParentView.vue'
+import DeleteParentView from '../views/parent/DeleteParentView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,7 +30,7 @@ const router = createRouter({
     { path: '/choixArtiste', name: 'choixArtisteView', component: choixArtisteView },    
     { path: '/Formulaire', name: 'FormulaireView', component: FormulaireView },
     { path: '/Contact', name: 'ContactView', component: ContactView },
-    { path: '/Profil', name: 'ProfilView', component: ProfilView },
+    { path: '/AfficheParent/:id', name: 'AfficheParent', component: AfficheParentView },
     { path: '/Mentionslegales', name: 'MentionslegalesView', component: MentionslegalesView },
     { path: '/Inscription', name: 'InscriptionView', component: InscriptionView },
     { path: '/Apropos', name: 'AproposView', component: AproposView },
@@ -37,7 +41,10 @@ const router = createRouter({
     { path: '/ModifierArtiste/:id', name:'ModifierArtiste', component: ModifierArtisteView},
     { path: '/DeleteArtiste/:id', name:'DeleteArtiste', component: DeleteArtisteView},
     { path: '/AfficheArtiste/:id', name: 'AfficheArtiste', component: AfficheArtisteView },
-
+    { path: '/CreateParent', name:'CreateParent', component: CreationParentView},
+    { path: '/ListeParent', name:'ListeParent', component: ListeParentView},
+    { path: '/ModifierParent/:id', name:'ModifierParent', component: ModifierParentView},
+    { path: '/DeleteParent/:id', name:'DeleteParent', component: DeleteParentView},
     // ici les autres routes
   ],
   scrollBehavior(to, from, savedPosition) {
