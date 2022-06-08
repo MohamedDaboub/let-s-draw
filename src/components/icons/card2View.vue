@@ -5,6 +5,9 @@
             <div class="flex flex-col text-white ml-4">
                 <p class="font-bold text-2xl mt-6"> {{ artiste.prenom }} {{ artiste.nom }}</p>
                 <p class="text-lg ml-4 mt-1">{{ artiste.role }}</p>
+                <RouterLink :to="{ name: 'AfficheArtiste', params: { id: artiste.id } }"><p>Afficher</p></RouterLink>
+                <RouterLink :to="{ name: 'ModifierArtiste', params: { id: artiste.id } }"><p>Modifier</p></RouterLink>
+                <RouterLink :to="{ name: 'DeleteArtiste', params: { id: artiste.id } }"><p>Supprimer</p></RouterLink>
             </div>
 
     </div>

@@ -1,10 +1,10 @@
 <template>
-    <h3 class="text-white bg-bleufonce px-8 py-2 rounded-lg">{{Nom}}</h3>
+  <h3 class="rounded-lg bg-bleufonce px-8 py-2 text-white">{{ Nom }}</h3>
 </template>
 <script>
 export default {
-    props: {
-        Nom: String
-    }
-}
+  props: {
+    Nom: String,
+  },
+};
 </script>

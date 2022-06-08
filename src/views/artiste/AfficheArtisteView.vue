@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <form enctype="multipart/form-data" @submit.prevent="updateArtiste">
+    <form enctype="multipart/form-data" @submit.prevent="afficheArtiste">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Mise à jour compte artiste</h5>
+          <h5 style="color: white">Affichage compte artiste</h5>
         </div>
 
         <div class="card-body">
@@ -19,21 +19,21 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required />
+                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required disabled/>
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" required />
+                <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" required disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Age</span>
                 </div>
-                <input class="form-control" placeholder="Age" v-model="artiste.age" required />
+                <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled/>
               </div>
               <br />
               <div class="input-group">
@@ -41,7 +41,7 @@
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
+                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled />
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
               </div>
@@ -50,41 +50,30 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required />
+                <input class="form-control" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required disabled />
               </div>
-              <!-- <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Date naissance</span>
-                                </div>
-                                <input 
-                                    type="date"
-                                    class="form-control"
-                                    v-model="participant.naissance"
-                                    format="dd//mm/yyyy" 
-                                    required />                    
-                            </div> -->
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Délai</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required />
+                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required disabled/>
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">description</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.description" required />
+                <input class="form-control" placeholder="Délai" v-model="artiste.description" required disabled/>
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Categorie</span>
                 </div>
-                <select class="custom-select" v-model="artiste.categorie">
+                <select class="custom-select" v-model="artiste.categorie" disabled>
                   <option selected disabled>Sélectionner un style</option>
-                  <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé">
+                  <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé" >
                     {{ categorieArtiste.libellé }}
                   </option>
                 </select>
@@ -94,9 +83,9 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Metier</span>
                 </div>
-                <select class="custom-select" v-model="artiste.role">
+                <select class="custom-select" v-model="artiste.role" disabled>
                   <option selected disabled>Sélectionner un metier</option>
-                  <option v-for="metier in listeMetier" :key="metier.libellé">{{ metier.libellé }}</option>
+                  <option v-for="metier in listeMetier" :key="metier.libellé" >{{ metier.libellé }}</option>
                 </select>
               </div>
               <br />
@@ -106,7 +95,7 @@
       </div>
       <div class="card-footer">   
                     <button type="submit" class="float-left btn btn-light">
-                        Modifier
+                        Valider
                     </button>
                     <button class="float-right btn btn-light" >
                         <router-link to="/choixArtiste" >Annuler</router-link>
@@ -114,15 +103,30 @@
                 </div>
     </form>
   </div>
-</template>
 
+  <h2>Mes derniers dessins :</h2>
+
+  <div>
+    
+    <div>
+      <p>Chien et chat meilleurs amis</p>
+      <p>Il y 4 jours</p>
+    </div>
+  </div>
+
+  <!-- Composant bouton envoyer -->
+  <button>
+    <RouterLink to="">Commence un chat </RouterLink>
+  </button>
+</template>
 <script>
+import TypeDessins from "../../components/TypeDessinsView.vue";
 import {
   getFirestore,
   collection,
   doc,
-  getDocs,
   getDoc,
+  getDocs,
   addDoc,
   updateDoc,
   deleteDoc,
@@ -132,19 +136,20 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 import {
   getStorage,
-  ref, //
+  ref, 
   getDownloadURL,
+  uploadBytes,
   uploadString,
   deleteObject,
+  listAll,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
-  name: "UpdateView",
+  name: "App",
+  components: { TypeDessins },
   data() {
     return {
       imageData: null,
-      listecategorieArtiste: [],
-      listeMetier: [],
       artiste: {
         nom: null,
         prenom: null,
@@ -158,8 +163,9 @@ export default {
         role: null,
       },
       refArtiste: null,
-      imgModifiée: false,
       photoActuelle: null,
+      listecategorieArtiste: [],
+      listeMetier: [],
     };
   },
   mounted() {
@@ -169,6 +175,26 @@ export default {
     this.getMetier();
   },
   methods: {
+    async getArtiste(id) {
+      const firestore = getFirestore();
+      const docRef = doc(firestore, "artiste", id);
+      this.refArtiste = await getDoc(docRef);
+      if (this.refArtiste.exists()) {
+        this.artiste = this.refArtiste.data();
+        this.photoActuelle = this.artiste.photo;
+      } else {
+        this.console.log("artiste inexistant");
+      }
+      const storage = getStorage();
+      const spaceRef = ref(storage, "artiste/" + this.artiste.photo);
+      getDownloadURL(spaceRef)
+        .then((url) => {
+          this.imageData = url;
+        })
+        .catch((error) => {
+          console.log("erreur downloadUrl", error);
+        });
+    },
     async getCategorieA() {
       const firestore = getFirestore();
       const dbCateA = collection(firestore, "categorieArtiste");
@@ -195,16 +221,13 @@ export default {
         console.log("liste des metiers", this.metier);
       });
     },
-
     previewImage: function (event) {
       // Miseàjour de la photo du participant
       this.file = this.$refs.file.files[0];
       // Récupérer le nom du fichier pour la photo du participant
       this.artiste.photo = this.file.name;
       // Reference to the DOM input element
-      // Reference du fichieràprévisualise
-      //Verifie l'image est modifiée ou non
-      this.imgModifiée = true;
+      // Reference du fichieràprévisualiser
       var input = event.target;
       // On s'assure que l'onaau moins un fichieràlire
       if (input.files && input.files[0]) {
@@ -222,28 +245,7 @@ export default {
         reader.readAsDataURL(input.files[0]);
       }
     },
-    async getArtiste(id) {
-      const firestore = getFirestore();
-      const docRef = doc(firestore, "artiste", id);
-      this.refArtiste = await getDoc(docRef);
-      if (this.refArtiste.exists()) {
-        this.artiste = this.refArtiste.data();
-        this.photoActuelle = this.artiste.photo;
-      } else {
-        this.console.log("Artiste inexistant");
-      }
-      const storage = getStorage();
-      const spaceRef = ref(storage, "artiste/" + this.artiste.photo);
-      getDownloadURL(spaceRef)
-        .then((url) => {
-          this.imageData = url;
-        })
-        .catch((error) => {
-          console.log("erreur downloadUrl", error);
-        });
-    },
-
-    async updateArtiste() {
+    async afficheArtiste() {
       if (this.imgModifiée) {
         const storage = getStorage();
         let docRef = ref(storage, "artiste/" + this.photoActuelle);

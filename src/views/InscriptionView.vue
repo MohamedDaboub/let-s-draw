@@ -10,7 +10,7 @@
                 <img src="../../public/img-squirrel/image_17.webp" class="text-center m-auto md:w-full w-96 " alt="">
                 <h4 class="md:text-2xl text-base font-bold py-10">Je souhaite envoyer mon dessin</h4>
             </RouterLink>
-            <RouterLink class="bg-bleufonce lg:p-10 p-5 rounded-lg hover:bg-blue-600" to="/IArtistes">
+            <RouterLink class="bg-bleufonce lg:p-10 p-5 rounded-lg hover:bg-blue-600" to="/createArtiste">
                 <img src="../../public/img-squirrel/image_18.webp" class="text-center m-auto md:w-full w-96" alt="">
                 <h4 class="md:text-2xl text-base font-bold py-10 ">Je souhaite devenir un artiste</h4>
             </RouterLink>

@@ -27,16 +27,16 @@
         <flechebas class="mt-2" />
       </div>
     </div>
-<RouterLink to="/profilArtiste"><Card2 /></RouterLink>
+    <Card2 />
     <!-- <div class="mx-5 grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(345px,1fr))] gap-8 p-10 py-20"> -->
-      <!-- <RouterLink to="/profilArtiste"
+    <!-- <RouterLink to="/profilArtiste"
         ><Card1 image="/public/img-squirrel/Florent_Vacot.webp" nom="Florent Vacot" role="Peintre"
       /></RouterLink>
       <RouterLink to="/profilArtiste"><Card1 image="/public/img-squirrel/image_1.webp" nom="Manon Bernard" role="Peintre" /></RouterLink>
       <RouterLink to="/profilArtiste"><Card1 image="/public/img-squirrel/image_5.webp" nom="Pauline Fort" role="Peintre" /></RouterLink>
       <RouterLink to="/profilArtiste"><Card1 image="/public/img-squirrel/image12.webp" nom="Lance Leblanc" role="Peintre" /></RouterLink>
       <RouterLink to="/profilArtiste"><Card1 image="/public/img-squirrel/image13.webp" nom="Florent Vacot" role="Peintre" /></RouterLink> -->
-      
+
     <!-- </div> -->
   </body>
 </template>

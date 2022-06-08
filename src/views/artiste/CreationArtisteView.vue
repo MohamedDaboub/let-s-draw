@@ -1,42 +1,46 @@
 <template>
-  <div class="container">
-    <form enctype="multipart/form-data" @submit.prevent="createArtiste">
-      <div class="card bg-dark">
-        <div class="card-header">
-          <h5 style="color: white">Création compte artiste</h5>
-        </div>
-
-        <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div>
+    <section class="p-10">
+        <h1  class="text-white text-3xl">Personnalisation de votre profil</h1>
+        <p class="mt-10">Veuillez personnalisé votre profil afin de montrer l’étendu de vos qualitées aux utilisateurs</p>
+    </section>
+    <section>
+        <form action="#" method="post" class="text-white" @submit.prevent="createArtiste">
+            <div class="mx-[25%]">
+                 <div>
                 <img class="preview img-fluid" :src="imageData" />
               </div>
+                <p>
+                    <label for="name"  class="flex flex-col my-5">Votre Nom
+                        <input type="text" id="name" name="name" v-model="artiste.nom" placeholder="  Henri "  class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400 text-black  rounded-lg h-8" >
+                    </label>
+                </p>
+                <p>
+                    <label for="forename"  class="flex flex-col my-5">Votre Prénom 
+                        <input type="text" id="forename" name="forename"  placeholder="  Laporte "  class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400 text-black   rounded-lg h-8" v-model="artiste.prenom">
+                    </label>
+                </p>
+                <p> 
+                    <label for="number" class="flex gap-4 h-8 my-10">Age
+                        <input type="text" id="age" name="age" class="rounded-lg"  v-model="artiste.age">
+                    </label>
+                </p>
+                <p>
+                    <label for="mail"  class="flex flex-col my-5">Votre mail 
+                        <input type="text" id="mail" name="mail"  placeholder="  xxx@hmmm.com " required class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400 text-black   rounded-lg h-8" v-model="artiste.mailArtiste">
+                    </label>
+                </p>
+                <p>
+                    <label for="Description" class="flex flex-col my-5">Description
+                        <textarea id="message" name="message"  placeholder="   Description" rows="7" required class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400  text-black  rounded-lg " v-model="artiste.description"></textarea>
+                    </label>
+                </p>
+                <p>
+                    <label for="Délai" class="flex flex-col my-5">Délai
+                        <textarea id="message" name="message"  placeholder="   Délai" rows="7" required class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400  text-black  rounded-lg " v-model="artiste.délai"></textarea>
+                    </label>
+                </p>
             </div>
-
-            <div class="col-6">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Nom</span>
-                </div>
-                <input class="form-control" placeholder="Nom " v-model="artiste.nom" required />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Prénom</span>
-                </div>
-                <input class="form-control" placeholder="Prénom " v-model="artiste.prenom" required />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Age</span>
-                </div>
-                <input class="form-control" placeholder="Age" v-model="artiste.age" required />
-              </div>
-              <br />
-              <div class="input-group">
+            <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Photo</span>
                 </div>
@@ -45,64 +49,81 @@
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
               </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">mail</span>
+            <!-- <div class="mx-[10%]">
+                <p>Vos domaines</p>
+                <div class="grid grid-cols-3">
+                    <div class="flex m-4">
+                        <input type="checkbox" id="choix1" name="choix1"
+                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
+                        <label for="choix1" class="check"><TypeDessins  Nom="Hyperréalisme"/></label>
+                    </div>
+                    <div class="flex m-4">
+                        <input type="checkbox" id="choix2" name="choix2"
+                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
+                        <label for="choix2" class="check"><TypeDessins Nom="Dessin au Trait"/></label>
+                    </div>         
+                    <div class="flex m-4">
+                        <input type="checkbox" id="choix3" name="choix3"
+                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
+                        <label for="choix3" class="check"><TypeDessins Nom="Le gribouillage"/></label>
+                    </div>  
+                    <div class="flex m-4">
+                        <input type="checkbox" id="choix4" name="choix4"
+                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
+                        <label for="choix4" class="check"><TypeDessins Nom="L’anamorphique"/></label>
+                    </div>  
+                    <div class="flex m-4">
+                        <input type="checkbox" id="choix5" name="choix5"
+                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
+                        <label for="choix5" class="check"><TypeDessins Nom="L’architectural"/></label>
+                    </div>
+                    <div class="flex m-4">
+                        <input type="checkbox" id="choix6" name="choix6"
+                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
+                        <label for="choix6" class="check"><TypeDessins Nom="Le pointillisme"/></label>
+                    </div> 
+                    <div class="flex m-4">
+                        <input type="checkbox" id="choix7" name="choix7"
+                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
+                        <label for="choix7" class="check"><TypeDessins  Nom="Le dessin de mode"/></label>
+                    </div>         
                 </div>
-                <input class="form-control" placeholder="Mail" v-model="artiste.mailArtiste" required />
-              </div>
-              <!-- <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Date naissance</span>
-                                </div>
-                                <input 
-                                    type="date"
-                                    class="form-control"
-                                    v-model="participant.naissance"
-                                    format="dd//mm/yyyy" 
-                                    required />                    
-                            </div> -->
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Délai</span>
+            </div> -->
+             <div class="">
+                <div class="">
+                  <span class="">Categorie</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">description</span>
-                </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.description" required />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Style</span>
-                </div>
-                <select class="custom-select" v-model="artiste.categorie">
+                <select class="" v-model="artiste.categorie">
                   <option selected disabled>Sélectionner un style</option>
                   <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé">{{ categorieArtiste.libellé }}</option>
                 </select>
               </div>
               <br />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Créer</button>
-          <button class="btn btn-light float-right">
-            <router-link to="/CreateArtiste">Annuler</router-link>
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
+            <div class="">
+                <div class="">
+                  <span class="">metier</span>
+                </div>
+                <select class="" v-model="artiste.role">
+                  <option selected disabled>Sélectionner un style</option>
+                  <option v-for="metier in listeMetier" :key="metier.libellé">{{ metier.libellé }}</option>
+                </select>
+              </div>
+              <br />
+            <div class="card-footer">   
+                    <button type="submit" class="float-left btn btn-light">
+                        Créer
+                    </button>
+                    <button class="float-right btn btn-light" >
+                        <router-link to="/choixArtiste" >Annuler</router-link>
+                    </button>
+                </div>
+        </form>
+    </section>
 </template>
+
 <script>
+// import TypeDessins from "../components/TypeDessinsView.vue"
+import Bouton from "../../components/BoutonView.vue"
 import {
   getFirestore,
   collection,
@@ -118,11 +139,14 @@ import {
 import { getStorage, ref, getDownloadURL, uploadString } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
-  name: "CreateArtisteView",
+    name: "App",
+    components: { Bouton },
+     name: "CreateArtisteView",
   data() {
     return {
       imageData: null,
       listecategorieArtiste: [],
+      listeMetier:[],
       artiste: {
         nom: null,
         prenom: null,
@@ -133,11 +157,13 @@ export default {
         categorie: null,
         style:null,
         description:null,
+        role:null,
       },
     };
   },
   mounted() {
     this.getCategorieA();
+    this.getMetier();
   },
   methods: {
     async getCategorieA() {
@@ -149,10 +175,24 @@ export default {
           id: doc.id,
           libellé: doc.data().libellé,
         };
-        this.categorieArtiste.push(categorieArtiste);
+        this.listecategorieArtiste.push(categorieArtiste);
         console.log("liste des categories", this.categorieArtiste);
       });
     },
+    async getMetier() {
+      const firestore = getFirestore();
+      const dbMetier = collection(firestore, "metier");
+      const query = await getDocs(dbMetier);
+      query.forEach((doc) => {
+        let metier = {
+          id: doc.id,
+          libellé: doc.data().libellé,
+        };
+        this.listeMetier.push(metier);
+        console.log("liste des metiers", this.metier);
+      });
+    },
+
 
     previewImage: function (event) {
       // Miseàjour de la photo du participant

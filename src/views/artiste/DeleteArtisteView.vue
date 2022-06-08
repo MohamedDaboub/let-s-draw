@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-6">
               <div>
-                <img class="preview img-fluid" :src="photoActuelle" />
+                <img class="preview img-fluid" :src="imageData" />
               </div>
             </div>
 
@@ -78,6 +78,16 @@
                 </select>
               </div>
             <br />
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Metier</span>
+                </div>
+                <select class="custom-select" v-model="artiste.role">
+                  <option selected disabled>Sélectionner un metier</option>
+                  <option v-for="metier in listeMetier" :key="metier.libellé">{{ metier.libellé }}</option>
+                </select>
+              </div>
+              <br />
               <h5 class="alert alert-warning text-center" role="alert">
                 Attention vous allez supprimer cet artiste, cette action est irreversible !!
               </h5>
@@ -92,6 +102,7 @@
           </button>
         </div>
       </div>
+      
     </form>
   </div>
 </template>
@@ -124,6 +135,7 @@ export default {
   name: "CreateView",
   data() {
     return {
+      imageData:null,
       artiste: {
         nom: null,
         prenom: null,
@@ -134,6 +146,7 @@ export default {
         categorie: null,
         style:null,
         description:null,
+        role:null,
       },
       refArtiste: null,
       photoActuelle: null,
@@ -164,7 +177,30 @@ export default {
           console.log("erreur downloadUrl", error);
         });
     },
-
+    previewImage: function (event) {
+      // Miseàjour de la photo du participant
+      this.file = this.$refs.file.files[0];
+      // Récupérer le nom du fichier pour la photo du participant
+      this.artiste.photo = this.file.name;
+      // Reference to the DOM input element
+      // Reference du fichieràprévisualiser
+      var input = event.target;
+      // On s'assure que l'onaau moins un fichieràlire
+      if (input.files && input.files[0]) {
+        // Creation d'un filereader
+        // Pour lire l'image et la convertir en base 64
+        var reader = new FileReader();
+        // fonction callback appellée lors que le fichieraété chargé
+        reader.onload = (e) => {
+          // Read image as base64 and set to imageData
+          // lecture du fichier pour mettreàjour
+          // la prévisualisation
+          this.imageData = e.target.result;
+        };
+        // Demarrage du reader pour la transformer en data URL(format base 64)
+        reader.readAsDataURL(input.files[0]);
+      }
+    },
     async deleteArtiste() {
       const firestore = getFirestore();
       await deleteDoc(doc(firestore, "artiste", this.$route.params.id));
