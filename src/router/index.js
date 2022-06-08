@@ -11,7 +11,6 @@ import InscriptionView from '../views/InscriptionView.vue'
 import AproposView from '../views/AproposView.vue'
 import UnicefView from '../views/UnicefView.vue'
 import page404 from '../views/Page404View.vue'
-import connecter from '../views/ConnecterView.vue'
 import AuthFirebaseView from '../AuthentificationFirebase/AuthFirebaseView.vue'
 import CreationArtisteView from '../views/artiste/CreationArtisteView.vue'
 import ModifierArtisteView from '../views/artiste/ModifierArtisteView.vue'
@@ -33,7 +32,6 @@ const router = createRouter({
     { path: '/Apropos', name: 'AproposView', component: AproposView },
     { path: '/Unicef', name: 'UnicefView', component: UnicefView },
     { path: '/:pathMatch(.*)*', name: 'page404', component: page404 },
-    { path: '/connecter', name: 'connecter', component: connecter },
     { path: '/Auth', name:'AuthFirebase', component: AuthFirebaseView},
     { path: '/CreateArtiste', name:'CreateArtiste', component: CreationArtisteView},
     { path: '/ModifierArtiste/:id', name:'ModifierArtiste', component: ModifierArtisteView},
