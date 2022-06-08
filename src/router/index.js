@@ -14,6 +14,7 @@ import UnicefView from '../views/UnicefView.vue'
 import page404 from '../views/Page404View.vue'
 import connecter from '../views/ConnecterView.vue'
 import IArtistesView from '../views/IArtistesView.vue'
+import AuthFirebaseView from '../AuthentificationFirebase/AuthFirebaseView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,7 @@ const router = createRouter({
     { path: '/IArtistes', name: 'IArtistesView', component: IArtistesView },
     { path: '/:pathMatch(.*)*', name: 'page404', component: page404 },
     { path: '/connecter', name: 'connecter', component: connecter },
+    { path: '/Auth', name:'AuthFirebase', component: AuthFirebaseView},
     // ici les autres routes
   ],
   scrollBehavior(to, from, savedPosition) {
