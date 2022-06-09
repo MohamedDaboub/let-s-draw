@@ -18,7 +18,7 @@
             <div class="mx-[15%] grid grid-cols-6 text-base">
               <div class="">
                 <div class="">
-                  <span class="input-group-text">Titre dessi,</span>
+                  <span class="input-group-text">Titre dessin</span>
                 </div>
                 <input class="form-control" placeholder="Titre du dessin" v-model="dessin.titre" required />
               </div>
