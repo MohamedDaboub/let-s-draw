@@ -22,6 +22,10 @@ import ModifierParentView from '../views/parent/ModiferParentView.vue'
 import DeleteParentView from '../views/parent/DeleteParentView.vue'
 import ConnexionParentView from '../views/parent/ConnexionParentView.vue'
 import ListeDessinView from '../views/dessin/ListeDessinView.vue'
+import CreateDessinView from '../views/dessin/CreateDessinView.vue'
+import AfficheDessinView from '../views/dessin/AfficheDessinView.vue'
+import ModifierDessinView from '../views/dessin/ModifierDessinView.vue'
+import DeleteDessinView from '../views/dessin/DeleteDessinView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -49,6 +53,10 @@ const router = createRouter({
     { path: '/DeleteParent/:id', name:'DeleteParent', component: DeleteParentView},
     { path: '/ConnexionParent', name:'ConnexionParent', component: ConnexionParentView},
     { path: '/ListeDessin', name:'ListeDessin', component: ListeDessinView},
+    { path: '/CreateDessin', name:'CreateDessin', component: CreateDessinView},
+    { path: '/AfficheDessin/:id', name:'AfficheDessin', component: AfficheDessinView},
+    { path: '/ModifierDessin/:id', name:'ModifierDessin', component: ModifierDessinView},
+    { path: '/DeleteDessin::id', name:'DeleteDessin', component: DeleteDessinView},
     // ici les autres routes
   ],
   scrollBehavior(to, from, savedPosition) {

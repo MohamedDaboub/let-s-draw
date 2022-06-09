@@ -3,6 +3,9 @@
             <img class="rounded-t-lg w-full h-full" :src="dessin.photo" :alt="dessin.titre">
             <div class="flex text-white mx-4">
                 <h2 class="font-bold font-chivo text-2xl my-6">{{ dessin.titre }}</h2>
+                <RouterLink :to="{ name: 'AfficheDessin', params: { id: dessin.id } }"><p>Afficher</p></RouterLink>
+                <RouterLink :to="{ name: 'ModifierDessin', params: { id: dessin.id } }"><p>Modifier</p></RouterLink>
+                <RouterLink :to="{ name: 'DeleteDessin', params: { id: dessin.id } }"><p>Supprimer</p></RouterLink>
             </div>
 
     </div>
