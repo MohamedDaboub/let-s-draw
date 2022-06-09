@@ -218,7 +218,7 @@ export default {
                     // Obtenir le Cloud Storage
                     const storage = getStorage();
                     // Récupérer l'image par son nom de fichier
-                    const spaceRef = ref(storage, "users/"+user.avatar);
+                    const spaceRef = ref(storage, "user/"+user.avatar);
                     // Récupération de l'url
                     getDownloadURL(spaceRef)
                     .then((url)=>{
