@@ -100,12 +100,14 @@
             <p class="w-1/2 ml-16 text-white">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
                 “Unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
                 Draw.</p>
-            <img class="absolute w-1/4 right-20 mb-20" src="../../public/img-squirrel/image-37 (1).webp" alt="Logo Unicef">
+                <!-- <img class="items-center m-auto my-10" src="../../public/img-squirrel/image_19.webp" alt="Logo Unicef"> -->
             
         </div>
-        <div class="mt-56">
+        <div class="my-10">
             <h3 class="text-2xl text-white my-6 mx-6">Répartition du don</h3>
-            <img class="w-1/3 ml-64" src="../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don">
+            <div class="flex justify-end mx-auto">
+            <!-- <img class="w-1/3" src="../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don"> -->
+            </div>
         </div>
         <bouton class="mt-10 mr-40" Nom="Faire un don" />
     </div>

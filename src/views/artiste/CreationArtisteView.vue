@@ -1,13 +1,13 @@
 <template>
-    <section class="p-10">
-        <h1  class="text-white text-3xl">Personnalisation de votre profil</h1>
-        <p class="mt-10">Veuillez personnalisé votre profil afin de montrer l’étendu de vos qualitées aux utilisateurs</p>
+    <section class="md:mx-10 text-white p-4">
+        <h1  class="text-white text-3xl font-chivo">Personnalisation de votre profil</h1>
+        <p class="py-10 font-fira-sans">Veuillez personnalisé votre profil afin de montrer l’étendu de vos qualitées aux utilisateurs</p>
     </section>
     <section>
-        <form action="#" method="post" class="text-white" @submit.prevent="createArtiste">
+        <form action="#" method="post" class="text-white font-fira-sans" @submit.prevent="createArtiste">
             <div class="mx-[25%]">
                  <div>
-                <img class="preview img-fluid" :src="imageData" />
+                <img class="flex justify-center mx-auto rounded-2xl" :src="imageData" />
               </div>
                 <p>
                     <label for="name"  class="flex flex-col my-5">Votre Nom
@@ -40,13 +40,13 @@
                     </label>
                 </p>
             </div>
-            <div class="input-group">
+            <div class="flex flex-col">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Photo</span>
+                  <span class="text-xl ">Photo</span>
                 </div>
-                <div class="custom-file">
+                <div class="">
                   <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
-                  <label class="custom-file-label" for="file">Sélectionner l'image</label>
+                  <label class="text-base" for="file">Sélectionner l'image</label>
                 </div>
               </div>
             <!-- <div class="mx-[10%]">
@@ -89,11 +89,11 @@
                     </div>         
                 </div>
             </div> -->
-             <div class="">
+             <div class="py-5">
                 <div class="">
-                  <span class="">Categorie</span>
+                  <span class="text-xl py-10">Categorie</span>
                 </div>
-                <select class="" v-model="artiste.categorie">
+                <select class="text-black" v-model="artiste.categorie">
                   <option selected disabled>Sélectionner un style</option>
                   <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé">{{ categorieArtiste.libellé }}</option>
                 </select>
@@ -101,7 +101,7 @@
               <br />
             <div class="">
                 <div class="">
-                  <span class="">metier</span>
+                  <span class="text-xl">metier</span>
                 </div>
                 <select class="" v-model="artiste.role">
                   <option selected disabled>Sélectionner un style</option>
@@ -109,11 +109,11 @@
                 </select>
               </div>
               <br />
-            <div class="card-footer">   
-                    <button type="submit" class="float-left btn btn-light">
+            <div class="flex md:gap-10 gap-5  justify-center py-10 ">   
+                    <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4 ">
                         Créer
                     </button>
-                    <button class="float-right btn btn-light" >
+                    <button class="bg-bleufonce md:px-8 px-4 py-4" >
                         <router-link to="/choixArtiste" >Annuler</router-link>
                     </button>
                 </div>

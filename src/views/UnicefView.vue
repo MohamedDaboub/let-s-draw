@@ -3,7 +3,7 @@
     <h1 class="text-3xl  font-bold py-4">C’est quoi l’UNICEF ?</h1>
     <p class=" text-lg py-4">UNICEF - pour United Nations International Children's Emergency Fund, soit Fonds des Nations unies pour l’enfance - est une agence des Nations unies, créée en 1946, dont le siège est à New York, aux États-Unis.
         Elle s’occupe de défendre le droit des enfants et de les défendre face à la pauvreté, la famine...</p>
-    <img class="items-center m-auto my-10" src="../../public/img-squirrel/image-37 (1).webp" alt="">
+    <img class="items-center m-auto my-10" src="../../public/img-squirrel/image_19.webp" alt="">
     <p class=" text-lg mr-[30rem] ml-24">Nous soutenons l’UNICEF car nous voulons aider les enfants  défavorisés du monde entier. Deplus, le principe de Let’s Draw est en rapport avec les enfants, leur faire plaisir reproduisant leur dessin ou encore en gardant un souvenir de leur dessin</p>
     <div class=" flex justify-between mx-40 my-16">
         <h3 class="text-4xl font-bold">2,15 milliard $</h3>

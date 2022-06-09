@@ -50,7 +50,7 @@ import {
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
-import {emitter} from '../../main';
+// import {emitter} from '../../main';
 export default {
   name: "MonCompteView",
   data() {

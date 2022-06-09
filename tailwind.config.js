@@ -19,7 +19,7 @@ module.exports = {
       "fontFamily": {
         "inter": "Inter, system-ui, sans-serif",
         "yaldevi": "Yaldevi",
-        "tinos": "Tinos",
+        "chivo": "Chivo",
         "fira-sans": "Fira Sans"
       },
 
