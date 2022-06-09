@@ -3,18 +3,18 @@
     <form enctype="multipart/form-data" @submit.prevent="deleteParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Supression du parent</h5>
+          <h5 class="text-center py-10 text-2xl text-white font-chivo">Supression du parent</h5>
         </div>
 
         <div class="card-body">
-          <div class="row">
+          <div class="grid grid-cols-1">
             <div class="col-6">
-              <div>
-                <img class="preview img-fluid" :src="imageData" />
+              <div class="flex justify-center my-10">
+                <img class="w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-1 md:mx-[15%] mx-[5%] text-base">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
@@ -54,23 +54,26 @@
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
+                <div>
+                  <span>moyen</span>
                 </div>
                  <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
               </div>
               <br />
-              <h5 class="alert alert-warning text-center" role="alert">
-                Attention vous allez supprimer ce parent, cette action est irreversible !!
-              </h5>
             </div>
           </div>
+            <div class="flex justify-center my-10 text-white text-lg">
+              <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
+            </div>
+            <div class="bg-red-600 text-black py-10 my-10  text-lg font-chivo font-bold mx-[20%]">
+              <h5 class="alert alert-warning text-center" role="alert">  Attention vous allez supprimer ce parent, cette action est irreversible !!</h5>
+            </div>
         </div>
 
-        <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Supprimer</button>
-          <button class="btn btn-light float-right">
-            <router-link to="/CreateArtiste">Annuler</router-link>
+        <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
+          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Supprimer</button>
+          <button class="bg-bleufonce md:px-8 px-4 py-4">
+            <router-link to="/listeParent">Annuler</router-link>
           </button>
         </div>
       </div>

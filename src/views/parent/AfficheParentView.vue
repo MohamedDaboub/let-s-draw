@@ -70,7 +70,7 @@
         <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
           <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Valider</button>
           <button class="bg-bleufonce md:px-8 px-4 py-4t">
-            <router-link to="/CreateArtiste">Annuler</router-link>
+            <router-link to="/listeParent">Annuler</router-link>
           </button>
         </div>
       </div>
