@@ -122,6 +122,9 @@
   <button class="mx-auto flex justify-center py-10 text-white">
     <RouterLink to="/Chat" class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">Commence un chat </RouterLink>
   </button>
+  <button class="mx-auto flex justify-center py-10 text-white">
+    <RouterLink to="/CreateDessin" class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">Soumettre un dessin</RouterLink>
+  </button>
 </template>
 <script>
 import TypeDessins from "../../components/TypeDessinsView.vue";
