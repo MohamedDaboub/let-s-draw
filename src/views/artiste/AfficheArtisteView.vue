@@ -118,7 +118,7 @@
 
   <!-- Composant bouton envoyer -->
   <button class="mx-auto flex justify-center py-10 text-white">
-    <RouterLink to="" class="bg-bleufonce px-4 py-4 md:px-8">Commence un chat </RouterLink>
+    <RouterLink to="/Chat" class="bg-bleufonce px-4 py-4 md:px-8">Commence un chat </RouterLink>
   </button>
 </template>
 <script>

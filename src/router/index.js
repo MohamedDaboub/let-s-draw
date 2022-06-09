@@ -26,6 +26,7 @@ import CreateDessinView from '../views/dessin/CreateDessinView.vue'
 import AfficheDessinView from '../views/dessin/AfficheDessinView.vue'
 import ModifierDessinView from '../views/dessin/ModifierDessinView.vue'
 import DeleteDessinView from '../views/dessin/DeleteDessinView.vue'
+import ChatView from '../views/ChatView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,7 +57,8 @@ const router = createRouter({
     { path: '/CreateDessin', name:'CreateDessin', component: CreateDessinView},
     { path: '/AfficheDessin/:id', name:'AfficheDessin', component: AfficheDessinView},
     { path: '/ModifierDessin/:id', name:'ModifierDessin', component: ModifierDessinView},
-    { path: '/DeleteDessin::id', name:'DeleteDessin', component: DeleteDessinView},
+    { path: '/DeleteDessin/:id', name:'DeleteDessin', component: DeleteDessinView},
+    { path: '/Chat', name:'Chat', component: ChatView},
     // ici les autres routes
   ],
   scrollBehavior(to, from, savedPosition) {
