@@ -10,7 +10,7 @@
           <div class="grid grid-cols-1">
             <div class="">
               <div class="flex justify-center my-10">
-                <img class="w-1/4 rounded-full" :src="imageData" />
+                <img class="w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 

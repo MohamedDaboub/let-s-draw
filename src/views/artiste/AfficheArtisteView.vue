@@ -13,7 +13,7 @@
 
             <div class="">
               <div class="flex justify-center my-10">
-                <img class="w-1/4 h-1/6 rounded-full " :src="imageData" />
+                <img class="w-1/4 h-1/6 rounded-2xl " :src="imageData" />
               </div>
             </div>
 

@@ -1,23 +1,23 @@
 <template>
-    <h1 class="p-10 text-white text-5xl">Mon Profil</h1>
+    <h1 class="p-10 text-white text-3xl text-center">Mon Profil</h1>
   <div class="container">
     <form enctype="multipart/form-data" @submit.prevent="afficheParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Affichage du parent</h5>
+          <h5 class="text-center py-10 text-2xl text-white font-chivo">Affichage du parent</h5>
         </div>
 
         <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div>
-                <img class="preview img-fluid" :src="imageData" />
+          <div class="grid grid-cols-1">
+            <div class="">
+              <div class="flex justify-center my-10">
+                <img class="w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 
-            <div class="col-6">
-              <div class="input-group">
-                <div class="input-group-prepend">
+            <div class="grid grid-cols-6 mx-[15%] text-base">
+              <div class="">
+                <div class="">
                   <span class="input-group-text">Nom</span>
                 </div>
                 <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" disabled />
@@ -48,15 +48,15 @@
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
+                <div class="py-4">
                   <span class="input-group-text">Nombre d'enfants</span>
                 </div>
                 <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" disabled />
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
+                <div class="py-4">
+                  <span>Moyen Paiement</span>
                 </div>
                  <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
               </div>
@@ -64,10 +64,12 @@
             </div>
           </div>
         </div>
-
-        <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Valider</button>
-          <button class="btn btn-light float-right">
+        <div class="text-white py-10 text-center">
+        <span >Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
+        </div>
+        <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
+          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Valider</button>
+          <button class="bg-bleufonce md:px-8 px-4 py-4t">
             <router-link to="/CreateArtiste">Annuler</router-link>
           </button>
         </div>
