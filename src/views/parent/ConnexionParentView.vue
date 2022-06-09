@@ -1,10 +1,10 @@
 <template>
   <form @submit.prevent="onCnx">
-    <div class="card-body">
+    <div class="flex justify-center gap-10 py-10">
       <div class="row">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text">Email</span>
+            <span class="text-white text-lg">Email</span>
           </div>
           <input
             class="form-control"
@@ -14,9 +14,9 @@
             required
           />
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group my-5">
           <div class="input-group-prepend">
-            <span class="input-group-text">Mot de passe</span>
+            <span class="text-white text-lg">Mot de passe</span>
           </div>
           <input
             class="form-control"
@@ -32,11 +32,13 @@
           </div>
         </div>
       </div>
-      <div class="alert alert-warning" role="alert">{{ message }}</div>
     </div>
-    <div class="card-footer">
-      <button type="submit" class="float-left btn btn-dark">Connexion</button>
-      <button type="button" class="float-right btn btn-dark" @click="onDncx">
+    <div class="flex justify-center text-white text-xl">
+    <div class="alert alert-warning" role="alert">{{ message }}</div>
+    </div>
+    <div class="flex justify-center md:gap-10 gap-4 text-white py-10 ">
+      <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Connexion</button>
+      <button type="button" class="bg-bleufonce md:px-8 px-4 py-4" @click="onDncx">
         Déconnexion
       </button>
     </div>
