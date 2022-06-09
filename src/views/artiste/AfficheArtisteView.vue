@@ -1,6 +1,4 @@
 <template>
-
-<!-- Les inputs doivent être des balises P (du moins a tester) !! affichage statique sur cette page avec l'id sélectionné -->
   <div class="container">
     <form enctype="multipart/form-data" @submit.prevent="afficheArtiste">
       <div class="">
@@ -111,8 +109,15 @@
       </div>
     </form>
   </div>
-
+<!-- comme je ne comprends pas comment faire un import d'un élément seul avec firebase malgré le lien id artiste qui est crée, ce sera une grossière liste sans lien id qui sera diffusé... -->
   <h2 class="font-chivo text-center my-10 text-2xl">Mes derniers dessins :</h2>
+    <div class="flex bg-noir rounded-xl flex-col" v-for="dessin in listeDessin" :key="dessin.id">
+            <img class="rounded-t-lg w-full h-full" :src="dessin.photo" :alt="dessin.titre">
+            <div class="flex text-white mx-4">
+                <p class="font-bold text-2xl my-6">{{ dessin.titre }}</p>
+            </div>
+
+    </div>
 
   <div>
     <div>
@@ -169,11 +174,15 @@ export default {
         role: null,
         login:null,
         password:null,
+        titreDessin:null,
+        photoDessin: null,
       },
       refArtiste: null,
       photoActuelle: null,
+      photoCard:null,
       listecategorieArtiste: [],
       listeMetier: [],
+      listeDessin:[],
     };
   },
   mounted() {
@@ -181,8 +190,43 @@ export default {
     this.getArtiste(this.$route.params.id);
     this.getCategorieA();
     this.getMetier();
+    this.getDessin();
+
   },
   methods: {
+      async getDessin() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données(collection)document participant
+      const dbDessin = collection(firestore, "dessin");
+      // Liste des participants triés sur leur nom
+      const q = query(dbDessin, orderBy("titre", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        this.listeDessin = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        // Récupération des images de chaque participant
+        // parcours de la liste
+
+        this.listeDessin.forEach(function (dessin) {
+          // Obtenir le Cloud Storage
+          const storage = getStorage();
+          // Récupération de l'image par son nom de fichier
+          const spaceRef = ref(storage, "dessin/" + dessin.photo);
+          // Récupération de l'url complète de l'image
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              // On remplace le nom du fichier
+              // Par l'url complète de la photo
+              dessin.photo = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
     async getArtiste(id) {
       const firestore = getFirestore();
       const docRef = doc(firestore, "artiste", id);

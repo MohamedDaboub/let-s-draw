@@ -4,7 +4,7 @@
     <form enctype="multipart/form-data" @submit.prevent="createDessin">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 class="py-10 text-center font-chivo text-2xl text-white">Affichage du dessin</h5>
+          <h5 class="py-10 text-center font-chivo text-2xl text-white">Création du dessin</h5>
         </div>
 
         <div class="card-body">
@@ -20,14 +20,14 @@
                 <div class="">
                   <span class="input-group-text">Titre dessi,</span>
                 </div>
-                <input class="form-control" placeholder="Titre du dessin" v-model="dessin.titre" disabled />
+                <input class="form-control" placeholder="Titre du dessin" v-model="dessin.titre" required />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Description dessin</span>
                 </div>
-                <input class="form-control" placeholder="Titre du dessin" v-model="dessin.description" disabled />
+                <input class="form-control" placeholder="Titre du dessin" v-model="dessin.description" required />
               </div>
               <br />
               <div class="input-group">
@@ -35,7 +35,7 @@
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled/>
+                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" required/>
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
               </div>
