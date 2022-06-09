@@ -3,18 +3,18 @@
     <form enctype="multipart/form-data" @submit.prevent="createParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Création compte Parent</h5>
+          <h5 class="text-center py-10 text-2xl text-white font-chivo">Création compte Parent</h5>
         </div>
 
         <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div>
-                <img class="preview img-fluid" :src="imageData" />
+          <div class="grid grid-cols-1">
+            <div class="">
+              <div class="flex justify-center my-10">
+                <img class="w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="grid grid-cols-6 mx-[15%] text-base">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
@@ -54,10 +54,8 @@
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"
-                    >Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span
-                  >
+                <div class="py-3">
+                  <span>Moyen Paiement</span>
                 </div>
                 <select class="custom-select" v-model="parent.moyenP">
                   <option selected disabled>Sélectionner un moyen de paiement</option>
@@ -67,12 +65,15 @@
               <br />
             </div>
           </div>
+        <div class="text-xl text-white text-center py-10">
+          <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
+        </div>
         </div>
 
-        <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Créer</button>
-          <button class="btn btn-light float-right">
-            <router-link to="/listeParent">Annuler</router-link>
+        <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
+          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Créer</button>
+          <button class="bg-bleufonce md:px-8 px-4 py-4">
+            <routerlink to="/listeParent">Annuler</routerlink>
           </button>
         </div>
       </div>

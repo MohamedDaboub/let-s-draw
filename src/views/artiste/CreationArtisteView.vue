@@ -39,8 +39,7 @@
                         <textarea id="message" name="message"  placeholder="   Délai" rows="7" required class="my-3 border-2  placeholder:text-base md:placeholder:text-lg placeholder:text-gray-400  text-black  rounded-lg " v-model="artiste.délai"></textarea>
                     </label>
                 </p>
-            </div>
-            <div class="flex flex-col">
+                <div class="flex flex-col">
                 <div class="input-group-prepend">
                   <span class="text-xl ">Photo</span>
                 </div>
@@ -49,46 +48,6 @@
                   <label class="text-base" for="file">Sélectionner l'image</label>
                 </div>
               </div>
-            <!-- <div class="mx-[10%]">
-                <p>Vos domaines</p>
-                <div class="grid grid-cols-3">
-                    <div class="flex m-4">
-                        <input type="checkbox" id="choix1" name="choix1"
-                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix1" class="check"><TypeDessins  Nom="Hyperréalisme"/></label>
-                    </div>
-                    <div class="flex m-4">
-                        <input type="checkbox" id="choix2" name="choix2"
-                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix2" class="check"><TypeDessins Nom="Dessin au Trait"/></label>
-                    </div>         
-                    <div class="flex m-4">
-                        <input type="checkbox" id="choix3" name="choix3"
-                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix3" class="check"><TypeDessins Nom="Le gribouillage"/></label>
-                    </div>  
-                    <div class="flex m-4">
-                        <input type="checkbox" id="choix4" name="choix4"
-                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix4" class="check"><TypeDessins Nom="L’anamorphique"/></label>
-                    </div>  
-                    <div class="flex m-4">
-                        <input type="checkbox" id="choix5" name="choix5"
-                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix5" class="check"><TypeDessins Nom="L’architectural"/></label>
-                    </div>
-                    <div class="flex m-4">
-                        <input type="checkbox" id="choix6" name="choix6"
-                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix6" class="check"><TypeDessins Nom="Le pointillisme"/></label>
-                    </div> 
-                    <div class="flex m-4">
-                        <input type="checkbox" id="choix7" name="choix7"
-                            class="mx-5 mt-1 md:h-8 md:w-10 w-20 border-2 border-Default/me/Gris" required>
-                        <label for="choix7" class="check"><TypeDessins  Nom="Le dessin de mode"/></label>
-                    </div>         
-                </div>
-            </div> -->
              <div class="py-5">
                 <div class="">
                   <span class="text-xl py-10">Categorie</span>
@@ -103,11 +62,13 @@
                 <div class="">
                   <span class="text-xl">metier</span>
                 </div>
-                <select class="" v-model="artiste.role">
+                <select class="text-black" v-model="artiste.role">
                   <option selected disabled>Sélectionner un style</option>
                   <option v-for="metier in listeMetier" :key="metier.libellé">{{ metier.libellé }}</option>
                 </select>
               </div>
+            </div>
+            
               <br />
             <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">   
                     <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4 ">
