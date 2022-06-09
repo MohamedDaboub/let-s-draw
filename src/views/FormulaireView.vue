@@ -2,7 +2,7 @@
 <template>
   <section class="mx-[15%]">
     <div class="p-10 text-white">
-      <h1 class="my-10 text-3xl md:text-5xl">Envoyer mon Dessin</h1>
+      <h1 class="my-10 text-3xl md:text-5xl font-chivo">Envoyer mon Dessin</h1>
       <p class="my-10 text-lg md:text-2xl">Pour envoyer votre dessin, veuillez créer un compte et remplir le formulaire ci-dessous</p>
     </div>
     <div>

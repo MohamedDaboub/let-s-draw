@@ -1,6 +1,6 @@
 <template>
     <div class="mx-4 md:mx-8 lg:mx-10 py-10 text-white text-center">
-        <h1 class="text-xl md:text-3xl py-10">ERREUR 404</h1>
+        <h1 class="text-xl md:text-3xl py-10 font-chivo">ERREUR 404</h1>
         <p class="text-lg md:text-xl font-fira-sans">LA PAGE N'A PAS ÉTÉ TROUVÉE...</p>
         <img src="../../public/img-squirrel/image_16.webp" class="m-auto my-10" alt="errore pas non trouver">
     </div>

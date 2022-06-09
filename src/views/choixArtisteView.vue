@@ -1,7 +1,7 @@
 <template>
   <body>
     <section class="p-10">
-      <h1 class="text-3xl text-white">Choix de l’artiste</h1>
+      <h1 class="text-3xl text-white font-chivo">Choix de l’artiste</h1>
 
       <p class="pt-10 text-lg text-white">
         Pour envoyer votre dessin veullez choisir un artiste en fonction de son style et de vos préférences

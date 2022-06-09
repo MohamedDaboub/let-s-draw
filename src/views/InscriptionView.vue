@@ -1,6 +1,6 @@
 <template>
     <body class="md:mx-10 mx-5 text-white">
-        <h1 class="p-10 text-3xl font-bold mx-4">Inscrivez-vous</h1>
+        <h1 class="p-10 text-3xl font-bold mx-4 font-chivo">Inscrivez-vous</h1>
         <p class="text-2xl font-bold py-10">Vous pouvez vous inscrire sous forme de 2 comptes différents.
             Devenez un artiste et vous réaliserez les dessins.
             Envoyez votre dessin pour le faire réaliser par un artiste</p>

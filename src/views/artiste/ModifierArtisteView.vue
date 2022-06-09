@@ -3,7 +3,7 @@
     <form enctype="multipart/form-data" @submit.prevent="updateArtiste">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Mise à jour compte artiste</h5>
+          <h5 class="font-chivo text-white text-center py-10" >Mise à jour compte artiste</h5>
         </div>
 
         <div class="card-body">

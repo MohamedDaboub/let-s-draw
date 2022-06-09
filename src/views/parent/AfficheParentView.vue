@@ -75,7 +75,7 @@
     </form>
   </div>
     <div class="my-6 mx-10">
-        <h2 class="text-4xl text-white">Biographie</h2>
+        <h2 class="text-4xl text-white font-chivo">Biographie</h2>
         <div class="flex justify-between bg-bleutransparent2 p-3 rounded-xl mt-4 mr-40">
             <p class="">Je suis actuellement à la recherche d’un artiste spécialiste du pointillisme. J’aimerai qu’on reprenne mon
             dessin d’enfance.</p>
@@ -83,7 +83,7 @@
         </div>
     </div>
     <div class="my-10 mx-10">
-        <h2 class="text-4xl text-white">Notifications</h2>
+        <h2 class="text-4xl text-white font-chivo">Notifications</h2>
         <div class="text-2xl flex mt-8 ml-20 text-white">
             <p class="bg-red-700 rounded-full p-1">1</p>
             <p class="mx-4 p-1">Vous avez reçu un nouveau dessin</p>
@@ -93,18 +93,18 @@
 
     </div>
     <!-- <bouton  Nom="Consulter mon dessin" /> -->
-    <div class="mx-10 pb-36">
-        <h2 class="text-4xl text-white mt-20">Faîtes un don</h2>
+    <div class="mx-10 py-10">
+        <h2 class="text-3xl text-white my-20 font-chivo">Faîtes un don</h2>
         <div>
-            <h3 class="text-2xl text-white my-6 mx-6">L'objectif du don</h3>
-            <p class="w-1/2 ml-16 text-white">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
+            <h3 class="text-2xl text-white my-6 mx-6 font-chivo">L'objectif du don</h3>
+            <p class="w-1/2 mx-10 text-white">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
                 “Unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
                 Draw.</p>
                 <!-- <img class="items-center m-auto my-10" src="../../public/img-squirrel/image_19.webp" alt="Logo Unicef"> -->
             
         </div>
         <div class="my-10">
-            <h3 class="text-2xl text-white my-6 mx-6">Répartition du don</h3>
+            <h3 class="text-2xl text-white my-6 mx-6 font-chivo">Répartition du don</h3>
             <div class="flex justify-end mx-auto">
             <!-- <img class="w-1/3" src="../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don"> -->
             </div>

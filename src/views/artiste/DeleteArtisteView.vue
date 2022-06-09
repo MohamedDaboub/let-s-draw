@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div class="text-white">
     <form enctype="multipart/form-data" @submit.prevent="deleteArtiste">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Supression de l"artiste</h5>
+          <h5 class="font-chivo text-lg text-center py-10">Supression de l"artiste</h5>
         </div>
 
         <div class="card-body">
@@ -19,7 +19,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
+                <input class="" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
               </div>
               <br />
               <div class="input-group">

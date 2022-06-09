@@ -1,5 +1,5 @@
 <template>
-    <h1 class=" text-white mx-24 text-4xl pt-12 font-medium">Glossaire</h1>
+    <h1 class=" text-white mx-24 text-4xl pt-12 font-medium font-chivo">Glossaire</h1>
     <dl class=" text-white mx-10 py-10 pb-24">
         <dt class=" py-8 text-2xl">Hyperréalisme</dt>
         <dd class=" text-lg mx-10">Courant artistique (peinture, sculpture) né aux États-Unis à la fin des années 1960, caractérisé par un rendu minutieux de la réalité inspiré d'images photographiques.</dd>

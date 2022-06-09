@@ -1,18 +1,18 @@
 <template>
 <section class="lg:mx-10 mx-4 text-white py-7">
-    <h1 class="text-3xl  font-bold py-4">Faire un Don à l’UNICEF</h1>
+    <h1 class="text-3xl  font-bold py-4 font-chivo">Faire un Don à l’UNICEF</h1>
     <p class=" text-lg py-4">Vous avez la possibilité de faire un don à l’UNICEF et à Let’s Draw où la moitié du don ira à l’un et à l’autre</p>
 
-    <h2 class="text-3xl  font-bold py-4">Pourquoi l’UNICEF ?</h2>
+    <h2 class="text-3xl  font-bold py-4 font-chivo">Pourquoi l’UNICEF ?</h2>
     <p class=" text-lg py-4">Nous avons créer une page entièrement dédiée à l’UNICEF. Nous vous conseillons d’aller la voir.</p>
     <div class="flex justify-end ">
     <RouterLink to="/Unicef"><flechedroite /></RouterLink>
     </div>
-    <h2  class="text-3xl  font-bold py-4">Pourquoi Let’s Draw ?</h2>
+    <h2  class="text-3xl  font-bold py-4 font-chivo">Pourquoi Let’s Draw ?</h2>
     <p class=" text-lg py-4">En fondant Let’s Draw, nous avons tout de suite penser à le rendre totalement gratuit. Mais cela a des conséquences, nous avons besoin de rémunération pour continué à faire fonctionner le site.
     Si chaque personne lisant ce message donnait ce qui pouvait, nous pourrons déjà vivre de ce site.</p>
 
-    <h2 class="text-3xl  font-bold py-4">Pour faire un don</h2>
+    <h2 class="text-3xl  font-bold py-4 font-chivo">Pour faire un don</h2>
     <p class=" text-lg py-4">Pour faire un don remplissez le formulaire ci-dessous. 
     Vous avez la possibilité de remplir ce formulaire de façon anonymes en ne remplissant votre nom et prénom.
     Le montant minimal est de 1 € et maximal de 1 000 €.</p>

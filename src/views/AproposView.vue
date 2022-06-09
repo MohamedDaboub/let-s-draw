@@ -1,6 +1,6 @@
 <template>
     <body class="text-white">
-        <h1 class=" text-3xl p-12">Qui sommes-nous ?</h1>
+        <h1 class=" text-3xl p-12 font-chivo">Qui sommes-nous ?</h1>
         <p class=" text-xl px-16 py-8 ">Nous sommes 3 étudiants en BUT MMI. Nous avons réaliser ce concept lors d’un projet durant notre 1 ère année.  Merci de votre compréhension.</p>
         <div class="flex gap-10 justify-center py-10 flex-wrap">
             <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gradient-to-t from-batman to-batman1 ">

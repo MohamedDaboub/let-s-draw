@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <a href="#content" class="sr-only focus:not-sr-only text-lg text-text"> Passez au contenu </a>
     <nav class=" lg:flex lg:justify-between">
       <div class="flex justify-between items-center">
-        <RouterLink to="/"><Logo class="md:w-40 h-12 mx-6 w-16 " /></RouterLink>
+        <RouterLink to="/"><Logo class="w-24  mx-5" /></RouterLink>
         <span class="text-3xl cursor-pointer lg:hidden block w-8 h-8 mx-10  ">
           <MenuIcon class=" text-white"  aria-controls="menu"
           :aria-expanded="menuOuvert"
@@ -69,7 +69,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </ul>
     </nav>
   </header>
-  <main class=" bg-bleu" id="content">
+  <main class=" bg-bleu font-fira-sans" id="content">
     <Router-View />
   </main>
   <footer class="bg-bleufonce pt-10 font-yaldevi ">

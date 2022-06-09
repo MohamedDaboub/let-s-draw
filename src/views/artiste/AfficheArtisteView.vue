@@ -96,7 +96,7 @@
     </form>
   </div>
 
-  <h2>Mes derniers dessins :</h2>
+  <h2 class="font-chivo">Mes derniers dessins :</h2>
 
   <div>
     <div>

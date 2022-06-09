@@ -1,7 +1,7 @@
 <template>
 <section class="mx-[15%]">
     <div class="text-white p-10">
-        <h1 class="md:text-5xl text-3xl my-10">Nous contacter</h1>
+        <h1 class="md:text-5xl text-3xl my-10 font-chivo">Nous contacter</h1>
         <p class="md:text-2xl text-lg my-10">Pour nous contacter veuillez remplir le formulaire ci-dessous en reignant votre demande</p>
     </div>
     <div>
