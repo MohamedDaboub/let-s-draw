@@ -43,7 +43,7 @@
       </button>
     </div>
   </form>
-  <p class="text-lg text-white text-center">Pas encore inscrit ? <RouterLink class="text-black hover:text-blue-300 duration-700 py-10" to="Inscription"> S’inscrire </RouterLink></p>
+  <p class="text-lg text-white text-center py-10">Pas encore inscrit ? <RouterLink class="text-black hover:text-blue-300 duration-700 " to="Inscription"> S’inscrire </RouterLink></p>
 
 </template>
 
