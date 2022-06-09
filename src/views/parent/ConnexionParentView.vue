@@ -7,7 +7,7 @@
             <span class="text-white text-lg">Email</span>
           </div>
           <input
-            class="form-control"
+            class="form-control pl-2"
             placeholder="adresse mail"
             type="email"
             v-model="user.email"
@@ -19,7 +19,7 @@
             <span class="text-white text-lg">Mot de passe</span>
           </div>
           <input
-            class="form-control"
+            class="form-control pl-2"
             placeholder="mot de passe"
             :type="type"
             v-model="user.password"
