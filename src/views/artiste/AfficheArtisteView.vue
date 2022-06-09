@@ -3,8 +3,8 @@
 <!-- Les inputs doivent être des balises P (du moins a tester) !! affichage statique sur cette page avec l'id sélectionné -->
   <div class="container">
     <form enctype="multipart/form-data" @submit.prevent="afficheArtiste">
-      <div class="card bg-dark">
-        <div class="card-header">
+      <div class="">
+        <div class="">
           <h5 class="text-center py-10 text-2xl text-white font-chivo">Affichage compte artiste</h5>
         </div>
 
@@ -32,11 +32,11 @@
                 <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" required disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Age</span>
+              <div class="">
+                <div class="">
+                  <span class="">Age</span>
                 </div>
-                <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled />
+                <input class="" placeholder="Age" v-model="artiste.age" required disabled />
               </div>
               <!-- <br />
               <div class="input-group">
@@ -49,18 +49,18 @@
                 </div>
               </div> -->
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Mail</span>
+              <div class="">
+                <div class="">
+                  <span class="">Mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required disabled />
+                <input class="" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Délai</span>
+              <div class="">
+                <div class="">
+                  <span class="">Délai</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required disabled />
+                <input class="" placeholder="Délai" v-model="artiste.délai" required disabled />
               </div>
               <br />
               <div class="">
@@ -70,18 +70,18 @@
                 <input class="" placeholder="Délai" v-model="artiste.description" required disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Categorie</span>
+              <div class="">
+                <div class="">
+                  <span class="">Categorie</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.categorie" required disabled />
+                <input class="" placeholder="Délai" v-model="artiste.categorie" required disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Métier</span>
+              <div class="">
+                <div class="">
+                  <span class="">Métier</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.role" required disabled />
+                <input class="" placeholder="Délai" v-model="artiste.role" required disabled />
               </div>
               <br />
             </div>

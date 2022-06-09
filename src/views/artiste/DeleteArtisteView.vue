@@ -1,108 +1,109 @@
 <template>
-  <div class="text-white">
+  <div class="">
     <form enctype="multipart/form-data" @submit.prevent="deleteArtiste">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 class="font-chivo text-lg text-center py-10">Supression de l"artiste</h5>
+          <h5 class="text-center py-10 text-2xl text-white font-chivo">Supression de l"artiste</h5>
         </div>
 
-        <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div>
-                <img class="preview img-fluid" :src="imageData" />
+        <div class="">
+          <div class="grid grid-cols-1">
+            <div class="">
+              <div class="flex justify-center my-10">
+                <img class="w-1/4 rounded-full" :src="imageData" />
               </div>
             </div>
-
-            <div class="col-6">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Nom</span>
+            <div class="flex justify-center">
+              <div class="grid grid-cols-4 mx-[20%] text-base ">
+                <div class="m ">
+                  <div class="">
+                    <span class="">Nom</span>
+                  </div>
+                  <input class="" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
                 </div>
-                <input class="" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
-              </div>
+                <br />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Prénom</span>
+                  </div>
+                  <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" disabled />
+                </div>
+                <br />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Age</span>
+                  </div>
+                  <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled />
+                </div>
+                <br />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Photo</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled/>
+                    <label class="custom-file-label" for="file">Sélectionner l'image</label>
+                  </div>
+                </div>
+                <br />
+                <!-- <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Date naissance</span>
+                  </div>
+                  <input type="date" class="form-control" v-model="artiste.naissance" format="dd//mm/yyyy" disabled />
+                </div> -->
+                <br />
+                <br />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Délai</span>
+                  </div>
+                  <input class="form-control" placeholder="Délai" v-model="artiste.délai" disabled />
+                </div>
+                <br />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">description</span>
+                  </div>
+                  <input class="form-control" placeholder="Délai" v-model="artiste.description" disabled />
+                </div>
+                <br />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Style</span>
+                  </div>
+                  <select class="custom-select" v-model="artiste.categorie">
+                    <option selected disabled>Sélectionner un style</option>
+                    <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé" disabled>{{ categorieArtiste.libellé }}</option>
+                  </select>
+                </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Prénom</span>
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Metier</span>
+                  </div>
+                  <select class="custom-select" v-model="artiste.role">
+                    <option selected disabled>Sélectionner un metier</option>
+                    <option v-for="metier in listeMetier" :key="metier.libellé">{{ metier.libellé }}</option>
+                  </select>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" disabled />
+                <br />
               </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Age</span>
-                </div>
-                <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Photo</span>
-                </div>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" disabled/>
-                  <label class="custom-file-label" for="file">Sélectionner l'image</label>
-                </div>
-              </div>
-              <br />
-              <!-- <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Date naissance</span>
-                </div>
-                <input type="date" class="form-control" v-model="artiste.naissance" format="dd//mm/yyyy" disabled />
-              </div> -->
-              <br />
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Délai</span>
-                </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.délai" disabled />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">description</span>
-                </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.description" disabled />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Style</span>
-                </div>
-                <select class="custom-select" v-model="artiste.categorie">
-                  <option selected disabled>Sélectionner un style</option>
-                  <option v-for="categorieArtiste in listecategorieArtiste" :key="categorieArtiste.libellé" disabled>{{ categorieArtiste.libellé }}</option>
-                </select>
-              </div>
-            <br />
-            <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Metier</span>
-                </div>
-                <select class="custom-select" v-model="artiste.role">
-                  <option selected disabled>Sélectionner un metier</option>
-                  <option v-for="metier in listeMetier" :key="metier.libellé">{{ metier.libellé }}</option>
-                </select>
-              </div>
-              <br />
-              <h5 class="alert alert-warning text-center" role="alert">
-                Attention vous allez supprimer cet artiste, cette action est irreversible !!
-              </h5>
+            </div>
+            <div class="bg-red-600 flex justify-center my-10 mx-[30%]">
+            <h5 class=" text-xl text-center my-10" role="alert">
+                  Attention vous allez supprimer cet artiste, cette action est irreversible !!</h5>
             </div>
           </div>
-        </div>
 
-        <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
-          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Supprimer</button>
-          <button class="bg-bleufonce md:px-8 px-4 py-4">
-            <router-link to="/CreateArtiste">Annuler</router-link>
-          </button>
+          <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
+            <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Supprimer</button>
+            <button class="bg-bleufonce md:px-8 px-4 py-4">
+              <router-link to="/CreateArtiste">Annuler</router-link>
+            </button>
+          </div>
         </div>
       </div>
-      
     </form>
   </div>
 </template>

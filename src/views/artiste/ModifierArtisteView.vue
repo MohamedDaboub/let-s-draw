@@ -3,21 +3,21 @@
     <form enctype="multipart/form-data" @submit.prevent="updateArtiste">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 class="font-chivo text-white text-center py-10" >Mise à jour compte artiste</h5>
+          <h5 class="text-center py-10 text-2xl text-white font-chivo" >Mise à jour compte artiste</h5>
         </div>
 
-        <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div>
-                <img class="preview img-fluid" :src="imageData" />
+        <div class="">
+          <div class="grid grid-cols-1">
+            <div class="">
+              <div class="flex justify-center my-10">
+                <img class="w-1/4 rounded-full" :src="imageData" />
               </div>
             </div>
 
-            <div class="col-6">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Nom</span>
+            <div class="grid grid-cols-6 mx-[15%] text-base">
+              <div class="">
+                <div class="">
+                  <span class="">Nom</span>
                 </div>
                 <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required />
               </div>
