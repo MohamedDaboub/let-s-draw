@@ -14,6 +14,8 @@
 </div>
 </template>
 <script>
+import edit from "../../components/icons/EditView.vue"
+import trach from "../../components/icons/TrashView.vue"
 import {
   getFirestore,
   collection,
@@ -36,6 +38,7 @@ export default {
 
 
    name: "cardV2view",
+   components: { edit, trach },
   data() {
     return {
       listeParent: [],

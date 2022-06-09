@@ -1,19 +1,21 @@
 <template>
-    <div class="container ">  
+    <div class=" ">  
 
-        <div class="card-header">
-            <h5 style="color:white;">Chat</h5>
+        <div class="py-10">
+            <h5 class="md:text-2xl text-xl text-white text-center font-chivo font-bold ">Chat</h5>
         </div>    
 
         <div v-if="user == null">
-            <h6 class="alert alert-warning text-center" role="alert">
+            <div class="bg-red-600 font-chivo text-xl md:mx-[20%] mx-[5%] py-20">
+            <h6 class=" " role="alert">
                 Vous devez être connecté pour utiliser le Chat !!
             </h6>
+            </div>
         </div>
-        <div v-else>        
-            <div class="input-group mb-3">
+        <div v-else class="mx-[5%] py-16">        
+            <div class=" mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" >Sélectionner un utilisateur</span>
+                    <span class="text-white text-xl " >Sélectionner un utilisateur</span>
                 </div>
                 <select class="custom-select" v-model="userSelected" @change="selectUser">
                     <option selected disabled value="">...</option>
@@ -23,36 +25,36 @@
                     >{{util.login}}</option>
                 </select>
             </div>
-            <div v-if="userSelected != null"> 
-                <form class="mb-3" @submit.prevent="createDisc()">
+            <div v-if="userSelected != null" class="text-white text-base font-fira-sans bg-bleufonce p-10 rounded-xl"> 
+                <form class="my-5" @submit.prevent="createDisc()">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Nouveau fil avec {{userSelected.login}}</span>
                         </div>
                         <input type="text" class="form-control" v-model="libelle" required />
-                        <button class="btn btn-light" type="submit" title="Création">
-                            <i class="fa fa-save fa-lg"></i>
+                        <button class="mx-5 mt-1" type="submit" title="Création">
+                            <save class="fill-white mt-3"></save>
                         </button>
                     </div>
                 </form>
 
                 <h5>Vos fils de discussion avec : {{userSelected.login}}</h5>
                 <div v-if="chat.length > 0"> 
-                    <table class="table text-light">
+                    <table class="my-5">
                         <tbody>
                             <tr v-for="disc in chat" :key="disc.uid">
-                                <td>
+                                <td class="text-lg">
                                     {{disc.libelle}} - créer par 
                                     <span v-if="disc.fil[0] == user.uid">vous</span>
                                     <span v-else>{{userSelected.login}}</span>
                                     le  {{dateFr(disc.creation)}}
                                 </td>
-                                <td>
-                                    <button class="btn btn-light mr-3" type="button" @click="viewFil(disc)" title="Voir ce fil">
-                                        <i class="fa fa-eye fa-lg"></i>
+                                <td class="flex  mx-5 items-center">
+                                    <button class="mx-3" type="button" @click="viewFil(disc)" title="Voir ce fil">
+                                        <eye class="w-8 h-8"></eye>
                                     </button>
-                                    <button class="btn btn-light" type="button" @click="deleteFil(disc)" title="Supprimer ce fil">
-                                        <i class="fa fa-trash fa-lg"></i>
+                                    <button class="" type="button" @click="deleteFil(disc)" title="Supprimer ce fil">
+                                        <trash class="w-8 h-8"></trash>
                                     </button>
                                 </td>
                             </tr>
@@ -65,19 +67,19 @@
                 </div>
 
 
-                <hr style="background-color:white;" />
+                <hr class="bg-white" />
 
                 <div v-if="discussion != null"> 
                     <h5>Discussion : {{discussion.libelle}}</h5>
                     <hr/>
-                    <div class="input-group mb-3">
+                    <div class="flex gap-10 my-10">
                         <textarea class="form-control msg" rows="3" 
                             placeholder="Message" 
                             v-model="message"
                         ></textarea>
-                        <div class="input-group-prepend">
+                        <div class="flex">
                             <button class="btn btn-dark" @click="sendMsg()">
-                            <i class="fa fa-share-square fa-lg fa-2x" ></i>
+                            <square></square>
                             </button>
                         </div>
                     </div>
@@ -88,7 +90,7 @@
 
                             <div v-for="msg in sortMsgByDate(disc.msg)" :key="msg.date">
 
-                                <div class="row mb-3" v-if="msg.by == user.uid">
+                                <div class="my-5" v-if="msg.by == user.uid">
                                     <div class="col-4" >
                                         <div class="text-left ml-3">
                                             <img  class="avatar" :src="userInfo[0].avatar" />
@@ -158,8 +160,14 @@ import {
 // Fonction authentification
 import { getAuth } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js'
 
+import eye from "../components/icons/EyeView.vue"
+import save from "../components/icons/SaveView.vue"
+import trash from "../components/icons/TrashView.vue"
+import square from "../components/icons/SquareView.vue"
+
 export default {
     name:'ChatView',
+    components:{eye,save,trash,square},
     data() { // Les données
         return {
             user:null,                  // User connecté

@@ -35,7 +35,7 @@
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" required/>
+                  <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
               </div>

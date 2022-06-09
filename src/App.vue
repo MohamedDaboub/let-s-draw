@@ -34,7 +34,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <span v-if="avatar != null">
               <RouterLink to="/listeParent"><img class="w-12 h-12 rounded-full" :src="avatar"></RouterLink>
           </span>
-          <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
+          <RouterLink class="" to="/ConnexionParent">Se connecter</RouterLink>
         </li>
 
         <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
@@ -60,7 +60,7 @@ import { RouterLink, RouterView } from 'vue-router'
               <RouterLink to="/listeParent">{{user.login}}</RouterLink>
           </span>
           <span v-if="avatar == null">
-          <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
+          <RouterLink class="" to="/ConnexionParent">Se connecter</RouterLink>
           </span>
         </li>
         <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
