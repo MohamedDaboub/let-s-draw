@@ -53,10 +53,13 @@ import { RouterLink, RouterView } from 'vue-router'
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
-        <!-- <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white">
-          <RouterLink class=" " to="/connecter">se connecter</RouterLink>
-        </li> -->
-        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white">
+        <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
+          <span v-if="avatar != null">
+              <RouterLink to="/listeParent"><img :src="avatar"></RouterLink>
+          </span>
+          <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
+        </li>
+        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
           <Inscription class="mt-1 " />
           <RouterLink class=" " to="/Inscription">S’inscrire</RouterLink>
           
@@ -142,6 +145,24 @@ import Instagram from "./components/icons/InstagramView.vue"
 import Pinterest from "./components/icons/PinterestView.vue"
 import modifier from "./components/icons/ModifierView.vue"
 import Logo from "./components/LogoView.vue";
+import {emitter} from './main.js';
+import {
+  getFirestore,
+  collection,
+  onSnapshot,
+  query,
+  where,
+  orderBy,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+import {
+  getStorage,
+  ref,
+  getDownloadURL,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
+import {
+  getAuth,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
 
 export default {
@@ -150,11 +171,69 @@ export default {
       data() {
     return {
       menuOuvert: false,
-    };
-    
+      user: {
+        email: null,
+        password: null,
+      },
+      userInfo: null,
+      name: "parent",
+      avatar: null,
+      isAdmin: false
+    };    
     },
     beforeMount(){
     this.$router.afterEach(() => (this.menuOuvert = false));
-  }
+  },
+   mounted() {
+    this.getUserConnect();
+    emitter.on("connectUser", (e) => {
+      this.user = e.user;
+      console.log("App => reception user connecté", this.user);
+      this.getUserInfo(this.user);
+    });
+    emitter.on("deconnectUser", (e) => {
+      this.user = e.user;
+      console.log("App => reception user deconnecté", this.user);
+      this.userInfo = null;
+      this.name = "parent";
+      this.avatar = null;
+      this.IsAdmin = false;
+    });
+    
+  },
+  methods: {
+    async getUserConnect() {
+      await getAuth().onAuthStateChanged(
+        function (user) {
+          if (user) {
+            this.user = user;
+            this.getUserInfo(this.user);
+          }
+        }.bind(this)
+      );
+    },
+    async getUserInfo(user){
+      const firestore = getFirestore();
+      const dbUsers = collection(firestore, "users");
+      const q = query(dbUsers, where("uid", "==", user.uid));
+      await onSnapshot(q, (snapshot) =>{
+        this.userInfo = snapshot.docs.map(doc => (
+          {id:doc.id, ...doc.data()}
+        ));
+        console.log("userInfo", this.userInfo);
+        this.name = this.userInfo[0].login;
+        this.isAdmin=this.userInfo[0].admin;
+        const storage = getStorage();
+        const spaceRef = ref(storage, 'user/'+this.userInfo[0].avatar);
+        getDownloadURL(spaceRef)
+          .then((url) =>{
+            this.avatar = url;
+          })
+          .catch((error) =>{
+            console.log('erreur downloadURL', error);
+          })        
+      })
+    },
+  },
 };
 </script>

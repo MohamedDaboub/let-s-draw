@@ -20,6 +20,7 @@ import CreationParentView from '../views/parent/CreationParentView.vue'
 import ListeParentView from '../views/parent/ListeParentView.vue'
 import ModifierParentView from '../views/parent/ModiferParentView.vue'
 import DeleteParentView from '../views/parent/DeleteParentView.vue'
+import ConnexionParentView from '../views/parent/ConnexionParentView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,7 @@ const router = createRouter({
     { path: '/ListeParent', name:'ListeParent', component: ListeParentView},
     { path: '/ModifierParent/:id', name:'ModifierParent', component: ModifierParentView},
     { path: '/DeleteParent/:id', name:'DeleteParent', component: DeleteParentView},
+    { path: '/ConnexionParent', name:'ConnexionParent', component: ConnexionParentView},
     // ici les autres routes
   ],
   scrollBehavior(to, from, savedPosition) {
