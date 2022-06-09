@@ -69,7 +69,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </ul>
     </nav>
   </header>
-  <main class=" bg-bleu font-fira-sans" id="content">
+  <main class=" bg-bleu font-fira-sans " id="content">
     <Router-View />
   </main>
   <footer class="bg-bleufonce pt-10 font-yaldevi ">

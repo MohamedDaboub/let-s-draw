@@ -104,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="flex md:gap-10 gap-5  justify-center py-10">   
+      <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">   
                     <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">
                         Modifier
                     </button>

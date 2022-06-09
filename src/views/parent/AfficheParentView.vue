@@ -109,7 +109,7 @@
             <!-- <img class="w-1/3" src="../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don"> -->
             </div>
         </div>
-        <bouton class="mt-10 mr-40" Nom="Faire un don" />
+        <bouton class="my-10 mx-10" Nom="Faire un don" />
     </div>
     
 </template>

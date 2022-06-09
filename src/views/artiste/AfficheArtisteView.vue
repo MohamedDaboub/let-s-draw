@@ -105,7 +105,7 @@
   </div>
 
   <!-- Composant bouton envoyer -->
-  <button class="flex justify-center mx-auto my-10">
+  <button class="flex justify-center mx-auto py-10">
     <RouterLink to="" class="bg-bleufonce md:px-8 px-4 py-4">Commence un chat </RouterLink>
   </button>
 </template>
