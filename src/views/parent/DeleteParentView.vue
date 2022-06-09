@@ -177,7 +177,7 @@ export default {
       const storage = getStorage();
       let docRef = ref(storage, "parent/", this.parent.photo);
       deleteObject(docRef);
-      this.$router.push("/parent");
+      this.$router.push("/listeParent");
     },
   },
 };
