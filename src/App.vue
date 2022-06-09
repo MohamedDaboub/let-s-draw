@@ -55,7 +55,7 @@ import { RouterLink, RouterView } from 'vue-router'
         </li>
         <!-- ici faut me trouver le moyen de cacher le "se connecter" quand l'image doit apparaitre post connexion!!" -->
         <li class="px-2 bg-white  rounded-full text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
-          <span v-if="avatar != null" class="">
+          <span v-if="avatar != null" class="justify-center flex">
               <RouterLink to="/listeParent"><img class="w-16 h-16  rounded-full" :src="avatar"></RouterLink>
               <RouterLink to="/listeParent">{{user.login}}</RouterLink>
           </span>

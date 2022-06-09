@@ -20,14 +20,14 @@
                 <div class="">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" disabled />
+                <input class="form-control pl-2 rounded-sm" placeholder="Nom de la personne" v-model="parent.nom" disabled />
               </div>
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="parent.prenom" disabled />
+                <input class="form-control pl-2 rounded-sm" placeholder="Prénom de la personne" v-model="parent.prenom" disabled />
               </div>
               <!-- <br /> -->
               <!-- <div class="input-group">
@@ -44,21 +44,21 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" disabled />
+                <input class="form-control pl-2 rounded-sm" placeholder="Mail de la personne" v-model="parent.mailParent" disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="py-4">
+              <div class="input-group mt-4">
+                <div class="">
                   <span class="input-group-text">Nombre d'enfants</span>
                 </div>
-                <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" disabled />
+                <input class="form-control pl-2 rounded-sm" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="py-4">
+              <div class="input-group mt-4">
+                <div class="">
                   <span>Moyen Paiement</span>
                 </div>
-                <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
+                <input class="form-control pl-2 rounded-sm" placeholder="Moyen Paiement ?" v-model="parent.moyenP" disabled />
               </div>
               <br />
             </div>
@@ -72,20 +72,20 @@
           <div class="input-group-prepend">
             <span class="input-group-text">Nom Utilisateur</span>
           </div>
-          <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" disabled />
+          <input class="form-control pl-2 rounded-sm" placeholder="Nom d'utilisateur" v-model="parent.login" disabled />
         </div>
         <br />
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">Mot de passe</span>
           </div>
-          <input class="form-control" placeholder="Mot de passe" v-model="parent.password" disabled />
+          <input class="form-control pl-2 rounded-sm" placeholder="Mot de passe" v-model="parent.password" disabled />
         </div>
         <br />
         </div>
         <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
-          <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Valider</button>
-          <button class="py-4t bg-bleufonce px-4 md:px-8">
+          <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">Valider</button>
+          <button class="py-4t bg-bleufonce px-4 md:px-8 hover:bg-blue-600">
             <router-link to="/listeParent">Annuler</router-link>
           </button>
         </div>
@@ -129,7 +129,7 @@
       </div>
     </div>
     <div class="py-10 justify-center flex">
-      <RouterLink class="text-white bg-bleufonce px-8 py-4 " to="/Don">Faire un don</RouterLink>
+      <RouterLink class="text-white bg-bleufonce px-8 py-4 hover:bg-blue-600" to="/Don">Faire un don</RouterLink>
     </div>
   </div>
 </template>
