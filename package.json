@@ -8,9 +8,12 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
+    "firebase": "^9.8.2",
     "mitt": "^3.0.0",
+    "uuid": "^8.3.2",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vue2-dropzone": "^3.6.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",

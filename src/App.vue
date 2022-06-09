@@ -53,6 +53,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
+        <!-- ici faut me trouver le moyen de cacher le "se connecter" quand l'image doit apparaitre post connexion!!" -->
         <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
           <span v-if="avatar != null">
               <RouterLink to="/listeParent"><img :src="avatar"></RouterLink>
@@ -137,6 +138,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <script>
+
 import { MenuIcon } from "@heroicons/vue/solid";
 import Donate from "./components/icons/DonateView.vue"
 import Inscription from "./components/icons/sincrireView.vue"
