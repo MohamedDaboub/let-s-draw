@@ -15,25 +15,25 @@
             </div>
 
             <div class="mx-[15%] grid grid-cols-6 text-base">
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Nom de la personne" v-model="artiste.nom" required disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Prénom</span>
+              <div class="my-2">
+                <div class="my-2">
+                  <span class="">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Prénom de la personne" v-model="artiste.prenom" required disabled />
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Age</span>
                 </div>
-                <input class="" placeholder="Age" v-model="artiste.age" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Age" v-model="artiste.age" required disabled />
               </div>
               <!-- <br />
               <div class="input-group">
@@ -46,53 +46,53 @@
                 </div>
               </div> -->
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Mail</span>
                 </div>
-                <input class="" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required disabled />
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Délai</span>
                 </div>
-                <input class="" placeholder="Délai" v-model="artiste.délai" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Délai" v-model="artiste.délai" required disabled />
               </div>
               <br />
-              <div class="">
-                <div class="">
-                  <span class="">description</span>
+              <div class="my-2">
+                <div class="my-2">
+                  <span class="">Description</span>
                 </div>
-                <input class="" placeholder="Délai" v-model="artiste.description" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Délai" v-model="artiste.description" required disabled />
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Categorie</span>
                 </div>
-                <input class="" placeholder="Délai" v-model="artiste.categorie" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Délai" v-model="artiste.categorie" required disabled />
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Métier</span>
                 </div>
-                <input class="" placeholder="Délai" v-model="artiste.role" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="Délai" v-model="artiste.role" required disabled />
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Nom utilisateur</span>
                 </div>
-                <input class="" placeholder="nom user" v-model="artiste.login" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="nom user" v-model="artiste.login" required disabled />
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Métier</span>
                 </div>
-                <input class="" placeholder="mot de passe" v-model="artiste.password" required disabled />
+                <input class="pl-2 rounded-sm" placeholder="mot de passe" v-model="artiste.password" required disabled />
               </div>
               <br />
             </div>
@@ -100,8 +100,8 @@
         </div>
       </div>
       <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
-        <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Valider</button>
-        <button class="bg-bleufonce px-4 py-4 md:px-8">
+        <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">Valider</button>
+        <button class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">
           <router-link to="/choixArtiste">Retour</router-link>
         </button>
       </div>
@@ -120,7 +120,7 @@
 
   <!-- Composant bouton envoyer -->
   <button class="mx-auto flex justify-center py-10 text-white">
-    <RouterLink to="/Chat" class="bg-bleufonce px-4 py-4 md:px-8">Commence un chat </RouterLink>
+    <RouterLink to="/Chat" class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">Commence un chat </RouterLink>
   </button>
 </template>
 <script>
