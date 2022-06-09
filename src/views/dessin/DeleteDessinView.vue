@@ -48,13 +48,13 @@
               </div>
               <br />
                <br />
-            <div class="bg-red-600 text-black py-10 my-10  text-lg font-chivo font-bold mx-[20%]">
-              <h5 class="alert alert-warning text-center" role="alert">  Attention vous allez supprimer ce parent, cette action est irreversible !!</h5>
-            </div>
+
             </div>
           </div>
         </div>
-
+        <div class="bg-red-600 text-black py-10 my-10  text-lg font-chivo font-bold mx-[20%]">
+          <h5 class="alert alert-warning text-center" role="alert">  Attention vous allez supprimer ce parent, cette action est irreversible !!</h5>
+        </div>
         <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
           <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Supprimer</button>
           <button class="py-4t bg-bleufonce px-4 md:px-8">

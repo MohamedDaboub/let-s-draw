@@ -108,12 +108,14 @@
     </form>
   </div>
   <!-- comme je ne comprends pas comment faire un import d'un élément seul avec firebase malgré le lien id artiste qui est crée, ce sera une grossière liste sans lien id qui sera diffusé... -->
-  <h2 class="my-10 text-center font-chivo text-2xl">Mes derniers dessins :</h2>
+  <h2 class="my-10 text-center font-chivo text-2xl text-white">Mes derniers dessins </h2>
+  <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(345px,1fr))] gap-8 md:mx-10  py-10">
   <div class="flex flex-col rounded-xl bg-noir" v-for="dessin in listeDessin" :key="dessin.id">
     <img class="h-full w-full rounded-t-lg" :src="dessin.photo" :alt="dessin.titre" />
     <div class="mx-4 flex text-white">
       <p class="my-6 text-2xl font-bold">{{ dessin.titre }}</p>
     </div>
+  </div>
   </div>
 
   <!-- Composant bouton envoyer -->
