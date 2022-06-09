@@ -70,20 +70,22 @@
               >Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span
             >
           </div>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Nom Utilisateur</span>
+          <div class="flex justify-center md:gap-10 gap-5 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Nom Utilisateur</span>
+              </div>
+              <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" required />
             </div>
-            <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" required />
-          </div>
-          <br />
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Mot de passe</span>
+            <br />
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Mot de passe</span>
+              </div>
+              <input class="form-control" placeholder="Mot de passe" v-model="parent.password" required />
             </div>
-            <input class="form-control" placeholder="Mot de passe" v-model="parent.password" required />
+            <br />
           </div>
-          <br />
         </div>
 
         <div class="flex justify-center gap-5 py-10 text-white md:gap-10">

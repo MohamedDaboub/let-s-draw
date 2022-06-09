@@ -126,7 +126,9 @@
         <img class="w-1/3" src="../../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don" />
       </div>
     </div>
-    <bouton class="my-10 mx-10" Nom="Faire un don" />
+    <div class="py-10 justify-center flex">
+      <RouterLink class="text-white bg-bleufonce px-8 py-4 " to="/Don">Faire un don</RouterLink>
+    </div>
   </div>
 </template>
 <script>
