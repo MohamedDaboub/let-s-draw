@@ -95,9 +95,9 @@
           </div>
         </div>
 
-        <div class="card-footer">
-          <button type="submit" class="btn btn-light float-left">Supprimer</button>
-          <button class="btn btn-light float-right">
+        <div class="flex md:gap-10 gap-5  justify-center py-10">
+          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Supprimer</button>
+          <button class="bg-bleufonce md:px-8 px-4 py-4">
             <router-link to="/CreateArtiste">Annuler</router-link>
           </button>
         </div>

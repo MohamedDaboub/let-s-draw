@@ -104,11 +104,11 @@
           </div>
         </div>
       </div>
-      <div class="card-footer">   
-                    <button type="submit" class="float-left btn btn-light">
+      <div class="flex md:gap-10 gap-5  justify-center py-10">   
+                    <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">
                         Modifier
                     </button>
-                    <button class="float-right btn btn-light" >
+                    <button class="bg-bleufonce md:px-8 px-4 py-4" >
                         <router-link to="/choixArtiste" >Annuler</router-link>
                     </button>
                 </div>

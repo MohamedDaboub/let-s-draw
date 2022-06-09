@@ -87,10 +87,10 @@
           </div>
         </div>
       </div>
-      <div class="card-footer">
-        <button type="submit" class="btn btn-light float-left">Valider</button>
-        <button class="btn btn-light float-right">
-          <router-link to="/choixArtiste">Annuler</router-link>
+      <div class="flex md:gap-10 gap-5  justify-center py-10">
+        <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Valider</button>
+        <button class="bg-bleufonce md:px-8 px-4 py-4">
+          <router-link to="/choixArtiste">Retour</router-link>
         </button>
       </div>
     </form>
@@ -100,14 +100,13 @@
 
   <div>
     <div>
-      <p>Chien et chat meilleurs amis</p>
-      <p>Il y 4 jours</p>
+
     </div>
   </div>
 
   <!-- Composant bouton envoyer -->
-  <button>
-    <RouterLink to="">Commence un chat </RouterLink>
+  <button class="flex justify-center mx-auto my-10">
+    <RouterLink to="" class="bg-bleufonce md:px-8 px-4 py-4">Commence un chat </RouterLink>
   </button>
 </template>
 <script>
