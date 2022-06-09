@@ -15,29 +15,29 @@
             </div>
 
             <div class="mx-[15%] grid grid-cols-6 text-base">
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Nom de la personne" v-model="artiste.nom" required />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Prénom de la personne" v-model="artiste.prenom" required />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Age</span>
                 </div>
-                <input class="form-control" placeholder="Age" v-model="artiste.age" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Age" v-model="artiste.age" required />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
@@ -46,11 +46,11 @@
                 </div>
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required />
               </div>
               <!-- <div class="input-group">
                                 <div class="input-group-prepend">
@@ -64,22 +64,22 @@
                                     required />                    
                             </div> -->
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Délai</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.délai" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Délai" v-model="artiste.délai" required />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">description</span>
+              <div class="my-2">
+                <div class="my-2">
+                  <span class="input-group-text">Description</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.description" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Délai" v-model="artiste.description" required />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Categorie</span>
                 </div>
                 <select class="custom-select" v-model="artiste.categorie">
@@ -90,28 +90,28 @@
                 </select>
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Metier</span>
                 </div>
-                <select class="custom-select" v-model="artiste.role">
+                <select class="custom-select pl-2 rounded-sm" v-model="artiste.role">
                   <option selected disabled>Sélectionner un metier</option>
                   <option v-for="metier in listeMetier" :key="metier.libellé">{{ metier.libellé }}</option>
                 </select>
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Nom utilisateur</span>
                 </div>
-                <input class="" placeholder="nom user" v-model="artiste.login" required  />
+                <input class="pl-2 rounded-sm" placeholder="nom user" v-model="artiste.login" required  />
               </div>
               <br />
-              <div class="">
-                <div class="">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="">Métier</span>
                 </div>
-                <input class="" placeholder="mot de passe" v-model="artiste.password" required  />
+                <input class="pl-2 rounded-sm" placeholder="mot de passe" v-model="artiste.password" required  />
               </div>
               <br />
             </div>
@@ -119,8 +119,8 @@
         </div>
       </div>
       <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
-        <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Modifier</button>
-        <button class="bg-bleufonce px-4 py-4 md:px-8">
+        <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">Modifier</button>
+        <button class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">
           <router-link to="/choixArtiste">Annuler</router-link>
         </button>
       </div>
