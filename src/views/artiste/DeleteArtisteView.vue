@@ -15,29 +15,29 @@
             </div>
             <div class="flex justify-center">
               <div class="grid grid-cols-4 mx-[20%] text-base ">
-                <div class="m ">
-                  <div class="">
+                <div class="my-2">
+                  <div class="my-2">
                     <span class="">Nom</span>
                   </div>
-                  <input class="" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
+                  <input class="pl-2 rounded-sm" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
                 </div>
                 <br />
-                <div class="input-group">
-                  <div class="input-group-prepend">
+                <div class="my-2">
+                  <div class="my-2">
                     <span class="input-group-text">Prénom</span>
                   </div>
-                  <input class="form-control" placeholder="Prénom de la personne" v-model="artiste.prenom" disabled />
+                  <input class="form-control pl-2 rounded-sm" placeholder="Prénom de la personne" v-model="artiste.prenom" disabled />
                 </div>
                 <br />
-                <div class="input-group">
-                  <div class="input-group-prepend">
+                <div class="my-2">
+                  <div class="my-2">
                     <span class="input-group-text">Age</span>
                   </div>
-                  <input class="form-control" placeholder="Age" v-model="artiste.age" required disabled />
+                  <input class="form-control pl-2 rounded-sm" placeholder="Age" v-model="artiste.age" required disabled />
                 </div>
                 <br />
-                <div class="input-group">
-                  <div class="input-group-prepend">
+                <div class="my-2">
+                  <div class="my-2">
                     <span class="input-group-text">Photo</span>
                   </div>
                   <div class="custom-file">
@@ -54,22 +54,22 @@
                 </div> -->
                 <br />
                 <br />
-                <div class="input-group">
-                  <div class="input-group-prepend">
+                <div class="my-2">
+                  <div class="my-2">
                     <span class="input-group-text">Délai</span>
                   </div>
-                  <input class="form-control" placeholder="Délai" v-model="artiste.délai" disabled />
+                  <input class="form-control pl-2 rounded-sm" placeholder="Délai" v-model="artiste.délai" disabled />
                 </div>
                 <br />
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">description</span>
+                <div class="my-2">
+                  <div class="my-2">
+                    <span class="input-group-text">Description</span>
                   </div>
-                  <input class="form-control" placeholder="Délai" v-model="artiste.description" disabled />
+                  <input class="form-control pl-2 rounded-sm" placeholder="Délai" v-model="artiste.description" disabled />
                 </div>
                 <br />
-                <div class="input-group">
-                  <div class="input-group-prepend">
+                <div class="my-2">
+                  <div class="my-2">
                     <span class="input-group-text">Style</span>
                   </div>
                   <select class="custom-select" v-model="artiste.categorie">
@@ -78,8 +78,8 @@
                   </select>
                 </div>
               <br />
-              <div class="input-group">
-                  <div class="input-group-prepend">
+              <div class="my-2">
+                  <div class="my-2">
                     <span class="input-group-text">Metier</span>
                   </div>
                   <select class="custom-select" v-model="artiste.role">
@@ -89,21 +89,23 @@
                 </div>
                 <br />
               </div>
-              <div class="">
-                <div class="">
-                  <span class="">Nom utilisateur</span>
+              </div>
+              <div class="flex justify-center gap-4 mt-4">
+                <div class="my-2">
+                  <div class="my-2">
+                    <span class="">Nom utilisateur</span>
+                  </div>
+                  <input class="pl-2 rounded-sm" placeholder="nom user" v-model="artiste.login" required disabled />
                 </div>
-                <input class="" placeholder="nom user" v-model="artiste.login" required disabled />
+                <br />
+                <div class="my-2">
+                  <div class="my-2">
+                    <span class="">Métier</span>
+                  </div>
+                  <input class="pl-2 rounded-sm" placeholder="mot de passe" v-model="artiste.password" required disabled />
+                </div>
               </div>
               <br />
-              <div class="">
-                <div class="">
-                  <span class="">Métier</span>
-                </div>
-                <input class="" placeholder="mot de passe" v-model="artiste.password" required disabled />
-              </div>
-              <br />
-            </div>
             <div class="bg-red-600 flex justify-center my-10 mx-[30%]">
             <h5 class=" text-xl text-center my-10" role="alert">
                   Attention vous allez supprimer cet artiste, cette action est irreversible !!</h5>
@@ -111,8 +113,8 @@
           </div>
 
           <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
-            <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Supprimer</button>
-            <button class="bg-bleufonce md:px-8 px-4 py-4">
+            <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4 hover:bg-blue-600">Supprimer</button>
+            <button class="bg-bleufonce md:px-8 px-4 py-4 hover:bg-blue-600">
               <router-link to="/CreateArtiste">Annuler</router-link>
             </button>
           </div>

@@ -60,7 +60,7 @@
               <br />
             <div class="">
                 <div class="">
-                  <span class="text-xl">metier</span>
+                  <span class="text-xl">Métier</span>
                 </div>
                 <select class="text-black" v-model="artiste.role">
                   <option selected disabled>Sélectionner un style</option>
