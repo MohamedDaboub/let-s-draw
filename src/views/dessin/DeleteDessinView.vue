@@ -4,7 +4,7 @@
     <form enctype="multipart/form-data" @submit.prevent="deleteDessin">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 class="py-10 text-center font-chivo text-2xl text-white">Affichage du dessin</h5>
+          <h5 class="py-10 text-center font-chivo text-2xl text-white">Supression du dessin</h5>
         </div>
 
         <div class="card-body">
@@ -47,6 +47,10 @@
                 <input class="form-control" placeholder="Auteur du dessin" v-model="dessin.auteur" disabled />
               </div>
               <br />
+               <br />
+            <div class="bg-red-600 text-black py-10 my-10  text-lg font-chivo font-bold mx-[20%]">
+              <h5 class="alert alert-warning text-center" role="alert">  Attention vous allez supprimer ce parent, cette action est irreversible !!</h5>
+            </div>
             </div>
           </div>
         </div>
@@ -54,7 +58,7 @@
         <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
           <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Supprimer</button>
           <button class="py-4t bg-bleufonce px-4 md:px-8">
-            <router-link to="/listeParent">Annuler</router-link>
+            <router-link to="/listeDessin">Annuler</router-link>
           </button>
         </div>
       </div>

@@ -55,7 +55,7 @@
         <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
           <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Créer</button>
           <button class="py-4t bg-bleufonce px-4 md:px-8">
-            <router-link to="/listeParent">Annuler</router-link>
+            <router-link to="/listeDessin">Annuler</router-link>
           </button>
         </div>
       </div>
