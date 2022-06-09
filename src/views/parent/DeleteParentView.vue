@@ -15,22 +15,22 @@
             </div>
 
             <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-1 md:mx-[15%] mx-[5%] text-base">
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" disabled />
+                <input class="form-control  pl-2 rounded-sm" placeholder="Nom de la personne" v-model="parent.nom" disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="parent.prenom" disabled />
+                <input class="form-control pl-2 rounded-sm" placeholder="Prénom de la personne" v-model="parent.prenom" disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
@@ -39,25 +39,25 @@
                 </div>
               </div>
               <br />              
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" disabled  />
+                <input class="form-control pl-2 rounded-sm" placeholder="Mail de la personne" v-model="parent.mailParent" disabled  />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
+              <div class="my-2">
+                <div class="my-2">
                   <span class="input-group-text">Nombre d'enfants</span>
                 </div>
-                <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" disabled />
+                <input class="form-control pl-2 rounded-sm" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div>
-                  <span>moyen</span>
+              <div class="my-2">
+                <div class="my-2">
+                  <span>Moyen de Paiement</span>
                 </div>
-                 <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
+                 <input class="form-control pl-2 rounded-sm" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
               </div>
               <br />
             </div>
@@ -65,19 +65,21 @@
             <div class="flex justify-center my-10 text-white text-lg">
               <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
             </div>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Nom Utilisateur</span>
+            <div class="flex justify-center gap-3">
+              <div class="my-2">
+                  <div class="my-2">
+                    <span class="input-group-text">Nom Utilisateur</span>
+                  </div>
+                  <input class="form-control pl-2 rounded-sm" placeholder="Nom d'utilisateur" v-model="parent.login" disabled />
                 </div>
-                <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" disabled />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Mot de passe</span>
+                <br />
+                <div class="my-2">
+                  <div class="my-2">
+                    <span class="input-group-text">Mot de passe</span>
+                  </div>
+                  <input class="form-control pl-2 rounded-sm" placeholder="Mot de passe" v-model="parent.password" disabled />
                 </div>
-                <input class="form-control" placeholder="Mot de passe" v-model="parent.password" disabled />
-              </div>
+            </div>
               <br />
             <div class="bg-red-600 text-black py-10 my-10  text-lg font-chivo font-bold mx-[20%]">
               <h5 class="alert alert-warning text-center" role="alert">  Attention vous allez supprimer ce parent, cette action est irreversible !!</h5>
@@ -85,8 +87,8 @@
         </div>
 
         <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
-          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Supprimer</button>
-          <button class="bg-bleufonce md:px-8 px-4 py-4">
+          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4 hover:bg-blue-600">Supprimer</button>
+          <button class="bg-bleufonce md:px-8 px-4 py-4 hover:bg-blue-600">
             <router-link to="/listeParent">Annuler</router-link>
           </button>
         </div>
