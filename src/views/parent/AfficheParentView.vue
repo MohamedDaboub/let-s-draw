@@ -100,7 +100,7 @@
             <p class="w-1/2 mx-10 text-white">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
                 “Unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
                 Draw.</p>
-                <img class="items-center m-auto my-10" src="../../../public/img-squirrel/image_19.webp" alt="Logo Unicef">
+                <img class="items-center m-auto my-10" src="../../../public/img-squirrel/image-19.webp" alt="Logo Unicef">
             
         </div>
         <div class="my-10">
