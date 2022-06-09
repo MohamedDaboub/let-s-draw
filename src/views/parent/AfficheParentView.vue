@@ -67,6 +67,7 @@
         <div class="py-10 text-center text-white">
           <span>Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
         </div>
+        <div class="flex justify-center gap-5">
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">Nom Utilisateur</span>
@@ -81,6 +82,7 @@
           <input class="form-control" placeholder="Mot de passe" v-model="parent.password" disabled />
         </div>
         <br />
+        </div>
         <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
           <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Valider</button>
           <button class="py-4t bg-bleufonce px-4 md:px-8">

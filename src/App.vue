@@ -30,14 +30,14 @@ import { RouterLink, RouterView } from 'vue-router'
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
-        <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
+        <li class=" bg-white  rounded-3xl text-black  w-1/6 hover:bg-bleu  hover:text-white" >
           <span v-if="avatar != null">
-              <RouterLink to="/listeParent"><img class="w-12 h-12 rounded-full" :src="avatar"></RouterLink>
+              <RouterLink to="/listeParent"><img class="w-20 h-20 rounded-full" :src="avatar"></RouterLink>
           </span>
-          <RouterLink class="" to="/ConnexionParent">Se connecter</RouterLink>
+          <span v-if="avatar == null">
+          <RouterLink class="px-2 py-2" to="/ConnexionParent">Se connecter</RouterLink>
+          </span>
         </li>
-
-        <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
       </ul>
       <ul class="lg:flex  gap-10 lg:items-center hidden items-center text-white text-xl font-semibold mx-10 py-5" >
         <li class="my-5">
@@ -46,24 +46,23 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="my-5">
           <RouterLink class=" " to="/Glossaire">Glossaire</RouterLink>
         </li>
-        <li class="my-5">
+        <li class="my-5 ">
           <RouterLink class=" " to="/Contact">Nous contacter</RouterLink>
         </li>
         <li class="flex gap-2 px-4 bg-white p-2 rounded-3xl text-black my-5 w-1/2 hover:bg-bleu hover:text-white">
           <Donate class="" />
-            <RouterLink class="" to="/Don">Faire un don</RouterLink>
+          <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
         <!-- ici faut me trouver le moyen de cacher le "se connecter" quand l'image doit apparaitre post connexion!!" -->
-        <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
+        <li class="px-2 bg-white  rounded-full text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
           <span v-if="avatar != null" class="justify-center flex">
-              <RouterLink to="/listeParent"><img class="w-20 rounded-full" :src="avatar"></RouterLink>
+              <RouterLink to="/listeParent"><img class="w-16 h-16  rounded-full" :src="avatar"></RouterLink>
               <RouterLink to="/listeParent">{{user.login}}</RouterLink>
           </span>
           <span v-if="avatar == null">
           <RouterLink class="" to="/ConnexionParent">Se connecter</RouterLink>
           </span>
         </li>
-        <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
       </ul>
     </nav>
   </header>

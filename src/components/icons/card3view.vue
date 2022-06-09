@@ -5,9 +5,11 @@
             <div class="flex flex-col text-white ml-4">
                 <p class="font-bold text-2xl mt-6"> {{ parent.prenom }} {{ parent.nom }}</p>
                 <p class="text-lg ml-4 mt-1">{{ parent.nbrEnfantsParent }}</p>
+                <div class="flex gap-5 items-center">
                 <RouterLink :to="{ name: 'AfficheParent', params: { id: parent.id } }"><p>Afficher</p></RouterLink>
-                <RouterLink :to="{ name: 'ModifierParent', params: { id: parent.id } }"><p>Modifier</p></RouterLink>
-                <RouterLink :to="{ name: 'DeleteParent', params: { id: parent.id } }"><p>Supprimer</p></RouterLink>
+                <RouterLink :to="{ name: 'ModifierParent', params: { id: parent.id } }"><edit class="fill-white"></edit></RouterLink>
+                <RouterLink :to="{ name: 'DeleteParent', params: { id: parent.id } }"><trach class="fill-white"></trach></RouterLink>
+                </div>
             </div>
 
     </div>

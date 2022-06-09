@@ -5,8 +5,8 @@
             <img class="w-1/3 " src="../../public/img-squirrel/image_9.webp" alt="">
         </div>
         <div class="flex mx-auto content-center text-center justify-center lg:gap-52 gap-3  md:text-xl text-base ">
-           <RouterLink class="bg-bleufonce rounded-full text-white  md:px-8 px-4 py-4 font-chivo" to="/choixArtiste">Envoyer mon dessin</RouterLink>
-           <RouterLink class="bg-bleufonce rounded-full text-white  md:px-8 px-4 py-4 font-chivo" to="/Inscription">Faire un dessin</RouterLink>
+           <RouterLink class="bg-bleufonce rounded-full text-white  md:px-8 px-4 py-4 font-chivo hover:bg-white hover:text-black" to="/choixArtiste">Envoyer mon dessin</RouterLink>
+           <RouterLink class="bg-bleufonce rounded-full text-white  md:px-8 px-4 py-4 font-chivo hover:bg-white hover:text-black" to="/Inscription">Faire un dessin</RouterLink>
         </div>
         
         <h2 class="font-bold text-center text-4xl my-10  text-white font-chivo">Les Dernieres Tendances</h2>
