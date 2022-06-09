@@ -5,21 +5,22 @@
     <form enctype="multipart/form-data" @submit.prevent="afficheArtiste">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 style="color: white">Affichage compte artiste</h5>
+          <h5 class="text-center py-10 text-2xl text-white font-chivo">Affichage compte artiste</h5>
         </div>
 
-        <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div>
-                <img class="preview img-fluid" :src="imageData" />
+        <div class=" ">
+          <div class="grid grid-cols-1 ">
+
+            <div class="">
+              <div class="flex justify-center my-10">
+                <img class="w-1/4 h-1/6 rounded-full " :src="imageData" />
               </div>
             </div>
 
-            <div class="col-6">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Nom</span>
+            <div class="grid grid-cols-6 mx-[15%] text-base">
+              <div class="">
+                <div class="">
+                  <span class="">Nom</span>
                 </div>
                 <input class="form-control" placeholder="Nom de la personne" v-model="artiste.nom" required disabled />
               </div>
@@ -50,7 +51,7 @@
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">mail</span>
+                  <span class="input-group-text">Mail</span>
                 </div>
                 <input class="form-control" placeholder="Mail de la personne" v-model="artiste.mailArtiste" required disabled />
               </div>
@@ -62,11 +63,11 @@
                 <input class="form-control" placeholder="Délai" v-model="artiste.délai" required disabled />
               </div>
               <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">description</span>
+              <div class="">
+                <div class="">
+                  <span class="">description</span>
                 </div>
-                <input class="form-control" placeholder="Délai" v-model="artiste.description" required disabled />
+                <input class="" placeholder="Délai" v-model="artiste.description" required disabled />
               </div>
               <br />
               <div class="input-group">
@@ -87,7 +88,7 @@
           </div>
         </div>
       </div>
-      <div class="flex md:gap-10 gap-5  justify-center py-10">
+      <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
         <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Valider</button>
         <button class="bg-bleufonce md:px-8 px-4 py-4">
           <router-link to="/choixArtiste">Retour</router-link>
@@ -96,7 +97,7 @@
     </form>
   </div>
 
-  <h2 class="font-chivo">Mes derniers dessins :</h2>
+  <h2 class="font-chivo text-center my-10 text-2xl">Mes derniers dessins :</h2>
 
   <div>
     <div>
@@ -105,7 +106,7 @@
   </div>
 
   <!-- Composant bouton envoyer -->
-  <button class="flex justify-center mx-auto py-10">
+  <button class="flex justify-center mx-auto py-10 text-white">
     <RouterLink to="" class="bg-bleufonce md:px-8 px-4 py-4">Commence un chat </RouterLink>
   </button>
 </template>
