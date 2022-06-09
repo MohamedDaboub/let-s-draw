@@ -43,6 +43,8 @@
       </button>
     </div>
   </form>
+  <p class="text-lg text-white text-center">Pas encore inscrit ? <RouterLink class="text-black hover:text-blue-300 duration-700" to="Inscription"> S’inscrire </RouterLink></p>
+
 </template>
 
 <script>

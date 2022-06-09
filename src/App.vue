@@ -36,10 +36,7 @@ import { RouterLink, RouterView } from 'vue-router'
           </span>
           <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
         </li>
-        <li class="flex gap-2 px-4 bg-white  rounded-3xl text-black py-5 w-40">
-          <Inscription class="mt-1" />
-          <RouterLink class=" " to="/Inscription">S’inscrire</RouterLink>
-        </li>
+
         <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
       </ul>
       <ul class="lg:flex  gap-10 lg:items-center hidden items-center text-white text-xl font-semibold mx-10 py-5" >
@@ -58,18 +55,13 @@ import { RouterLink, RouterView } from 'vue-router'
         </li>
         <!-- ici faut me trouver le moyen de cacher le "se connecter" quand l'image doit apparaitre post connexion!!" -->
         <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
-          <span v-if="avatar != null">
-              <RouterLink to="/listeParent"><img class="w-12 h-12 rounded-full" :src="avatar"></RouterLink>
+          <span v-if="avatar != null" class="justify-center flex">
+              <RouterLink to="/listeParent"><img class="w-20 rounded-full" :src="avatar"></RouterLink>
               <RouterLink to="/listeParent">{{user.login}}</RouterLink>
           </span>
           <span v-if="avatar == null">
           <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
           </span>
-        </li>
-        <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
-          <Inscription class="mt-1 " />
-          <RouterLink class=" " to="/Inscription">S’inscrire</RouterLink>
-          
         </li>
         <!-- <li> <RouterLink class=" " to="/Profil">Profil</RouterLink></li> -->
       </ul>
@@ -147,7 +139,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 import { MenuIcon } from "@heroicons/vue/solid";
 import Donate from "./components/icons/DonateView.vue"
-import Inscription from "./components/icons/sincrireView.vue"
 import Facebook from "./components/icons/FacebookView.vue"
 import Instagram from "./components/icons/InstagramView.vue"
 import Pinterest from "./components/icons/PinterestView.vue"
@@ -175,7 +166,7 @@ import {
 
 export default {
   name: "App",
-  components: { MenuIcon, Donate, Inscription, Facebook, Instagram, Pinterest, modifier, Logo,},
+  components: { MenuIcon, Donate, Facebook, Instagram, Pinterest, modifier, Logo,},
       data() {
     return {
       menuOuvert: false,
