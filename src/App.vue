@@ -61,7 +61,9 @@ import { RouterLink, RouterView } from 'vue-router'
           <span v-if="avatar != null">
               <RouterLink to="/listeParent"><img class="w-12 h-12 rounded-full" :src="avatar"></RouterLink>
           </span>
+          <span v-if="avatar == null">
           <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
+          </span>
         </li>
         <li class="flex gap-2 px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
           <Inscription class="mt-1 " />

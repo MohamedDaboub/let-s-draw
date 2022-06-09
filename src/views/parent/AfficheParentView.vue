@@ -1,21 +1,21 @@
 <template>
-    <h1 class="p-10 text-white text-3xl text-center">Mon Profil</h1>
+  <h1 class="p-10 text-center text-3xl text-white">Mon Profil</h1>
   <div class="container">
     <form enctype="multipart/form-data" @submit.prevent="afficheParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 class="text-center py-10 text-2xl text-white font-chivo">Affichage du parent</h5>
+          <h5 class="py-10 text-center font-chivo text-2xl text-white">Affichage du parent</h5>
         </div>
 
         <div class="card-body">
           <div class="grid grid-cols-1">
             <div class="">
-              <div class="flex justify-center my-10">
+              <div class="my-10 flex justify-center">
                 <img class="w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 
-            <div class="grid grid-cols-6 mx-[15%] text-base">
+            <div class="mx-[15%] grid grid-cols-6 text-base">
               <div class="">
                 <div class="">
                   <span class="input-group-text">Nom</span>
@@ -39,12 +39,12 @@
                   <label class="custom-file-label" for="file">Sélectionner l'image</label>
                 </div>
               </div> -->
-              <br />              
+              <br />
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" disabled  />
+                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" disabled />
               </div>
               <br />
               <div class="input-group">
@@ -58,61 +58,76 @@
                 <div class="py-4">
                   <span>Moyen Paiement</span>
                 </div>
-                 <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
+                <input class="form-control" placeholder="Moyen Paiement?" v-model="parent.moyenP" disabled />
               </div>
               <br />
             </div>
           </div>
         </div>
-        <div class="text-white py-10 text-center">
-        <span >Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
+        <div class="py-10 text-center text-white">
+          <span>Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
         </div>
-        <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
-          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Valider</button>
-          <button class="bg-bleufonce md:px-8 px-4 py-4t">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Nom Utilisateur</span>
+          </div>
+          <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" disabled />
+        </div>
+        <br />
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Mot de passe</span>
+          </div>
+          <input class="form-control" placeholder="Mot de passe" v-model="parent.password" disabled />
+        </div>
+        <br />
+        <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
+          <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Valider</button>
+          <button class="py-4t bg-bleufonce px-4 md:px-8">
             <router-link to="/listeParent">Annuler</router-link>
           </button>
         </div>
       </div>
     </form>
   </div>
-    <div class="my-6 mx-10">
-        <h2 class="text-4xl text-white font-chivo">Biographie</h2>
-        <div class="flex justify-between bg-bleutransparent2 p-3 rounded-xl mt-4 mr-40">
-            <p class="">Je suis actuellement à la recherche d’un artiste spécialiste du pointillisme. J’aimerai qu’on reprenne mon
-            dessin d’enfance.</p>
-        </div>
+  <div class="my-6 mx-10">
+    <h2 class="font-chivo text-4xl text-white">Biographie</h2>
+    <div class="mt-4 mr-40 flex justify-between rounded-xl bg-bleutransparent2 p-3">
+      <p class="">
+        Je suis actuellement à la recherche d’un artiste spécialiste du pointillisme. J’aimerai qu’on reprenne mon dessin d’enfance.
+      </p>
     </div>
-    <div class="my-10 mx-10">
-        <h2 class="text-4xl text-white font-chivo">Notifications</h2>
-        <div class="text-2xl flex mt-8 ml-20 text-white">
-            <p class="bg-red-700 rounded-full p-1">1</p>
-            <p class="mx-4 p-1">Vous avez reçu un nouveau dessin</p>
-        </div>
-        <p class="bg-bleutransparent2 p-3 rounded-xl mr-40 mt-6">Florent Vacot a terminer votre dessin, il y a 2 jours. Vous pouvez dès à présent consulter votre dessin en
-            cliquant sur ce bouton ci-dessous</p>
-
+  </div>
+  <div class="my-10 mx-10">
+    <h2 class="font-chivo text-4xl text-white">Notifications</h2>
+    <div class="mt-8 ml-20 flex text-2xl text-white">
+      <p class="rounded-full bg-red-700 p-1">1</p>
+      <p class="mx-4 p-1">Vous avez reçu un nouveau dessin</p>
     </div>
-    <!-- <bouton  Nom="Consulter mon dessin" /> -->
-    <div class="mx-10 py-10">
-        <h2 class="text-3xl text-white my-20 font-chivo">Faîtes un don</h2>
-        <div>
-            <h3 class="text-2xl text-white my-6 mx-6 font-chivo">L'objectif du don</h3>
-            <p class="w-1/2 mx-10 text-white">Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association
-                “Unicef” qui lutte pour les enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s
-                Draw.</p>
-                <img class="items-center m-auto my-10" src="../../../public/img-squirrel/image-19.webp" alt="Logo Unicef">
-            
-        </div>
-        <div class="my-10">
-            <h3 class="text-2xl text-white my-6 mx-6 font-chivo">Répartition du don</h3>
-            <div class="flex justify-end mx-auto">
-            <img class="w-1/3" src="../../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don">
-            </div>
-        </div>
-        <bouton class="my-10 mx-10" Nom="Faire un don" />
+    <p class="mr-40 mt-6 rounded-xl bg-bleutransparent2 p-3">
+      Florent Vacot a terminer votre dessin, il y a 2 jours. Vous pouvez dès à présent consulter votre dessin en cliquant sur ce bouton
+      ci-dessous
+    </p>
+  </div>
+  <!-- <bouton  Nom="Consulter mon dessin" /> -->
+  <div class="mx-10 py-10">
+    <h2 class="my-20 font-chivo text-3xl text-white">Faîtes un don</h2>
+    <div>
+      <h3 class="my-6 mx-6 font-chivo text-2xl text-white">L'objectif du don</h3>
+      <p class="mx-10 w-1/2 text-white">
+        Le don a pour but d’aider les artistes dans leur carrière ou futur carrière, de soutenir l’association “Unicef” qui lutte pour les
+        enfants défavorisés et de nous aider à continuer de faire fonctionner Let’s Draw.
+      </p>
+      <img class="m-auto my-10 items-center" src="../../../public/img-squirrel/image-19.webp" alt="Logo Unicef" />
     </div>
-    
+    <div class="my-10">
+      <h3 class="my-6 mx-6 font-chivo text-2xl text-white">Répartition du don</h3>
+      <div class="mx-auto flex justify-end">
+        <img class="w-1/3" src="../../../public/img-squirrel/Diagramme-Don.webp" alt="Diagramme de la répartition du don" />
+      </div>
+    </div>
+    <bouton class="my-10 mx-10" Nom="Faire un don" />
+  </div>
 </template>
 <script>
 import {
@@ -139,22 +154,24 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
-    name: "App",
-    components: {  },
-      data() {
+  name: "App",
+  components: {},
+  data() {
     return {
       parent: {
         nom: null,
         prenom: null,
         photo: null,
         mailParent: null,
-        nbrEnfantsParent:null,
-        moyenP:null,
+        nbrEnfantsParent: null,
+        moyenP: null,
+        login: null,
+        password: null,
       },
       refParent: null,
       photoActuelle: null,
       imgModifiée: false,
-      imageData:null,
+      imageData: null,
     };
   },
   mounted() {
@@ -224,6 +241,5 @@ export default {
       this.$router.push("/listeParent");
     },
   },
-
 };
 </script>

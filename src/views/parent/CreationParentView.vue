@@ -3,18 +3,18 @@
     <form enctype="multipart/form-data" @submit.prevent="createParent">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 class="text-center py-10 text-2xl text-white font-chivo">Création compte Parent</h5>
+          <h5 class="py-10 text-center font-chivo text-2xl text-white">Création compte Parent</h5>
         </div>
 
         <div class="card-body">
           <div class="grid grid-cols-1">
             <div class="">
-              <div class="flex justify-center my-10">
+              <div class="my-10 flex justify-center">
                 <img class="w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 
-            <div class="grid grid-cols-6 mx-[15%] text-base">
+            <div class="mx-[15%] grid grid-cols-6 text-base">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">Nom</span>
@@ -65,14 +65,30 @@
               <br />
             </div>
           </div>
-        <div class="text-xl text-white text-center py-10">
-          <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
-        </div>
+          <div class="py-10 text-center text-xl text-white">
+            <span class="input-group-text"
+              >Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span
+            >
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Nom Utilisateur</span>
+            </div>
+            <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" required />
+          </div>
+          <br />
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Mot de passe</span>
+            </div>
+            <input class="form-control" placeholder="Mot de passe" v-model="parent.password" required />
+          </div>
+          <br />
         </div>
 
-        <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
-          <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Créer</button>
-          <button class="bg-bleufonce md:px-8 px-4 py-4">
+        <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
+          <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Créer</button>
+          <button class="bg-bleufonce px-4 py-4 md:px-8">
             <routerlink to="/listeParent">Annuler</routerlink>
           </button>
         </div>
@@ -108,6 +124,8 @@ export default {
         mailParent: null,
         nbrEnfantsParent: null,
         moyenP: null,
+        login: null,
+        password: null,
       },
     };
   },

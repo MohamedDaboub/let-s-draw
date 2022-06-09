@@ -70,6 +70,20 @@
             </div>
             
               <br />
+              <div class="">
+                <div class="">
+                  <span class="">Nom utilisateur</span>
+                </div>
+                <input class="" placeholder="nom user" v-model="artiste.login" required  />
+              </div>
+              <br />
+              <div class="">
+                <div class="">
+                  <span class="">Métier</span>
+                </div>
+                <input class="" placeholder="mot de passe" v-model="artiste.password" required  />
+              </div>
+              <br />
             <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">   
                     <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4 ">
                         Créer
@@ -119,6 +133,8 @@ export default {
         style:null,
         description:null,
         role:null,
+        login:null,
+        password:null,
       },
     };
   },

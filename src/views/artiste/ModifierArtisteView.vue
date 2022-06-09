@@ -3,18 +3,18 @@
     <form enctype="multipart/form-data" @submit.prevent="updateArtiste">
       <div class="card bg-dark">
         <div class="card-header">
-          <h5 class="text-center py-10 text-2xl text-white font-chivo" >Mise à jour compte artiste</h5>
+          <h5 class="py-10 text-center font-chivo text-2xl text-white">Mise à jour compte artiste</h5>
         </div>
 
         <div class="">
           <div class="grid grid-cols-1">
             <div class="">
-              <div class="flex justify-center my-10">
+              <div class="my-10 flex justify-center">
                 <img class="w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 
-            <div class="grid grid-cols-6 mx-[15%] text-base">
+            <div class="mx-[15%] grid grid-cols-6 text-base">
               <div class="">
                 <div class="">
                   <span class="">Nom</span>
@@ -100,18 +100,30 @@
                 </select>
               </div>
               <br />
+              <div class="">
+                <div class="">
+                  <span class="">Nom utilisateur</span>
+                </div>
+                <input class="" placeholder="nom user" v-model="artiste.login" required  />
+              </div>
+              <br />
+              <div class="">
+                <div class="">
+                  <span class="">Métier</span>
+                </div>
+                <input class="" placeholder="mot de passe" v-model="artiste.password" required  />
+              </div>
+              <br />
             </div>
           </div>
         </div>
       </div>
-      <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">   
-                    <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">
-                        Modifier
-                    </button>
-                    <button class="bg-bleufonce md:px-8 px-4 py-4" >
-                        <router-link to="/choixArtiste" >Annuler</router-link>
-                    </button>
-                </div>
+      <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
+        <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Modifier</button>
+        <button class="bg-bleufonce px-4 py-4 md:px-8">
+          <router-link to="/choixArtiste">Annuler</router-link>
+        </button>
+      </div>
     </form>
   </div>
 </template>
@@ -156,6 +168,8 @@ export default {
         style: null,
         description: null,
         role: null,
+        login: null,
+        password: null,
       },
       refArtiste: null,
       imgModifiée: false,

@@ -65,6 +65,20 @@
             <div class="flex justify-center my-10 text-white text-lg">
               <span class="input-group-text">Dans le cadre d'un don, nous devons svaoir quel moyen de paiement vous envisager d'utiliser ?</span>
             </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Nom Utilisateur</span>
+                </div>
+                <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" disabled />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Mot de passe</span>
+                </div>
+                <input class="form-control" placeholder="Mot de passe" v-model="parent.password" disabled />
+              </div>
+              <br />
             <div class="bg-red-600 text-black py-10 my-10  text-lg font-chivo font-bold mx-[20%]">
               <h5 class="alert alert-warning text-center" role="alert">  Attention vous allez supprimer ce parent, cette action est irreversible !!</h5>
             </div>
@@ -116,6 +130,8 @@ export default {
         mailParent: null,
         nbrEnfantsParent:null,
         moyenP:null,
+        login:null,
+        password:null,
       },
       refParent: null,
       photoActuelle: null,

@@ -63,6 +63,20 @@
                 </select>
               </div>
               <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Nom Utilisateur</span>
+                </div>
+                <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" required />
+              </div>
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Mot de passe</span>
+                </div>
+                <input class="form-control" placeholder="Mot de passe" v-model="parent.password" required />
+              </div>
+              <br />
             </div>
           </div>
         </div>
@@ -113,6 +127,8 @@ export default {
         mailParent: null,
         nbrEnfantsParent:null,
         moyenP:null,
+        login:null,
+        password:null,
       },
       refParent: null,
       imgModifiée: false,

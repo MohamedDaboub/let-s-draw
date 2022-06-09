@@ -89,6 +89,20 @@
                 </div>
                 <br />
               </div>
+              <div class="">
+                <div class="">
+                  <span class="">Nom utilisateur</span>
+                </div>
+                <input class="" placeholder="nom user" v-model="artiste.login" required disabled />
+              </div>
+              <br />
+              <div class="">
+                <div class="">
+                  <span class="">Métier</span>
+                </div>
+                <input class="" placeholder="mot de passe" v-model="artiste.password" required disabled />
+              </div>
+              <br />
             </div>
             <div class="bg-red-600 flex justify-center my-10 mx-[30%]">
             <h5 class=" text-xl text-center my-10" role="alert">
@@ -148,6 +162,8 @@ export default {
         style:null,
         description:null,
         role:null,
+        login:null,
+        password:null,
       },
       refArtiste: null,
       photoActuelle: null,
