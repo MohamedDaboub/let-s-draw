@@ -3,19 +3,18 @@
     <form enctype="multipart/form-data" @submit.prevent="afficheArtiste">
       <div class="">
         <div class="">
-          <h5 class="text-center py-10 text-2xl text-white font-chivo">Affichage compte artiste</h5>
+          <h5 class="py-10 text-center font-chivo text-2xl text-white">Affichage compte artiste</h5>
         </div>
 
-        <div class=" ">
-          <div class="grid grid-cols-1 ">
-
+        <div class="">
+          <div class="grid grid-cols-1">
             <div class="">
-              <div class="flex justify-center my-10">
-                <img class="w-1/4 h-1/6 rounded-2xl " :src="imageData" />
+              <div class="my-10 flex justify-center">
+                <img class="h-1/6 w-1/4 rounded-2xl" :src="imageData" />
               </div>
             </div>
 
-            <div class="grid grid-cols-6 mx-[15%] text-base">
+            <div class="mx-[15%] grid grid-cols-6 text-base">
               <div class="">
                 <div class="">
                   <span class="">Nom</span>
@@ -96,38 +95,30 @@
                 <input class="" placeholder="mot de passe" v-model="artiste.password" required disabled />
               </div>
               <br />
-            
             </div>
           </div>
         </div>
       </div>
-      <div class="flex md:gap-10 gap-5  justify-center py-10 text-white">
-        <button type="submit" class="bg-bleufonce md:px-8 px-4 py-4">Valider</button>
-        <button class="bg-bleufonce md:px-8 px-4 py-4">
+      <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
+        <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8">Valider</button>
+        <button class="bg-bleufonce px-4 py-4 md:px-8">
           <router-link to="/choixArtiste">Retour</router-link>
         </button>
       </div>
     </form>
   </div>
-<!-- comme je ne comprends pas comment faire un import d'un élément seul avec firebase malgré le lien id artiste qui est crée, ce sera une grossière liste sans lien id qui sera diffusé... -->
-  <h2 class="font-chivo text-center my-10 text-2xl">Mes derniers dessins :</h2>
-    <div class="flex bg-noir rounded-xl flex-col" v-for="dessin in listeDessin" :key="dessin.id">
-            <img class="rounded-t-lg w-full h-full" :src="dessin.photo" :alt="dessin.titre">
-            <div class="flex text-white mx-4">
-                <p class="font-bold text-2xl my-6">{{ dessin.titre }}</p>
-            </div>
-
-    </div>
-
-  <div>
-    <div>
-
+  <!-- comme je ne comprends pas comment faire un import d'un élément seul avec firebase malgré le lien id artiste qui est crée, ce sera une grossière liste sans lien id qui sera diffusé... -->
+  <h2 class="my-10 text-center font-chivo text-2xl">Mes derniers dessins :</h2>
+  <div class="flex flex-col rounded-xl bg-noir" v-for="dessin in listeDessin" :key="dessin.id">
+    <img class="h-full w-full rounded-t-lg" :src="dessin.photo" :alt="dessin.titre" />
+    <div class="mx-4 flex text-white">
+      <p class="my-6 text-2xl font-bold">{{ dessin.titre }}</p>
     </div>
   </div>
 
   <!-- Composant bouton envoyer -->
-  <button class="flex justify-center mx-auto py-10 text-white">
-    <RouterLink to="" class="bg-bleufonce md:px-8 px-4 py-4">Commence un chat </RouterLink>
+  <button class="mx-auto flex justify-center py-10 text-white">
+    <RouterLink to="" class="bg-bleufonce px-4 py-4 md:px-8">Commence un chat </RouterLink>
   </button>
 </template>
 <script>
@@ -172,17 +163,17 @@ export default {
         style: null,
         description: null,
         role: null,
-        login:null,
-        password:null,
-        titreDessin:null,
+        login: null,
+        password: null,
+        titreDessin: null,
         photoDessin: null,
       },
       refArtiste: null,
       photoActuelle: null,
-      photoCard:null,
+      photoCard: null,
       listecategorieArtiste: [],
       listeMetier: [],
-      listeDessin:[],
+      listeDessin: [],
     };
   },
   mounted() {
@@ -191,10 +182,9 @@ export default {
     this.getCategorieA();
     this.getMetier();
     this.getDessin();
-
   },
   methods: {
-      async getDessin() {
+    async getDessin() {
       // Obtenir Firestore
       const firestore = getFirestore();
       // Base de données(collection)document participant
