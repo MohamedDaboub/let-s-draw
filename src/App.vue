@@ -147,7 +147,7 @@ import Instagram from "./components/icons/InstagramView.vue"
 import Pinterest from "./components/icons/PinterestView.vue"
 import modifier from "./components/icons/ModifierView.vue"
 import Logo from "./components/LogoView.vue";
-// import {emitter} from './main.js';
+import {emitter} from './main.js';
 import {
   getFirestore,
   collection,

@@ -7,7 +7,7 @@ import router from './router'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-// import mitt from 'mitt';
+import mitt from 'mitt';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -25,7 +25,7 @@ const appFirebase = initializeApp(firebaseConfig);
 
 const app = createApp(App)
 
-// export const emitter = mitt();
-// app.config.globalProperties.emitter = emitter;
+export const emitter = mitt();
+app.config.globalProperties.emitter = emitter;
 app.use(router)
 app.mount('#app')
