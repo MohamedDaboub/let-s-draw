@@ -6,7 +6,7 @@
         </div>    
 
         <div v-if="user == null">
-            <div class="bg-red-600 font-chivo text-xl md:mx-[20%] mx-[5%] py-20">
+            <div class="bg-red-600 font-chivo text-xl md:mx-[20%] mx-[5%] py-10 text-center">
             <h6 class=" " role="alert">
                 Vous devez être connecté pour utiliser le Chat !!
             </h6>
