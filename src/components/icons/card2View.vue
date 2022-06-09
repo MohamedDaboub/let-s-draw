@@ -5,15 +5,19 @@
             <div class="flex flex-col text-white ml-4">
                 <p class="font-bold text-2xl mt-6"> {{ artiste.prenom }} {{ artiste.nom }}</p>
                 <p class="text-lg ml-4 mt-1">{{ artiste.role }}</p>
+                <div class="flex gap-5 my-3">
                 <RouterLink :to="{ name: 'AfficheArtiste', params: { id: artiste.id } }"><p>Afficher</p></RouterLink>
-                <RouterLink :to="{ name: 'ModifierArtiste', params: { id: artiste.id } }"><p>Modifier</p></RouterLink>
-                <RouterLink :to="{ name: 'DeleteArtiste', params: { id: artiste.id } }"><p>Supprimer</p></RouterLink>
+                <RouterLink :to="{ name: 'ModifierArtiste', params: { id: artiste.id } }"><edit></edit></RouterLink>
+                <RouterLink :to="{ name: 'DeleteArtiste', params: { id: artiste.id } }"><trach></trach></RouterLink>
+                </div>
             </div>
 
     </div>
 </div>
 </template>
 <script>
+import edit from "../../components/icons/EditView.vue"
+import trach from "../../components/icons/TrashView.vue"
 import {
   getFirestore,
   collection,
@@ -32,10 +36,9 @@ import {
   getDownloadURL,
   uploadString,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
-export default {
-
-
+export default {  
    name: "cardV2view",
+   components: { edit, trach },
   data() {
     return {
       listeArtiste: [],

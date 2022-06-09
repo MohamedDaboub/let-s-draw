@@ -81,7 +81,6 @@
         <div class="flex justify-between bg-bleutransparent2 p-3 rounded-xl mt-4 mr-40">
             <p class="">Je suis actuellement à la recherche d’un artiste spécialiste du pointillisme. J’aimerai qu’on reprenne mon
             dessin d’enfance.</p>
-            <!-- <Modifier class="" /> -->
         </div>
     </div>
     <div class="my-10 mx-10">
@@ -116,8 +115,6 @@
     
 </template>
 <script>
-// import Modifier from "../components/icons/ModifierView.vue"
-// import Bouton from "../components/BoutonView.vue"
 import {
   getFirestore,
   collection,
@@ -143,7 +140,7 @@ import {
 
 export default {
     name: "App",
-    // components: { Modifier, Bouton },
+    components: {  },
       data() {
     return {
       parent: {
