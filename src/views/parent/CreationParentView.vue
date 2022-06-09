@@ -16,21 +16,21 @@
 
             <div class="mx-[15%] grid grid-cols-6 text-base">
               <div class="input-group">
-                <div class="input-group-prepend">
+                <div class="input-group-prepend py-2">
                   <span class="input-group-text">Nom</span>
                 </div>
-                <input class="form-control" placeholder="Nom de la personne" v-model="parent.nom" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Nom" v-model="parent.nom" required />
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
+                <div class="input-group-prepend py-2">
                   <span class="input-group-text">Prénom</span>
                 </div>
-                <input class="form-control" placeholder="Prénom de la personne" v-model="parent.prenom" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Prénom" v-model="parent.prenom" required />
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
+                <div class="input-group-prepend py-2">
                   <span class="input-group-text">Photo</span>
                 </div>
                 <div class="custom-file">
@@ -40,24 +40,24 @@
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">mail</span>
+                <div class="input-group-prepend py-2">
+                  <span class="input-group-text ">Mail</span>
                 </div>
-                <input class="form-control" placeholder="Mail de la personne" v-model="parent.mailParent" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Mail" v-model="parent.mailParent" required />
               </div>
               <br />
               <div class="input-group">
-                <div class="input-group-prepend">
+                <div class="input-group-prepend py-2">
                   <span class="input-group-text">Nombre d'enfants</span>
                 </div>
-                <input class="form-control" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" required />
+                <input class="form-control pl-2 rounded-sm" placeholder="Nombre d'enfants ?" v-model="parent.nbrEnfantsParent" required />
               </div>
               <br />
               <div class="input-group">
-                <div class="py-3">
+                <div class="py-2">
                   <span>Moyen Paiement</span>
                 </div>
-                <select class="custom-select" v-model="parent.moyenP">
+                <select class="custom-select rounded-sm" v-model="parent.moyenP">
                   <option selected disabled>Sélectionner un moyen de paiement</option>
                   <option v-for="moyenDePaiement in listeMoyenP" :key="moyenDePaiement.libellé">{{ moyenDePaiement.libellé }}</option>
                 </select>
@@ -72,17 +72,17 @@
           </div>
           <div class="flex justify-center md:gap-10 gap-5 ">
             <div class="input-group">
-              <div class="input-group-prepend">
+              <div class="input-group-prepend py-2">
                 <span class="input-group-text">Nom Utilisateur</span>
               </div>
-              <input class="form-control" placeholder="Nom d'utilisateur" v-model="parent.login" required />
+              <input class="form-control pl-2 rounded-sm" placeholder="Nom d'utilisateur" v-model="parent.login" required />
             </div>
             <br />
             <div class="input-group">
-              <div class="input-group-prepend">
+              <div class="input-group-prepend py-2">
                 <span class="input-group-text">Mot de passe</span>
               </div>
-              <input class="form-control" placeholder="Mot de passe" v-model="parent.password" required />
+              <input class="form-control pl-2 rounded-sm" placeholder="Mot de passe" v-model="parent.password" required />
             </div>
             <br />
           </div>

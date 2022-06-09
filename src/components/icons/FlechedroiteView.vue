@@ -1,5 +1,5 @@
 <template>
-<div class="bg-bleufonce p-4 rounded-2xl">
+<div class="bg-bleufonce p-4 rounded-2xl hover:bg-blue-600">
     <svg
   width="95"
   height="46"

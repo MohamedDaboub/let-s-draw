@@ -5,8 +5,8 @@
 
     <h2 class="text-3xl  font-bold py-4 font-chivo">Pourquoi l’UNICEF ?</h2>
     <p class=" text-lg py-4">Nous avons créer une page entièrement dédiée à l’UNICEF. Nous vous conseillons d’aller la voir.</p>
-    <div class="flex justify-end ">
-    <RouterLink to="/Unicef"><flechedroite /></RouterLink>
+    <div class="flex justify-end">
+        <RouterLink class="" to="/Unicef"><flechedroite /></RouterLink>
     </div>
     <h2  class="text-3xl  font-bold py-4 font-chivo">Pourquoi Let’s Draw ?</h2>
     <p class=" text-lg py-4">En fondant Let’s Draw, nous avons tout de suite penser à le rendre totalement gratuit. Mais cela a des conséquences, nous avons besoin de rémunération pour continué à faire fonctionner le site.
