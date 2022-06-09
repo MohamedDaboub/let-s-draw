@@ -90,7 +90,7 @@
                         Créer
                     </button>
                     <button class="bg-bleufonce md:px-8 px-4 py-4" >
-                        <router-link to="/choixArtiste" >Annuler</router-link>
+                        <router-link to="/Inscription" >Annuler</router-link>
                     </button>
                 </div>
         </form>

@@ -91,7 +91,7 @@
         <div class="flex justify-center gap-5 py-10 text-white md:gap-10">
           <button type="submit" class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">Créer</button>
           <button class="bg-bleufonce px-4 py-4 md:px-8 hover:bg-blue-600">
-            <routerlink to="/listeParent">Annuler</routerlink>
+            <routerlink to="/Inscription">Annuler</routerlink>
           </button>
         </div>
       </div>
