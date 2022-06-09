@@ -30,9 +30,12 @@ import { RouterLink, RouterView } from 'vue-router'
           <Donate class="" />
             <RouterLink class="" to="/Don">Faire un don</RouterLink>
         </li>
-        <!-- <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white">
-          <RouterLink class=" " to="/connecter">se connecter</RouterLink>
-        </li> -->
+        <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
+          <span v-if="avatar != null">
+              <RouterLink to="/listeParent"><img class="w-12 h-12 rounded-full" :src="avatar"></RouterLink>
+          </span>
+          <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
+        </li>
         <li class="flex gap-2 px-4 bg-white  rounded-3xl text-black py-5 w-40">
           <Inscription class="mt-1" />
           <RouterLink class=" " to="/Inscription">S’inscrire</RouterLink>
@@ -56,7 +59,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <!-- ici faut me trouver le moyen de cacher le "se connecter" quand l'image doit apparaitre post connexion!!" -->
         <li class="px-2 bg-white  rounded-3xl text-black py-2 w-1/3 hover:bg-bleu  hover:text-white" >
           <span v-if="avatar != null">
-              <RouterLink to="/listeParent"><img :src="avatar"></RouterLink>
+              <RouterLink to="/listeParent"><img class="w-12 h-12 rounded-full" :src="avatar"></RouterLink>
           </span>
           <RouterLink class="" to="/ConnexionParent">se connecter</RouterLink>
         </li>
