@@ -72,14 +72,14 @@
               <div class="">
                 <span class="">Nom utilisateur</span>
               </div>
-              <input class="" placeholder="nom user" v-model="artiste.login" required  />
+              <input class=" text-black" placeholder="nom user" v-model="artiste.login" required  />
             </div>
             <br />
             <div class="">
               <div class="">
                 <span class="">Mot de passe</span>
               </div>
-              <input class="" placeholder="mot de passe" v-model="artiste.password" required  />
+              <input class="text-black" placeholder="mot de passe" v-model="artiste.password" required  />
             </div>
             <br />
             

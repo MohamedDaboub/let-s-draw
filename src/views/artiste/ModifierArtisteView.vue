@@ -109,7 +109,7 @@
               <br />
               <div class="my-2">
                 <div class="my-2">
-                  <span class="">Métier</span>
+                  <span class="">Mot de passe</span>
                 </div>
                 <input class="pl-2 rounded-sm" placeholder="mot de passe" v-model="artiste.password" required  />
               </div>
